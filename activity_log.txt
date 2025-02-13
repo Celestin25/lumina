@@ -4,3 +4,4 @@
 [2025-02-12T12:45:00] fix: typo in landing page
 [2025-02-12T17:33:00] refactor: split large components
 [2025-02-12T16:18:00] style: improve dashboard responsiveness
+[2025-02-13T10:48:00] fix: typo in landing page
