@@ -1,3 +1,4 @@
 [2025-02-11T12:16:00] fix: handle null states in profile
 [2025-02-14T15:46:00] feat: integrate payment gateway
 [2025-02-14T10:25:00] fix: resolve race condition in api
+[2025-02-14T13:44:00] refactor: optimize database queries
