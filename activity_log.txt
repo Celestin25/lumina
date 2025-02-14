@@ -8,3 +8,4 @@
 [2025-02-13T13:45:00] refactor: clean up legacy code
 [2025-02-13T17:03:00] fix: resolve race condition in api
 [2025-02-13T12:32:00] feat: add export to csv feature
+[2025-02-14T17:28:00] refactor: split large components
