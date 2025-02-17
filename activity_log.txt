@@ -11,3 +11,4 @@
 [2025-02-14T17:28:00] refactor: split large components
 [2025-02-14T14:39:00] chore: cleanup logs
 [2025-02-14T14:26:00] test: fix flaky integration tests
+[2025-02-17T17:49:00] test: add unit tests for user service
