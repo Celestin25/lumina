@@ -5,3 +5,4 @@
 [2025-02-14T09:43:00] feat: add export to csv feature
 [2025-02-17T14:44:00] fix: handle null states in profile
 [2025-02-17T15:52:00] feat: integrate payment gateway
+[2025-02-17T14:48:00] chore: simple config change
