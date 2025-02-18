@@ -6,3 +6,4 @@
 [2025-02-13T16:43:00] docs: update api documentation
 [2025-02-14T15:16:00] docs: update api documentation
 [2025-02-14T13:35:00] feat: add export to csv feature
+[2025-02-18T14:38:00] chore: update dependencies
