@@ -13,3 +13,4 @@
 [2025-02-14T14:26:00] test: fix flaky integration tests
 [2025-02-17T17:49:00] test: add unit tests for user service
 [2025-02-17T15:33:00] refactor: split large components
+[2025-02-18T17:36:00] feat: update user authentication flow
