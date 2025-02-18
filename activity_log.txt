@@ -6,3 +6,4 @@
 [2025-02-17T14:44:00] fix: handle null states in profile
 [2025-02-17T15:52:00] feat: integrate payment gateway
 [2025-02-17T14:48:00] chore: simple config change
+[2025-02-18T15:53:00] chore: simple config change
