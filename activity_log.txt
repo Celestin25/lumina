@@ -14,3 +14,4 @@
 [2025-02-20T17:50:00] docs: update api documentation
 [2025-02-20T09:45:00] fix: resolve race condition in api
 [2025-02-21T14:15:00] fix: handle null states in profile
+[2025-02-21T14:46:00] test: fix flaky integration tests
