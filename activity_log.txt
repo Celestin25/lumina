@@ -24,3 +24,4 @@
 [2025-02-20T09:37:00] fix: typo in landing page
 [2025-02-24T09:13:00] refactor: optimize database queries
 [2025-02-24T16:28:00] style: update button colors
+[2025-02-24T17:41:00] perf: improve image loading speed
