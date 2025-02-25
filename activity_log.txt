@@ -12,3 +12,4 @@
 [2025-02-21T10:25:00] docs: update api documentation
 [2025-02-21T10:22:00] perf: improve image loading speed
 [2025-02-24T17:30:00] fix: resolve race condition in api
+[2025-02-25T10:18:00] feat: update user authentication flow
