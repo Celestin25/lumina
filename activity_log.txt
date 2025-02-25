@@ -17,3 +17,4 @@
 [2025-02-21T14:46:00] test: fix flaky integration tests
 [2025-02-24T09:05:00] test: fix flaky integration tests
 [2025-02-24T09:46:00] docs: update api documentation
+[2025-02-25T13:27:00] feat: integrate payment gateway
