@@ -15,3 +15,4 @@
 [2025-02-25T10:18:00] feat: update user authentication flow
 [2025-02-25T12:36:00] feat: update user authentication flow
 [2025-02-25T10:54:00] chore: update dependencies
+[2025-02-25T11:54:00] test: fix flaky integration tests
