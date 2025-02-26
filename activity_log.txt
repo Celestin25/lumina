@@ -17,3 +17,4 @@
 [2025-02-25T10:54:00] chore: update dependencies
 [2025-02-25T11:54:00] test: fix flaky integration tests
 [2025-02-26T15:43:00] feat: add export to csv feature
+[2025-02-26T10:44:00] refactor: split large components
