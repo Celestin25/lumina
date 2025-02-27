@@ -26,3 +26,4 @@
 [2025-02-24T16:28:00] style: update button colors
 [2025-02-24T17:41:00] perf: improve image loading speed
 [2025-02-27T16:39:00] test: fix flaky integration tests
+[2025-02-27T17:20:00] fix: handle null states in profile
