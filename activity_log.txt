@@ -19,3 +19,4 @@
 [2025-02-26T15:43:00] feat: add export to csv feature
 [2025-02-26T10:44:00] refactor: split large components
 [2025-02-26T17:26:00] fix: resolve race condition in api
+[2025-02-28T16:54:00] chore: cleanup logs
