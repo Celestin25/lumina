@@ -37,3 +37,4 @@
 [2025-03-04T09:23:00] refactor: split large components
 [2025-03-05T10:13:00] chore: simple config change
 [2025-03-05T10:10:00] fix: resolve race condition in api
+[2025-03-05T16:25:00] fix: handle null states in profile
