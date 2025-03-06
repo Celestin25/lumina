@@ -41,3 +41,4 @@
 [2025-03-05T12:31:00] style: update button colors
 [2025-03-06T10:46:00] fix: typo in landing page
 [2025-03-06T17:34:00] refactor: split large components
+[2025-03-06T15:21:00] style: improve dashboard responsiveness
