@@ -36,3 +36,4 @@
 [2025-03-10T16:11:00] fix: resolve race condition in api
 [2025-03-11T17:50:00] fix: handle null states in profile
 [2025-03-11T10:17:00] perf: improve image loading speed
+[2025-03-12T12:01:00] chore: simple config change
