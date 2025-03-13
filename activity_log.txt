@@ -40,3 +40,4 @@
 [2025-03-12T13:48:00] refactor: clean up legacy code
 [2025-03-13T14:09:00] refactor: clean up legacy code
 [2025-03-13T15:26:00] chore: cleanup logs
+[2025-03-13T11:58:00] fix: handle null states in profile
