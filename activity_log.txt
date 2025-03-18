@@ -43,3 +43,4 @@
 [2025-03-17T16:43:00] feat: update user authentication flow
 [2025-03-17T12:21:00] test: add unit tests for user service
 [2025-03-17T16:50:00] feat: implement search functionality
+[2025-03-18T14:32:00] feat: add export to csv feature
