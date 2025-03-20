@@ -47,3 +47,4 @@
 [2025-03-18T13:42:00] fix: handle null states in profile
 [2025-03-18T13:34:00] feat: integrate payment gateway
 [2025-03-18T13:35:00] feat: update user authentication flow
+[2025-03-20T14:18:00] perf: improve image loading speed
