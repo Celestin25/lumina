@@ -54,3 +54,4 @@
 [2025-03-19T10:33:00] feat: add export to csv feature
 [2025-03-20T14:05:00] style: improve dashboard responsiveness
 [2025-03-21T11:01:00] chore: simple config change
+[2025-03-21T11:23:00] feat: add export to csv feature
