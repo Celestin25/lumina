@@ -50,3 +50,4 @@
 [2025-03-21T10:17:00] perf: improve image loading speed
 [2025-03-21T10:56:00] refactor: split large components
 [2025-03-21T14:37:00] style: improve dashboard responsiveness
+[2025-03-21T12:21:00] feat: add export to csv feature
