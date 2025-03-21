@@ -49,3 +49,4 @@
 [2025-03-18T13:35:00] feat: update user authentication flow
 [2025-03-20T14:18:00] perf: improve image loading speed
 [2025-03-20T14:20:00] feat: update user authentication flow
+[2025-03-21T11:38:00] chore: update dependencies
