@@ -52,3 +52,4 @@
 [2025-03-21T14:37:00] style: improve dashboard responsiveness
 [2025-03-21T12:21:00] feat: add export to csv feature
 [2025-03-24T14:24:00] feat: integrate payment gateway
+[2025-03-25T11:44:00] style: update button colors
