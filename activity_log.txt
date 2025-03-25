@@ -53,3 +53,4 @@
 [2025-03-21T12:21:00] feat: add export to csv feature
 [2025-03-24T14:24:00] feat: integrate payment gateway
 [2025-03-25T11:44:00] style: update button colors
+[2025-03-25T14:01:00] test: add unit tests for user service
