@@ -56,3 +56,4 @@
 [2025-03-21T11:01:00] chore: simple config change
 [2025-03-21T11:23:00] feat: add export to csv feature
 [2025-03-21T16:51:00] refactor: clean up legacy code
+[2025-03-26T15:22:00] feat: add export to csv feature
