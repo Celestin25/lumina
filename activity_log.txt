@@ -63,3 +63,4 @@
 [2025-03-27T14:41:00] refactor: split large components
 [2025-03-27T15:31:00] feat: add export to csv feature
 [2025-03-27T13:55:00] feat: add export to csv feature
+[2025-03-27T17:42:00] refactor: optimize database queries
