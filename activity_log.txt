@@ -69,3 +69,4 @@
 [2025-03-28T14:32:00] docs: update api documentation
 [2025-03-28T12:31:00] feat: integrate payment gateway
 [2025-03-31T16:44:00] docs: update api documentation
+[2025-03-31T12:11:00] fix: handle null states in profile
