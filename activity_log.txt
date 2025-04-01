@@ -71,3 +71,4 @@
 [2025-03-31T16:44:00] docs: update api documentation
 [2025-03-31T12:11:00] fix: handle null states in profile
 [2025-04-01T15:43:00] style: improve dashboard responsiveness
+[2025-04-01T13:32:00] refactor: clean up legacy code
