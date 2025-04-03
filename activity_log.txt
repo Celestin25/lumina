@@ -63,3 +63,4 @@
 [2025-04-01T14:01:00] chore: update dependencies
 [2025-04-01T11:25:00] fix: typo in landing page
 [2025-04-02T13:49:00] fix: typo in landing page
+[2025-04-03T13:15:00] feat: add export to csv feature
