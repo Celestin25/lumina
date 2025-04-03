@@ -65,3 +65,4 @@
 [2025-04-02T13:49:00] fix: typo in landing page
 [2025-04-03T13:15:00] feat: add export to csv feature
 [2025-04-03T11:55:00] chore: simple config change
+[2025-04-03T13:50:00] feat: integrate payment gateway
