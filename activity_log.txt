@@ -76,3 +76,4 @@
 [2025-04-03T13:19:00] feat: implement search functionality
 [2025-04-03T09:41:00] feat: integrate payment gateway
 [2025-04-03T09:24:00] feat: add export to csv feature
+[2025-04-04T16:12:00] refactor: clean up legacy code
