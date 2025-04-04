@@ -67,3 +67,4 @@
 [2025-04-03T11:55:00] chore: simple config change
 [2025-04-03T13:50:00] feat: integrate payment gateway
 [2025-04-03T09:01:00] style: update button colors
+[2025-04-04T10:20:00] docs: update api documentation
