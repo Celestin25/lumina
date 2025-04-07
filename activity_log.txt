@@ -80,3 +80,4 @@
 [2025-04-04T11:09:00] test: add unit tests for user service
 [2025-04-04T11:15:00] test: fix flaky integration tests
 [2025-04-04T13:57:00] refactor: clean up legacy code
+[2025-04-07T17:32:00] fix: handle null states in profile
