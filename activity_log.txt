@@ -71,3 +71,4 @@
 [2025-04-07T11:50:00] test: fix flaky integration tests
 [2025-04-07T09:29:00] chore: simple config change
 [2025-04-07T15:23:00] feat: add export to csv feature
+[2025-04-08T17:04:00] test: add unit tests for user service
