@@ -77,3 +77,4 @@
 [2025-04-08T11:14:00] test: fix flaky integration tests
 [2025-04-09T11:55:00] chore: cleanup logs
 [2025-04-09T10:13:00] fix: resolve race condition in api
+[2025-04-10T14:51:00] chore: update dependencies
