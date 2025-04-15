@@ -81,3 +81,4 @@
 [2025-04-11T11:29:00] chore: simple config change
 [2025-04-11T10:53:00] chore: cleanup logs
 [2025-04-11T16:43:00] test: fix flaky integration tests
+[2025-04-15T12:48:00] perf: improve image loading speed
