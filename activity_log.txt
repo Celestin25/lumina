@@ -80,3 +80,4 @@
 [2025-04-14T10:49:00] feat: add export to csv feature
 [2025-04-16T15:55:00] chore: simple config change
 [2025-04-16T14:11:00] perf: improve image loading speed
+[2025-04-17T11:47:00] chore: cleanup logs
