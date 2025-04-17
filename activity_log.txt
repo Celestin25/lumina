@@ -98,3 +98,4 @@
 [2025-04-16T13:20:00] refactor: clean up legacy code
 [2025-04-16T14:16:00] fix: resolve race condition in api
 [2025-04-16T17:57:00] style: update button colors
+[2025-04-17T09:15:00] refactor: split large components
