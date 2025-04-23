@@ -105,3 +105,4 @@
 [2025-04-18T10:23:00] refactor: optimize database queries
 [2025-04-18T10:40:00] feat: add export to csv feature
 [2025-04-21T15:55:00] fix: handle null states in profile
+[2025-04-23T12:25:00] refactor: clean up legacy code
