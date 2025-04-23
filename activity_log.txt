@@ -90,3 +90,4 @@
 [2025-04-18T14:33:00] chore: simple config change
 [2025-04-21T11:46:00] perf: improve image loading speed
 [2025-04-23T11:12:00] fix: handle null states in profile
+[2025-04-23T15:33:00] fix: typo in landing page
