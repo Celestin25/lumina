@@ -109,3 +109,4 @@
 [2025-04-23T17:17:00] refactor: split large components
 [2025-04-24T17:28:00] feat: add export to csv feature
 [2025-04-24T11:16:00] refactor: optimize database queries
+[2025-04-24T12:53:00] feat: implement search functionality
