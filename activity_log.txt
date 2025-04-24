@@ -91,3 +91,4 @@
 [2025-04-21T11:46:00] perf: improve image loading speed
 [2025-04-23T11:12:00] fix: handle null states in profile
 [2025-04-23T15:33:00] fix: typo in landing page
+[2025-04-24T14:21:00] docs: update api documentation
