@@ -116,3 +116,4 @@
 [2025-04-29T11:57:00] fix: resolve race condition in api
 [2025-04-30T10:30:00] chore: cleanup logs
 [2025-04-30T17:56:00] style: update button colors
+[2025-05-05T11:46:00] docs: update api documentation
