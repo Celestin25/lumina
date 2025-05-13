@@ -117,3 +117,4 @@
 [2025-05-09T16:51:00] test: add unit tests for user service
 [2025-05-12T10:46:00] chore: simple config change
 [2025-05-12T11:23:00] refactor: split large components
+[2025-05-13T14:33:00] fix: resolve race condition in api
