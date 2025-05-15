@@ -120,3 +120,4 @@
 [2025-05-13T14:33:00] fix: resolve race condition in api
 [2025-05-15T12:51:00] chore: simple config change
 [2025-05-15T11:34:00] chore: update dependencies
+[2025-05-15T17:46:00] feat: integrate payment gateway
