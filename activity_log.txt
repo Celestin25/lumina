@@ -122,3 +122,4 @@
 [2025-05-15T11:34:00] chore: update dependencies
 [2025-05-15T17:46:00] feat: integrate payment gateway
 [2025-05-20T14:22:00] docs: update api documentation
+[2025-05-20T17:40:00] style: improve dashboard responsiveness
