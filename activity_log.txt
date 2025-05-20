@@ -134,3 +134,4 @@
 [2025-05-15T09:48:00] test: fix flaky integration tests
 [2025-05-16T10:29:00] refactor: clean up legacy code
 [2025-05-19T13:56:00] fix: handle null states in profile
+[2025-05-20T11:45:00] fix: navigation bar overflow issue
