@@ -137,3 +137,4 @@
 [2025-05-20T11:45:00] fix: navigation bar overflow issue
 [2025-05-20T14:22:00] fix: typo in landing page
 [2025-05-21T11:27:00] chore: cleanup logs
+[2025-05-21T15:06:00] feat: add export to csv feature
