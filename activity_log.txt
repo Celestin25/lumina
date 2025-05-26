@@ -139,3 +139,4 @@
 [2025-05-21T11:27:00] chore: cleanup logs
 [2025-05-21T15:06:00] feat: add export to csv feature
 [2025-05-23T13:30:00] fix: handle null states in profile
+[2025-05-26T15:35:00] test: fix flaky integration tests
