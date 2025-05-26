@@ -128,3 +128,4 @@
 [2025-05-22T16:38:00] chore: cleanup logs
 [2025-05-22T09:00:00] feat: add export to csv feature
 [2025-05-23T09:53:00] feat: implement search functionality
+[2025-05-26T16:07:00] refactor: optimize database queries
