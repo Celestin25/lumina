@@ -132,3 +132,4 @@
 [2025-05-26T12:16:00] fix: handle null states in profile
 [2025-05-26T09:35:00] style: improve dashboard responsiveness
 [2025-05-27T14:47:00] chore: update dependencies
+[2025-05-27T11:07:00] test: fix flaky integration tests
