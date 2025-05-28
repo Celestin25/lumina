@@ -142,3 +142,4 @@
 [2025-05-26T15:35:00] test: fix flaky integration tests
 [2025-05-26T11:00:00] refactor: optimize database queries
 [2025-05-26T16:29:00] fix: resolve race condition in api
+[2025-05-28T10:09:00] docs: update api documentation
