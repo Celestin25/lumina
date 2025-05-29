@@ -135,3 +135,4 @@
 [2025-05-27T11:07:00] test: fix flaky integration tests
 [2025-05-28T13:43:00] refactor: optimize database queries
 [2025-05-28T15:36:00] chore: cleanup logs
+[2025-05-29T14:39:00] fix: resolve race condition in api
