@@ -145,3 +145,4 @@
 [2025-05-28T10:09:00] docs: update api documentation
 [2025-05-29T11:40:00] chore: update dependencies
 [2025-05-29T16:40:00] test: add unit tests for user service
+[2025-05-29T12:45:00] chore: cleanup logs
