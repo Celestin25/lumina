@@ -149,3 +149,4 @@
 [2025-05-29T12:04:00] feat: integrate payment gateway
 [2025-05-30T11:40:00] test: add unit tests for user service
 [2025-05-30T11:50:00] feat: implement search functionality
+[2025-06-02T15:29:00] feat: integrate payment gateway
