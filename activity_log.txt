@@ -149,3 +149,4 @@
 [2025-06-06T12:01:00] fix: resolve race condition in api
 [2025-06-06T17:08:00] feat: update user authentication flow
 [2025-06-09T10:35:00] feat: add export to csv feature
+[2025-06-10T15:23:00] style: update button colors
