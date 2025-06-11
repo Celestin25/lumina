@@ -151,3 +151,4 @@
 [2025-06-09T10:35:00] feat: add export to csv feature
 [2025-06-10T15:23:00] style: update button colors
 [2025-06-11T17:17:00] chore: simple config change
+[2025-06-11T12:22:00] chore: simple config change
