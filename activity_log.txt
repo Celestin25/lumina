@@ -156,3 +156,4 @@
 [2025-06-11T15:46:00] test: fix flaky integration tests
 [2025-06-12T10:43:00] test: add unit tests for user service
 [2025-06-16T17:19:00] test: fix flaky integration tests
+[2025-06-17T15:01:00] fix: typo in landing page
