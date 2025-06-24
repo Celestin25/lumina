@@ -170,3 +170,4 @@
 [2025-06-20T16:56:00] refactor: split large components
 [2025-06-23T17:52:00] feat: add export to csv feature
 [2025-06-23T13:29:00] perf: improve image loading speed
+[2025-06-24T14:00:00] feat: integrate payment gateway
