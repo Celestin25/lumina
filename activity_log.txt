@@ -171,3 +171,4 @@
 [2025-06-23T17:52:00] feat: add export to csv feature
 [2025-06-23T13:29:00] perf: improve image loading speed
 [2025-06-24T14:00:00] feat: integrate payment gateway
+[2025-06-24T10:41:00] fix: handle null states in profile
