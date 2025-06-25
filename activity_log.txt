@@ -172,3 +172,4 @@
 [2025-06-23T13:29:00] perf: improve image loading speed
 [2025-06-24T14:00:00] feat: integrate payment gateway
 [2025-06-24T10:41:00] fix: handle null states in profile
+[2025-06-25T12:33:00] fix: typo in landing page
