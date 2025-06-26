@@ -175,3 +175,4 @@
 [2025-06-25T12:33:00] fix: typo in landing page
 [2025-06-25T10:34:00] chore: simple config change
 [2025-06-26T16:48:00] chore: update dependencies
+[2025-06-26T14:33:00] perf: improve image loading speed
