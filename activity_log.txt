@@ -173,3 +173,4 @@
 [2025-06-25T11:49:00] feat: update user authentication flow
 [2025-06-25T15:06:00] feat: add export to csv feature
 [2025-06-26T11:53:00] feat: add export to csv feature
+[2025-06-27T12:16:00] fix: handle null states in profile
