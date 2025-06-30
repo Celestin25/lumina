@@ -174,3 +174,4 @@
 [2025-06-25T15:06:00] feat: add export to csv feature
 [2025-06-26T11:53:00] feat: add export to csv feature
 [2025-06-27T12:16:00] fix: handle null states in profile
+[2025-06-30T12:58:00] fix: typo in landing page
