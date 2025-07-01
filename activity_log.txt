@@ -175,3 +175,4 @@
 [2025-06-26T11:53:00] feat: add export to csv feature
 [2025-06-27T12:16:00] fix: handle null states in profile
 [2025-06-30T12:58:00] fix: typo in landing page
+[2025-07-01T09:20:00] perf: improve image loading speed
