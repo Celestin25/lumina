@@ -190,3 +190,4 @@
 [2025-07-07T17:39:00] test: fix flaky integration tests
 [2025-07-08T13:23:00] chore: simple config change
 [2025-07-09T14:43:00] fix: resolve race condition in api
+[2025-07-09T11:50:00] chore: cleanup logs
