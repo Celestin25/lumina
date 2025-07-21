@@ -204,3 +204,4 @@
 [2025-07-18T15:25:00] feat: implement search functionality
 [2025-07-21T13:09:00] fix: navigation bar overflow issue
 [2025-07-21T16:00:00] refactor: clean up legacy code
+[2025-07-21T11:49:00] fix: typo in landing page
