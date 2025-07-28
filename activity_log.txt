@@ -220,3 +220,4 @@
 [2025-07-25T14:25:00] feat: integrate payment gateway
 [2025-07-25T16:44:00] docs: update api documentation
 [2025-07-25T13:34:00] docs: update api documentation
+[2025-07-28T11:08:00] fix: typo in landing page
