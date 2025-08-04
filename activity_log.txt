@@ -215,3 +215,4 @@
 [2025-07-31T15:18:00] refactor: clean up legacy code
 [2025-08-01T11:43:00] perf: improve image loading speed
 [2025-08-04T17:07:00] style: update button colors
+[2025-08-04T11:08:00] docs: update api documentation
