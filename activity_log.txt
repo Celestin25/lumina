@@ -219,3 +219,4 @@
 [2025-08-05T09:44:00] style: update button colors
 [2025-08-05T16:49:00] fix: typo in landing page
 [2025-08-06T09:22:00] chore: update dependencies
+[2025-08-06T12:51:00] feat: update user authentication flow
