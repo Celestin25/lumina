@@ -249,3 +249,4 @@
 [2025-08-21T14:42:00] feat: add export to csv feature
 [2025-08-21T17:51:00] chore: simple config change
 [2025-08-22T11:22:00] test: fix flaky integration tests
+[2025-08-26T12:26:00] refactor: optimize database queries
