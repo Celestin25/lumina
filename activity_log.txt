@@ -4419,3 +4419,4 @@
 [2025-08-27T09:23:55] test: added unit tests (Realistic Backfill)
 [2025-08-27T12:13:09] docs: updated readme (Realistic Backfill)
 [2025-08-27T09:10:06] wip: working on feature (Realistic Backfill)
+[2025-08-27T17:45:39] refactor: slightly improved performance (Realistic Backfill)
