@@ -265,3 +265,4 @@
 [2025-09-09T13:27:00] refactor: clean up legacy code
 [2025-09-09T11:42:00] feat: add export to csv feature
 [2025-09-11T10:07:00] feat: implement search functionality
+[2025-09-15T09:47:00] fix: resolve race condition in api
