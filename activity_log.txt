@@ -277,3 +277,4 @@
 [2025-09-24T09:26:00] feat: update user authentication flow
 [2025-09-24T17:03:00] refactor: optimize database queries
 [2025-09-25T10:55:00] feat: add export to csv feature
+[2025-09-25T17:51:00] feat: integrate payment gateway
