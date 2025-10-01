@@ -9,3 +9,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-01 13:55` feat(search): implement full-text search with debounce and highlighted results
 - `2025-10-01 14:29` feat(upload): support batch image upload with drag-and-drop reorder
 - `2025-10-01 14:40` fix(hydration): resolve client-server mismatch on timestamp display
+- `2025-10-01 14:50` fix(api): return proper 422 status for malformed request payloads
