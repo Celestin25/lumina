@@ -13,3 +13,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-01 16:05` fix(modal): lock body scroll when dialog is active
 - `2025-10-01 16:05` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
 - `2025-10-01 16:06` docs: update README with environment setup and database migration steps
+- `2025-10-01 16:43` feat(payment): integrate Stripe checkout with webhook event handling
