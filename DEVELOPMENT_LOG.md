@@ -16,3 +16,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-01 16:43` feat(payment): integrate Stripe checkout with webhook event handling
 - `2025-10-01 16:59` refactor(api): consolidate error handling into reusable middleware factory
 - `2025-10-01 17:01` fix(search): trim whitespace from search terms before querying
+- `2025-10-03 09:56` fix(prisma): fix schema migration conflict blocking production deploy
