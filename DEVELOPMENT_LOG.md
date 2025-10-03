@@ -20,3 +20,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-03 11:30` feat(dashboard): build revenue analytics with recharts and date-range picker
 - `2025-10-03 12:12` refactor: enforce strict TypeScript mode and resolve all implicit any types
 - `2025-10-03 12:50` perf: optimize font loading with next/font and preload directives
+- `2025-10-03 12:54` refactor(hooks): consolidate auth state management into useAuth context
