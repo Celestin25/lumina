@@ -298,3 +298,4 @@
 [2025-10-06T13:11:00] feat: integrate payment gateway
 [2025-10-06T11:51:00] test: fix flaky integration tests
 [2025-10-06T15:09:00] chore: cleanup logs
+[2025-10-06T14:22:00] fix: typo in landing page
