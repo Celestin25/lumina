@@ -23,3 +23,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-03 12:54` refactor(hooks): consolidate auth state management into useAuth context
 - `2025-10-03 14:02` chore: set up GitHub Actions CI with build, type-check and test steps
 - `2025-10-03 14:14` fix(search): trim whitespace from search terms before querying
+- `2025-10-06 10:00` refactor(components): split ModelCard into composable atomic components
