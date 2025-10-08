@@ -27,3 +27,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-06 10:00` feat(upload): support batch image upload with drag-and-drop reorder
 - `2025-10-06 10:25` feat(admin): build user management table with sort, filter and bulk actions
 - `2025-10-06 10:49` feat(notifications): build real-time push notifications with SSE
+- `2025-10-08 11:16` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
