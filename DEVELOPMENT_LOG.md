@@ -30,3 +30,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-08 11:16` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
 - `2025-10-09 09:01` feat(admin): build user management table with sort, filter and bulk actions
 - `2025-10-09 10:17` feat(models): add profile verification badge and approval workflow
+- `2025-10-09 10:42` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
