@@ -37,3 +37,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-09 14:33` fix(styles): resolve z-index stacking collision between modal and header
 - `2025-10-10 10:40` feat(ui): add dark mode toggle with system preference fallback
 - `2025-10-10 11:34` fix(routing): handle 404 gracefully with fallback UI and back navigation
+- `2025-10-10 11:55` feat(seo): add structured data markup and dynamic OpenGraph meta tags
