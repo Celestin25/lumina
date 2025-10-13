@@ -40,3 +40,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-10 11:55` feat(seo): add structured data markup and dynamic OpenGraph meta tags
 - `2025-10-12 10:36` fix(auth): prevent session fixation by regenerating ID after login
 - `2025-10-13 11:11` perf: optimize font loading with next/font and preload directives
+- `2025-10-13 11:23` feat(ui): add dark mode toggle with system preference fallback
