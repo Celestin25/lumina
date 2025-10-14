@@ -43,3 +43,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-13 11:23` feat(ui): add dark mode toggle with system preference fallback
 - `2025-10-13 11:40` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
 - `2025-10-14 09:24` feat(analytics): integrate client-side event tracking telemetry
+- `2025-10-14 10:58` feat(auth): implement JWT refresh token rotation and device session tracking
