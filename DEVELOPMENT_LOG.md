@@ -44,3 +44,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-13 11:40` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
 - `2025-10-14 09:24` feat(analytics): integrate client-side event tracking telemetry
 - `2025-10-14 10:58` feat(auth): implement JWT refresh token rotation and device session tracking
+- `2025-10-14 11:02` feat(seo): add structured data markup and dynamic OpenGraph meta tags
