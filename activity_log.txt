@@ -316,3 +316,4 @@
 [2025-10-14T15:24:00] fix: typo in landing page
 [2025-10-15T15:32:00] perf: improve image loading speed
 [2025-10-15T11:43:00] fix: typo in landing page
+[2025-10-15T16:32:00] fix: handle null states in profile
