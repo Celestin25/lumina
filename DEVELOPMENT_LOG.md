@@ -46,3 +46,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-14 10:58` feat(auth): implement JWT refresh token rotation and device session tracking
 - `2025-10-14 11:02` feat(seo): add structured data markup and dynamic OpenGraph meta tags
 - `2025-10-14 11:18` fix(search): trim whitespace from search terms before querying
+- `2025-10-15 10:08` fix(forms): enforce client-side validation before hitting API endpoints
