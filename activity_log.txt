@@ -318,3 +318,4 @@
 [2025-10-15T11:43:00] fix: typo in landing page
 [2025-10-15T16:32:00] fix: handle null states in profile
 [2025-10-15T17:53:00] style: improve dashboard responsiveness
+[2025-10-16T09:29:00] fix: resolve race condition in api
