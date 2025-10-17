@@ -51,3 +51,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-17 10:15` feat(api): add rate limiting middleware with Redis-backed token bucket
 - `2025-10-17 11:11` feat(i18n): add locale switcher with persistent preference in cookies
 - `2025-10-17 11:19` feat(models): add profile verification badge and approval workflow
+- `2025-10-17 11:43` fix(prisma): fix schema migration conflict blocking production deploy
