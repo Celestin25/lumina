@@ -48,3 +48,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-14 11:18` fix(search): trim whitespace from search terms before querying
 - `2025-10-15 10:08` fix(forms): enforce client-side validation before hitting API endpoints
 - `2025-10-17 10:08` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
+- `2025-10-17 10:15` feat(api): add rate limiting middleware with Redis-backed token bucket
