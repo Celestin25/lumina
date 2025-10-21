@@ -54,3 +54,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-17 11:43` fix(prisma): fix schema migration conflict blocking production deploy
 - `2025-10-21 10:25` fix(routing): handle 404 gracefully with fallback UI and back navigation
 - `2025-10-21 11:41` docs: update README with environment setup and database migration steps
+- `2025-10-21 11:50` fix(nav): correct active route indicator on nested paths
