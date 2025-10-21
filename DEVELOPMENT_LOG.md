@@ -52,3 +52,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-17 11:11` feat(i18n): add locale switcher with persistent preference in cookies
 - `2025-10-17 11:19` feat(models): add profile verification badge and approval workflow
 - `2025-10-17 11:43` fix(prisma): fix schema migration conflict blocking production deploy
+- `2025-10-21 10:25` fix(routing): handle 404 gracefully with fallback UI and back navigation
