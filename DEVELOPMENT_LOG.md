@@ -58,3 +58,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-21 11:52` fix(api): return proper 422 status for malformed request payloads
 - `2025-10-22 11:01` feat(analytics): integrate client-side event tracking telemetry
 - `2025-10-22 13:00` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
+- `2025-10-22 14:07` refactor: extract date formatting helpers into shared utils
