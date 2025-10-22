@@ -327,3 +327,4 @@
 [2025-10-21T15:34:00] docs: update api documentation
 [2025-10-21T14:01:00] feat: integrate payment gateway
 [2025-10-22T09:09:00] feat: add export to csv feature
+[2025-10-22T16:11:00] test: fix flaky integration tests
