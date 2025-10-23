@@ -64,3 +64,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-23 11:32` feat(media): implement WebP conversion on upload pipeline
 - `2025-10-23 12:31` fix(forms): enforce client-side validation before hitting API endpoints
 - `2025-10-23 13:13` fix(forms): enforce client-side validation before hitting API endpoints
+- `2025-10-23 14:32` feat(search): implement full-text search with debounce and highlighted results
