@@ -60,3 +60,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-22 13:00` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
 - `2025-10-22 14:07` refactor: extract date formatting helpers into shared utils
 - `2025-10-23 11:19` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
+- `2025-10-23 11:27` chore: set up GitHub Actions CI with build, type-check and test steps
