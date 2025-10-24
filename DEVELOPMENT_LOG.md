@@ -72,3 +72,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-24 13:37` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
 - `2025-10-24 14:34` test: add E2E tests for registration, login and profile update flows
 - `2025-10-24 15:02` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
+- `2025-10-24 15:44` feat(profile): implement step-by-step profile completion wizard
