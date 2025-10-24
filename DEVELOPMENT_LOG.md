@@ -65,3 +65,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-23 12:31` fix(forms): enforce client-side validation before hitting API endpoints
 - `2025-10-23 13:13` fix(forms): enforce client-side validation before hitting API endpoints
 - `2025-10-23 14:32` feat(search): implement full-text search with debounce and highlighted results
+- `2025-10-24 10:52` feat(ui): add dark mode toggle with system preference fallback
