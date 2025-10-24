@@ -67,3 +67,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-23 14:32` feat(search): implement full-text search with debounce and highlighted results
 - `2025-10-24 10:52` feat(ui): add dark mode toggle with system preference fallback
 - `2025-10-24 11:07` docs: update README with environment setup and database migration steps
+- `2025-10-24 12:36` feat(dashboard): build revenue analytics with recharts and date-range picker
