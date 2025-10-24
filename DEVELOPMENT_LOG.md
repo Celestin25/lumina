@@ -69,3 +69,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-24 11:07` docs: update README with environment setup and database migration steps
 - `2025-10-24 12:36` feat(dashboard): build revenue analytics with recharts and date-range picker
 - `2025-10-24 12:55` feat(analytics): integrate client-side event tracking telemetry
+- `2025-10-24 13:37` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
