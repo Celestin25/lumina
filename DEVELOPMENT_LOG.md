@@ -74,3 +74,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-24 15:02` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
 - `2025-10-24 15:44` feat(profile): implement step-by-step profile completion wizard
 - `2025-10-27 11:08` feat(profile): implement step-by-step profile completion wizard
+- `2025-10-27 11:46` fix(routing): handle 404 gracefully with fallback UI and back navigation
