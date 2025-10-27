@@ -75,3 +75,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-24 15:44` feat(profile): implement step-by-step profile completion wizard
 - `2025-10-27 11:08` feat(profile): implement step-by-step profile completion wizard
 - `2025-10-27 11:46` fix(routing): handle 404 gracefully with fallback UI and back navigation
+- `2025-10-27 12:15` feat(filter): add multi-tag faceted filtering to catalog
