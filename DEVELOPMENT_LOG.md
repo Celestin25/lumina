@@ -78,3 +78,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-27 12:15` feat(filter): add multi-tag faceted filtering to catalog
 - `2025-10-28 11:20` fix(perf): memoize expensive filter computations to prevent extra renders
 - `2025-10-28 12:23` fix(perf): memoize expensive filter computations to prevent extra renders
+- `2025-10-28 12:35` fix(prisma): fix schema migration conflict blocking production deploy
