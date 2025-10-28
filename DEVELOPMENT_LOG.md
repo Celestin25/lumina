@@ -77,3 +77,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-27 11:46` fix(routing): handle 404 gracefully with fallback UI and back navigation
 - `2025-10-27 12:15` feat(filter): add multi-tag faceted filtering to catalog
 - `2025-10-28 11:20` fix(perf): memoize expensive filter computations to prevent extra renders
+- `2025-10-28 12:23` fix(perf): memoize expensive filter computations to prevent extra renders
