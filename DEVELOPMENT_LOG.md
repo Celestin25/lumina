@@ -82,3 +82,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-28 12:51` feat(profile): implement step-by-step profile completion wizard
 - `2025-10-28 12:58` feat(analytics): integrate client-side event tracking telemetry
 - `2025-10-29 10:53` feat(search): implement full-text search with debounce and highlighted results
+- `2025-10-29 11:33` refactor(api): consolidate error handling into reusable middleware factory
