@@ -337,3 +337,4 @@
 [2025-10-24T17:18:00] test: add unit tests for user service
 [2025-10-27T11:36:00] test: fix flaky integration tests
 [2025-10-29T12:41:00] test: fix flaky integration tests
+[2025-10-29T14:06:00] fix: resolve race condition in api
