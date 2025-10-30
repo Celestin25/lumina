@@ -87,3 +87,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-30 12:43` feat(profile): implement step-by-step profile completion wizard
 - `2025-10-30 13:09` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
 - `2025-10-30 13:13` chore: add Zod schema validation for all environment variables on startup
+- `2025-10-30 13:30` feat(ui): add dark mode toggle with system preference fallback
