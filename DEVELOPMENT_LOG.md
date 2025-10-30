@@ -84,3 +84,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-29 10:53` feat(search): implement full-text search with debounce and highlighted results
 - `2025-10-29 11:33` refactor(api): consolidate error handling into reusable middleware factory
 - `2025-10-29 12:42` refactor(hooks): consolidate auth state management into useAuth context
+- `2025-10-30 12:43` feat(profile): implement step-by-step profile completion wizard
