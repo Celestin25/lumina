@@ -92,3 +92,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-30 13:52` fix(images): handle broken image URLs with graceful lazy-load fallback
 - `2025-10-30 14:19` test: add E2E tests for registration, login and profile update flows
 - `2025-10-30 15:06` fix(perf): memoize expensive filter computations to prevent extra renders
+- `2025-10-30 17:54` chore: add Zod schema validation for all environment variables on startup
