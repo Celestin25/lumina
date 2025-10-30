@@ -338,3 +338,4 @@
 [2025-10-27T11:36:00] test: fix flaky integration tests
 [2025-10-29T12:41:00] test: fix flaky integration tests
 [2025-10-29T14:06:00] fix: resolve race condition in api
+[2025-10-30T13:00:00] fix: navigation bar overflow issue
