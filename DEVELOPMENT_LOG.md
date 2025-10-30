@@ -90,3 +90,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-30 13:30` feat(ui): add dark mode toggle with system preference fallback
 - `2025-10-30 13:34` refactor(hooks): consolidate auth state management into useAuth context
 - `2025-10-30 13:52` fix(images): handle broken image URLs with graceful lazy-load fallback
+- `2025-10-30 14:19` test: add E2E tests for registration, login and profile update flows
