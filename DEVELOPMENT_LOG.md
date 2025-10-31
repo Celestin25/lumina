@@ -94,3 +94,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-30 15:06` fix(perf): memoize expensive filter computations to prevent extra renders
 - `2025-10-30 17:54` chore: add Zod schema validation for all environment variables on startup
 - `2025-10-31 10:38` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
+- `2025-10-31 10:54` fix(images): handle broken image URLs with graceful lazy-load fallback
