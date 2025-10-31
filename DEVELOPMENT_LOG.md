@@ -95,3 +95,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-30 17:54` chore: add Zod schema validation for all environment variables on startup
 - `2025-10-31 10:38` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
 - `2025-10-31 10:54` fix(images): handle broken image URLs with graceful lazy-load fallback
+- `2025-10-31 10:55` docs: update README with environment setup and database migration steps
