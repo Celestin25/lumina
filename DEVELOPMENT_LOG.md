@@ -98,3 +98,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-31 10:55` docs: update README with environment setup and database migration steps
 - `2025-11-03 11:03` fix(search): trim whitespace from search terms before querying
 - `2025-11-03 11:36` feat(ui): add dark mode toggle with system preference fallback
+- `2025-11-03 12:17` feat(admin): build user management table with sort, filter and bulk actions
