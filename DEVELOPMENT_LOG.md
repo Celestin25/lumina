@@ -96,3 +96,4 @@ Tracking engineering progress and feature updates.
 - `2025-10-31 10:38` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
 - `2025-10-31 10:54` fix(images): handle broken image URLs with graceful lazy-load fallback
 - `2025-10-31 10:55` docs: update README with environment setup and database migration steps
+- `2025-11-03 11:03` fix(search): trim whitespace from search terms before querying
