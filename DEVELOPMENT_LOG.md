@@ -105,3 +105,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-04 12:36` feat(admin): build user management table with sort, filter and bulk actions
 - `2025-11-04 13:01` feat(analytics): integrate client-side event tracking telemetry
 - `2025-11-04 13:52` fix(db): resolve N+1 query in listing endpoint with Prisma eager loading
+- `2025-11-04 14:59` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
