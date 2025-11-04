@@ -107,3 +107,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-04 13:52` fix(db): resolve N+1 query in listing endpoint with Prisma eager loading
 - `2025-11-04 14:59` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
 - `2025-11-04 15:06` chore: configure Husky pre-commit hooks with lint-staged for auto-format
+- `2025-11-04 17:47` chore: configure Husky pre-commit hooks with lint-staged for auto-format
