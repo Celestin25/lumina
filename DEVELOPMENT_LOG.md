@@ -103,3 +103,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-04 11:38` feat(ui): add dark mode toggle with system preference fallback
 - `2025-11-04 12:09` refactor: extract date formatting helpers into shared utils
 - `2025-11-04 12:36` feat(admin): build user management table with sort, filter and bulk actions
+- `2025-11-04 13:01` feat(analytics): integrate client-side event tracking telemetry
