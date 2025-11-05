@@ -108,3 +108,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-04 14:59` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
 - `2025-11-04 15:06` chore: configure Husky pre-commit hooks with lint-staged for auto-format
 - `2025-11-04 17:47` chore: configure Husky pre-commit hooks with lint-staged for auto-format
+- `2025-11-05 12:16` feat(seo): add structured data markup and dynamic OpenGraph meta tags
