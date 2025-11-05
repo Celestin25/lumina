@@ -113,3 +113,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-05 12:30` fix(nav): correct active route indicator on nested paths
 - `2025-11-05 12:48` feat(payment): integrate Stripe checkout with webhook event handling
 - `2025-11-05 12:59` test: add E2E tests for registration, login and profile update flows
+- `2025-11-05 13:31` fix(styles): resolve z-index stacking collision between modal and header
