@@ -112,3 +112,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-05 12:16` feat(upload): support batch image upload with drag-and-drop reorder
 - `2025-11-05 12:30` fix(nav): correct active route indicator on nested paths
 - `2025-11-05 12:48` feat(payment): integrate Stripe checkout with webhook event handling
+- `2025-11-05 12:59` test: add E2E tests for registration, login and profile update flows
