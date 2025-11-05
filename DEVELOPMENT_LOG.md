@@ -110,3 +110,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-04 17:47` chore: configure Husky pre-commit hooks with lint-staged for auto-format
 - `2025-11-05 12:16` feat(seo): add structured data markup and dynamic OpenGraph meta tags
 - `2025-11-05 12:16` feat(upload): support batch image upload with drag-and-drop reorder
+- `2025-11-05 12:30` fix(nav): correct active route indicator on nested paths
