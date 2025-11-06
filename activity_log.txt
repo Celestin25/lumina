@@ -345,3 +345,4 @@
 [2025-11-03T13:01:00] feat: add export to csv feature
 [2025-11-04T14:45:00] chore: simple config change
 [2025-11-04T15:42:00] chore: simple config change
+[2025-11-06T15:18:00] perf: improve image loading speed
