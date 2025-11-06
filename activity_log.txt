@@ -346,3 +346,4 @@
 [2025-11-04T14:45:00] chore: simple config change
 [2025-11-04T15:42:00] chore: simple config change
 [2025-11-06T15:18:00] perf: improve image loading speed
+[2025-11-06T14:34:00] docs: update api documentation
