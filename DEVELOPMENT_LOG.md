@@ -118,3 +118,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-06 09:23` feat(models): add profile verification badge and approval workflow
 - `2025-11-06 10:10` refactor: enforce strict TypeScript mode and resolve all implicit any types
 - `2025-11-07 10:24` feat(analytics): integrate client-side event tracking telemetry
+- `2025-11-07 10:55` feat(ui): add dark mode toggle with system preference fallback
