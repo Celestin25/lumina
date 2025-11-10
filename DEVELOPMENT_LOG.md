@@ -120,3 +120,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-07 10:24` feat(analytics): integrate client-side event tracking telemetry
 - `2025-11-07 10:55` feat(ui): add dark mode toggle with system preference fallback
 - `2025-11-10 11:32` fix(nav): correct active route indicator on nested paths
+- `2025-11-10 13:02` feat(upload): support batch image upload with drag-and-drop reorder
