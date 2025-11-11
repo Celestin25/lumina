@@ -125,3 +125,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-11 11:16` chore: configure Husky pre-commit hooks with lint-staged for auto-format
 - `2025-11-11 11:46` fix(nav): correct active route indicator on nested paths
 - `2025-11-11 12:36` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
+- `2025-11-11 12:55` feat(profile): implement step-by-step profile completion wizard
