@@ -122,3 +122,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-10 11:32` fix(nav): correct active route indicator on nested paths
 - `2025-11-10 13:02` feat(upload): support batch image upload with drag-and-drop reorder
 - `2025-11-10 13:39` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
+- `2025-11-11 11:16` chore: configure Husky pre-commit hooks with lint-staged for auto-format
