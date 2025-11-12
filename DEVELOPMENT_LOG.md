@@ -128,3 +128,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-11 12:55` feat(profile): implement step-by-step profile completion wizard
 - `2025-11-12 10:36` feat(api): add rate limiting middleware with Redis-backed token bucket
 - `2025-11-12 11:05` docs: update README with environment setup and database migration steps
+- `2025-11-12 12:10` fix(api): return proper 422 status for malformed request payloads
