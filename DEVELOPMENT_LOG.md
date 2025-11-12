@@ -127,3 +127,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-11 12:36` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
 - `2025-11-11 12:55` feat(profile): implement step-by-step profile completion wizard
 - `2025-11-12 10:36` feat(api): add rate limiting middleware with Redis-backed token bucket
+- `2025-11-12 11:05` docs: update README with environment setup and database migration steps
