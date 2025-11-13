@@ -130,3 +130,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-12 11:05` docs: update README with environment setup and database migration steps
 - `2025-11-12 12:10` fix(api): return proper 422 status for malformed request payloads
 - `2025-11-12 13:45` fix(hydration): resolve client-server mismatch on timestamp display
+- `2025-11-13 11:09` refactor(api): consolidate error handling into reusable middleware factory
