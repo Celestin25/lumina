@@ -360,3 +360,4 @@
 [2025-11-12T15:55:00] feat: implement search functionality
 [2025-11-12T16:19:00] style: update button colors
 [2025-11-17T13:14:00] feat: implement search functionality
+[2025-11-18T17:56:00] fix: resolve race condition in api
