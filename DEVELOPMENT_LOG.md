@@ -135,3 +135,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-19 11:32` fix(prisma): fix schema migration conflict blocking production deploy
 - `2025-11-19 11:56` feat(dashboard): build revenue analytics with recharts and date-range picker
 - `2025-11-19 12:12` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
+- `2025-11-19 12:24` perf: optimize font loading with next/font and preload directives
