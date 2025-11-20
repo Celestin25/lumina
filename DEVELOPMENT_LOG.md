@@ -137,3 +137,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-19 12:12` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
 - `2025-11-19 12:24` perf: optimize font loading with next/font and preload directives
 - `2025-11-19 12:35` feat(models): add profile verification badge and approval workflow
+- `2025-11-20 09:02` refactor: extract date formatting helpers into shared utils
