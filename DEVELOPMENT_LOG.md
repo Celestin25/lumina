@@ -139,3 +139,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-19 12:35` feat(models): add profile verification badge and approval workflow
 - `2025-11-20 09:02` refactor: extract date formatting helpers into shared utils
 - `2025-11-21 11:56` feat(export): add CSV export for transaction summaries
+- `2025-11-21 13:16` feat(upload): support batch image upload with drag-and-drop reorder
