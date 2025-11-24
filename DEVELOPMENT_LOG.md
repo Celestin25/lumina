@@ -141,3 +141,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-21 11:56` feat(export): add CSV export for transaction summaries
 - `2025-11-21 13:16` feat(upload): support batch image upload with drag-and-drop reorder
 - `2025-11-24 10:00` fix(perf): memoize expensive filter computations to prevent extra renders
+- `2025-11-24 10:06` feat(analytics): integrate client-side event tracking telemetry
