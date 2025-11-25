@@ -143,3 +143,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-24 10:00` fix(perf): memoize expensive filter computations to prevent extra renders
 - `2025-11-24 10:06` feat(analytics): integrate client-side event tracking telemetry
 - `2025-11-24 10:23` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
+- `2025-11-25 13:07` perf: optimize font loading with next/font and preload directives
