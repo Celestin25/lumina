@@ -146,3 +146,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-25 13:07` perf: optimize font loading with next/font and preload directives
 - `2025-11-26 10:03` fix(hydration): resolve client-server mismatch on timestamp display
 - `2025-11-26 10:07` refactor: enforce strict TypeScript mode and resolve all implicit any types
+- `2025-11-26 10:17` refactor(api): consolidate error handling into reusable middleware factory
