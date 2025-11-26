@@ -373,3 +373,4 @@
 [2025-11-25T13:25:00] feat: add export to csv feature
 [2025-11-25T15:44:00] feat: integrate payment gateway
 [2025-11-25T09:25:00] chore: simple config change
+[2025-11-26T17:43:00] fix: handle null states in profile
