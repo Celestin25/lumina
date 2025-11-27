@@ -154,3 +154,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-27 11:58` fix(auth): prevent session fixation by regenerating ID after login
 - `2025-11-27 12:23` chore: configure Husky pre-commit hooks with lint-staged for auto-format
 - `2025-11-27 13:02` fix(auth): prevent session fixation by regenerating ID after login
+- `2025-11-27 13:02` fix(perf): memoize expensive filter computations to prevent extra renders
