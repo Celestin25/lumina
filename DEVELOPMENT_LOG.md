@@ -158,3 +158,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-27 13:27` refactor(components): split ModelCard into composable atomic components
 - `2025-11-27 13:38` refactor: extract date formatting helpers into shared utils
 - `2025-11-27 14:27` fix(db): resolve N+1 query in listing endpoint with Prisma eager loading
+- `2025-11-27 15:24` fix(styles): resolve z-index stacking collision between modal and header
