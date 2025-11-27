@@ -149,3 +149,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-26 10:17` refactor(api): consolidate error handling into reusable middleware factory
 - `2025-11-26 10:34` feat(filter): add multi-tag faceted filtering to catalog
 - `2025-11-26 11:07` refactor: extract date formatting helpers into shared utils
+- `2025-11-27 10:25` fix(perf): memoize expensive filter computations to prevent extra renders
