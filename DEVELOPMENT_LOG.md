@@ -156,3 +156,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-27 13:02` fix(auth): prevent session fixation by regenerating ID after login
 - `2025-11-27 13:02` fix(perf): memoize expensive filter computations to prevent extra renders
 - `2025-11-27 13:27` refactor(components): split ModelCard into composable atomic components
+- `2025-11-27 13:38` refactor: extract date formatting helpers into shared utils
