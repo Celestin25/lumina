@@ -151,3 +151,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-26 11:07` refactor: extract date formatting helpers into shared utils
 - `2025-11-27 10:25` fix(perf): memoize expensive filter computations to prevent extra renders
 - `2025-11-27 11:27` feat(notifications): build real-time push notifications with SSE
+- `2025-11-27 11:58` fix(auth): prevent session fixation by regenerating ID after login
