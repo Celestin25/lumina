@@ -161,3 +161,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-27 15:24` fix(styles): resolve z-index stacking collision between modal and header
 - `2025-11-27 15:27` fix(perf): memoize expensive filter computations to prevent extra renders
 - `2025-11-27 15:39` feat(upload): support batch image upload with drag-and-drop reorder
+- `2025-11-27 17:54` chore: add Zod schema validation for all environment variables on startup
