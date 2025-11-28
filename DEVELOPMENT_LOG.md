@@ -165,3 +165,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-28 09:49` fix(db): resolve N+1 query in listing endpoint with Prisma eager loading
 - `2025-11-28 10:27` feat(upload): support batch image upload with drag-and-drop reorder
 - `2025-11-28 12:03` fix(api): return proper 422 status for malformed request payloads
+- `2025-11-28 12:11` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
