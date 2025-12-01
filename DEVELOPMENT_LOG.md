@@ -166,3 +166,4 @@ Tracking engineering progress and feature updates.
 - `2025-11-28 10:27` feat(upload): support batch image upload with drag-and-drop reorder
 - `2025-11-28 12:03` fix(api): return proper 422 status for malformed request payloads
 - `2025-11-28 12:11` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
+- `2025-12-01 12:55` refactor(api): consolidate error handling into reusable middleware factory
