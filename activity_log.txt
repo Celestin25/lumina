@@ -394,3 +394,4 @@
 [2025-12-03T09:23:00] feat: add export to csv feature
 [2025-12-03T15:33:00] refactor: split large components
 [2025-12-04T14:48:00] style: update button colors
+[2025-12-04T09:55:00] chore: update dependencies
