@@ -169,3 +169,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-01 12:55` refactor(api): consolidate error handling into reusable middleware factory
 - `2025-12-04 11:06` fix(auth): prevent session fixation by regenerating ID after login
 - `2025-12-04 12:35` chore: configure Husky pre-commit hooks with lint-staged for auto-format
+- `2025-12-04 12:47` feat(export): add CSV export for transaction summaries
