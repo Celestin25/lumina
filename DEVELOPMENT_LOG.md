@@ -175,3 +175,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-05 14:52` feat(models): add profile verification badge and approval workflow
 - `2025-12-05 16:28` feat(auth): implement JWT refresh token rotation and device session tracking
 - `2025-12-05 17:11` perf: optimize font loading with next/font and preload directives
+- `2025-12-05 17:21` feat(seo): add structured data markup and dynamic OpenGraph meta tags
