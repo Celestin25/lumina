@@ -172,3 +172,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-04 12:47` feat(export): add CSV export for transaction summaries
 - `2025-12-05 13:13` refactor: enforce strict TypeScript mode and resolve all implicit any types
 - `2025-12-05 14:04` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
+- `2025-12-05 14:52` feat(models): add profile verification badge and approval workflow
