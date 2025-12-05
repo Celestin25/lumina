@@ -177,3 +177,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-05 17:11` perf: optimize font loading with next/font and preload directives
 - `2025-12-05 17:21` feat(seo): add structured data markup and dynamic OpenGraph meta tags
 - `2025-12-05 17:45` feat(notifications): build real-time push notifications with SSE
+- `2025-12-05 17:46` fix(forms): enforce client-side validation before hitting API endpoints
