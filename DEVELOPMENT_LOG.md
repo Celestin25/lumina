@@ -180,3 +180,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-05 17:46` fix(forms): enforce client-side validation before hitting API endpoints
 - `2025-12-05 18:05` refactor(components): split ModelCard into composable atomic components
 - `2025-12-05 18:38` feat(seo): add structured data markup and dynamic OpenGraph meta tags
+- `2025-12-05 19:48` refactor(api): consolidate error handling into reusable middleware factory
