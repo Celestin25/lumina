@@ -179,3 +179,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-05 17:45` feat(notifications): build real-time push notifications with SSE
 - `2025-12-05 17:46` fix(forms): enforce client-side validation before hitting API endpoints
 - `2025-12-05 18:05` refactor(components): split ModelCard into composable atomic components
+- `2025-12-05 18:38` feat(seo): add structured data markup and dynamic OpenGraph meta tags
