@@ -184,3 +184,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-08 09:11` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
 - `2025-12-08 10:19` fix(api): return proper 422 status for malformed request payloads
 - `2025-12-08 11:18` refactor(hooks): consolidate auth state management into useAuth context
+- `2025-12-08 12:05` fix(styles): resolve z-index stacking collision between modal and header
