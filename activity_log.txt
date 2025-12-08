@@ -400,3 +400,4 @@
 [2025-12-05T17:13:00] docs: update api documentation
 [2025-12-08T17:01:00] refactor: split large components
 [2025-12-08T12:14:00] fix: navigation bar overflow issue
+[2025-12-08T16:24:00] feat: add export to csv feature
