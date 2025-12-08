@@ -181,3 +181,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-05 18:05` refactor(components): split ModelCard into composable atomic components
 - `2025-12-05 18:38` feat(seo): add structured data markup and dynamic OpenGraph meta tags
 - `2025-12-05 19:48` refactor(api): consolidate error handling into reusable middleware factory
+- `2025-12-08 09:11` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
