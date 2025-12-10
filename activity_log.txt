@@ -402,3 +402,4 @@
 [2025-12-08T12:14:00] fix: navigation bar overflow issue
 [2025-12-08T16:24:00] feat: add export to csv feature
 [2025-12-09T13:11:00] style: improve dashboard responsiveness
+[2025-12-10T14:11:00] style: update button colors
