@@ -188,3 +188,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-08 13:41` fix(styles): resolve z-index stacking collision between modal and header
 - `2025-12-08 14:49` feat(search): implement full-text search with debounce and highlighted results
 - `2025-12-08 15:51` fix(perf): memoize expensive filter computations to prevent extra renders
+- `2025-12-10 11:51` perf: enable Brotli compression and edge caching for static assets
