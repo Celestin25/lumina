@@ -191,3 +191,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-10 11:51` perf: enable Brotli compression and edge caching for static assets
 - `2025-12-10 11:54` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
 - `2025-12-10 12:36` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
+- `2025-12-10 13:30` feat(ui): add dark mode toggle with system preference fallback
