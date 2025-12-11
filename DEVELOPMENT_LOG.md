@@ -197,3 +197,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-11 09:13` fix(nav): correct active route indicator on nested paths
 - `2025-12-11 09:30` fix(forms): enforce client-side validation before hitting API endpoints
 - `2025-12-11 10:41` fix(hydration): resolve client-server mismatch on timestamp display
+- `2025-12-11 11:12` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
