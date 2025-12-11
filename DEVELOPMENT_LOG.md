@@ -195,3 +195,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-10 13:51` refactor: extract date formatting helpers into shared utils
 - `2025-12-11 09:12` feat(upload): support batch image upload with drag-and-drop reorder
 - `2025-12-11 09:13` fix(nav): correct active route indicator on nested paths
+- `2025-12-11 09:30` fix(forms): enforce client-side validation before hitting API endpoints
