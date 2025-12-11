@@ -193,3 +193,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-10 12:36` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
 - `2025-12-10 13:30` feat(ui): add dark mode toggle with system preference fallback
 - `2025-12-10 13:51` refactor: extract date formatting helpers into shared utils
+- `2025-12-11 09:12` feat(upload): support batch image upload with drag-and-drop reorder
