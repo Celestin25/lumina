@@ -201,3 +201,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-11 12:04` chore: configure Husky pre-commit hooks with lint-staged for auto-format
 - `2025-12-12 10:07` perf: optimize font loading with next/font and preload directives
 - `2025-12-12 11:20` docs: update README with environment setup and database migration steps
+- `2025-12-12 11:21` feat(api): add rate limiting middleware with Redis-backed token bucket
