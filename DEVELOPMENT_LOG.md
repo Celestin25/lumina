@@ -200,3 +200,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-11 11:12` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
 - `2025-12-11 12:04` chore: configure Husky pre-commit hooks with lint-staged for auto-format
 - `2025-12-12 10:07` perf: optimize font loading with next/font and preload directives
+- `2025-12-12 11:20` docs: update README with environment setup and database migration steps
