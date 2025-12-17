@@ -206,3 +206,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-17 09:44` feat(notifications): build real-time push notifications with SSE
 - `2025-12-17 10:00` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
 - `2025-12-17 11:16` fix(api): return proper 422 status for malformed request payloads
+- `2025-12-17 11:33` feat(dashboard): build revenue analytics with recharts and date-range picker
