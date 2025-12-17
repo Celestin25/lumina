@@ -216,3 +216,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-17 17:45` feat(api): add rate limiting middleware with Redis-backed token bucket
 - `2025-12-17 18:07` fix(styles): resolve z-index stacking collision between modal and header
 - `2025-12-17 18:30` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
+- `2025-12-17 19:19` fix(prisma): fix schema migration conflict blocking production deploy
