@@ -209,3 +209,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-17 11:33` feat(dashboard): build revenue analytics with recharts and date-range picker
 - `2025-12-17 11:35` feat(filter): add multi-tag faceted filtering to catalog
 - `2025-12-17 11:43` feat(filter): add multi-tag faceted filtering to catalog
+- `2025-12-17 11:56` feat(ui): add dark mode toggle with system preference fallback
