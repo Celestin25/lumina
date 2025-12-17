@@ -204,3 +204,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-12 11:21` feat(api): add rate limiting middleware with Redis-backed token bucket
 - `2025-12-16 09:53` fix(prisma): fix schema migration conflict blocking production deploy
 - `2025-12-17 09:44` feat(notifications): build real-time push notifications with SSE
+- `2025-12-17 10:00` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
