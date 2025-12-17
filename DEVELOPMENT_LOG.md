@@ -205,3 +205,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-16 09:53` fix(prisma): fix schema migration conflict blocking production deploy
 - `2025-12-17 09:44` feat(notifications): build real-time push notifications with SSE
 - `2025-12-17 10:00` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
+- `2025-12-17 11:16` fix(api): return proper 422 status for malformed request payloads
