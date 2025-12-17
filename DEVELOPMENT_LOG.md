@@ -211,3 +211,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-17 11:43` feat(filter): add multi-tag faceted filtering to catalog
 - `2025-12-17 11:56` feat(ui): add dark mode toggle with system preference fallback
 - `2025-12-17 13:48` refactor(hooks): consolidate auth state management into useAuth context
+- `2025-12-17 15:26` fix(api): return proper 422 status for malformed request payloads
