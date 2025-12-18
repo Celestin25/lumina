@@ -219,3 +219,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-17 19:19` fix(prisma): fix schema migration conflict blocking production deploy
 - `2025-12-18 09:05` feat(upload): support batch image upload with drag-and-drop reorder
 - `2025-12-18 09:52` feat(api): add rate limiting middleware with Redis-backed token bucket
+- `2025-12-18 09:53` docs: update README with environment setup and database migration steps
