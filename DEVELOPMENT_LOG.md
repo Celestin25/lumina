@@ -221,3 +221,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-18 09:52` feat(api): add rate limiting middleware with Redis-backed token bucket
 - `2025-12-18 09:53` docs: update README with environment setup and database migration steps
 - `2025-12-18 10:02` feat(dashboard): build revenue analytics with recharts and date-range picker
+- `2025-12-18 12:39` chore: configure Husky pre-commit hooks with lint-staged for auto-format
