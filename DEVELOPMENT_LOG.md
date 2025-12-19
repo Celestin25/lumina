@@ -227,3 +227,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-19 13:01` feat(media): implement WebP conversion on upload pipeline
 - `2025-12-19 13:38` docs: update README with environment setup and database migration steps
 - `2025-12-19 13:39` refactor(hooks): consolidate auth state management into useAuth context
+- `2025-12-19 13:52` feat(models): add profile verification badge and approval workflow
