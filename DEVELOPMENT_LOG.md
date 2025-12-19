@@ -224,3 +224,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-18 12:39` chore: configure Husky pre-commit hooks with lint-staged for auto-format
 - `2025-12-19 11:26` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
 - `2025-12-19 11:53` fix(routing): handle 404 gracefully with fallback UI and back navigation
+- `2025-12-19 13:01` feat(media): implement WebP conversion on upload pipeline
