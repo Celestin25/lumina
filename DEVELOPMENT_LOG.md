@@ -228,3 +228,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-19 13:38` docs: update README with environment setup and database migration steps
 - `2025-12-19 13:39` refactor(hooks): consolidate auth state management into useAuth context
 - `2025-12-19 13:52` feat(models): add profile verification badge and approval workflow
+- `2025-12-22 09:13` fix(modal): lock body scroll when dialog is active
