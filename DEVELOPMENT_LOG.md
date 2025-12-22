@@ -229,3 +229,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-19 13:39` refactor(hooks): consolidate auth state management into useAuth context
 - `2025-12-19 13:52` feat(models): add profile verification badge and approval workflow
 - `2025-12-22 09:13` fix(modal): lock body scroll when dialog is active
+- `2025-12-22 09:29` chore: set up GitHub Actions CI with build, type-check and test steps
