@@ -422,3 +422,4 @@
 [2025-12-19T11:04:00] fix: typo in landing page
 [2025-12-19T13:49:00] style: update button colors
 [2025-12-19T12:32:00] feat: integrate payment gateway
+[2025-12-23T13:09:00] refactor: split large components
