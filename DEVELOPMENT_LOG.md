@@ -235,3 +235,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-24 12:30` feat(notifications): build real-time push notifications with SSE
 - `2025-12-24 13:26` refactor(api): consolidate error handling into reusable middleware factory
 - `2025-12-24 13:32` fix(search): trim whitespace from search terms before querying
+- `2025-12-24 14:19` fix(nav): correct active route indicator on nested paths
