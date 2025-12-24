@@ -232,3 +232,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-22 09:29` chore: set up GitHub Actions CI with build, type-check and test steps
 - `2025-12-22 09:34` fix(auth): prevent session fixation by regenerating ID after login
 - `2025-12-24 12:15` feat(admin): build user management table with sort, filter and bulk actions
+- `2025-12-24 12:30` feat(notifications): build real-time push notifications with SSE
