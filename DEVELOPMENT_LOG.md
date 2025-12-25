@@ -237,3 +237,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-24 13:32` fix(search): trim whitespace from search terms before querying
 - `2025-12-24 14:19` fix(nav): correct active route indicator on nested paths
 - `2025-12-25 10:03` feat(ui): add dark mode toggle with system preference fallback
+- `2025-12-25 10:32` fix(prisma): fix schema migration conflict blocking production deploy
