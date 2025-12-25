@@ -236,3 +236,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-24 13:26` refactor(api): consolidate error handling into reusable middleware factory
 - `2025-12-24 13:32` fix(search): trim whitespace from search terms before querying
 - `2025-12-24 14:19` fix(nav): correct active route indicator on nested paths
+- `2025-12-25 10:03` feat(ui): add dark mode toggle with system preference fallback
