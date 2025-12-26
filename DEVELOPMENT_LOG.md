@@ -248,3 +248,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-26 14:01` perf: optimize font loading with next/font and preload directives
 - `2025-12-26 14:04` fix(images): handle broken image URLs with graceful lazy-load fallback
 - `2025-12-26 14:38` test: add E2E tests for registration, login and profile update flows
+- `2025-12-26 16:18` feat(filter): add multi-tag faceted filtering to catalog
