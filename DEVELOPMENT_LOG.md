@@ -239,3 +239,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-25 10:03` feat(ui): add dark mode toggle with system preference fallback
 - `2025-12-25 10:32` fix(prisma): fix schema migration conflict blocking production deploy
 - `2025-12-25 10:51` feat(upload): support batch image upload with drag-and-drop reorder
+- `2025-12-26 09:24` test: add E2E tests for registration, login and profile update flows
