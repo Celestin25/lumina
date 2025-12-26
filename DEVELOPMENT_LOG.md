@@ -252,3 +252,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-26 17:59` fix(forms): enforce client-side validation before hitting API endpoints
 - `2025-12-26 18:48` perf: enable Brotli compression and edge caching for static assets
 - `2025-12-26 19:46` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
+- `2025-12-26 19:51` refactor(api): consolidate error handling into reusable middleware factory
