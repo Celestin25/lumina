@@ -250,3 +250,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-26 14:38` test: add E2E tests for registration, login and profile update flows
 - `2025-12-26 16:18` feat(filter): add multi-tag faceted filtering to catalog
 - `2025-12-26 17:59` fix(forms): enforce client-side validation before hitting API endpoints
+- `2025-12-26 18:48` perf: enable Brotli compression and edge caching for static assets
