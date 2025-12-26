@@ -249,3 +249,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-26 14:04` fix(images): handle broken image URLs with graceful lazy-load fallback
 - `2025-12-26 14:38` test: add E2E tests for registration, login and profile update flows
 - `2025-12-26 16:18` feat(filter): add multi-tag faceted filtering to catalog
+- `2025-12-26 17:59` fix(forms): enforce client-side validation before hitting API endpoints
