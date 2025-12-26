@@ -241,3 +241,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-25 10:51` feat(upload): support batch image upload with drag-and-drop reorder
 - `2025-12-26 09:24` test: add E2E tests for registration, login and profile update flows
 - `2025-12-26 10:51` feat(payment): integrate Stripe checkout with webhook event handling
+- `2025-12-26 11:16` feat(media): implement WebP conversion on upload pipeline
