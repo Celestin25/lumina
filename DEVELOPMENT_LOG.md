@@ -256,3 +256,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-29 11:50` feat(analytics): integrate client-side event tracking telemetry
 - `2025-12-29 12:03` chore: configure Husky pre-commit hooks with lint-staged for auto-format
 - `2025-12-29 14:31` fix(db): resolve N+1 query in listing endpoint with Prisma eager loading
+- `2025-12-29 15:56` fix(nav): correct active route indicator on nested paths
