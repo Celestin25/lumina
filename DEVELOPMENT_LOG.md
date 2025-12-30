@@ -260,3 +260,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-30 09:11` feat(payment): integrate Stripe checkout with webhook event handling
 - `2025-12-30 09:24` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
 - `2025-12-30 09:25` refactor(api): consolidate error handling into reusable middleware factory
+- `2025-12-30 09:36` fix(routing): handle 404 gracefully with fallback UI and back navigation
