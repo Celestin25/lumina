@@ -263,3 +263,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-30 09:36` fix(routing): handle 404 gracefully with fallback UI and back navigation
 - `2025-12-30 09:38` chore: add Zod schema validation for all environment variables on startup
 - `2025-12-30 09:46` feat(dashboard): build revenue analytics with recharts and date-range picker
+- `2025-12-30 10:59` feat(i18n): add locale switcher with persistent preference in cookies
