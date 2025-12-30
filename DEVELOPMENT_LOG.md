@@ -258,3 +258,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-29 14:31` fix(db): resolve N+1 query in listing endpoint with Prisma eager loading
 - `2025-12-29 15:56` fix(nav): correct active route indicator on nested paths
 - `2025-12-30 09:11` feat(payment): integrate Stripe checkout with webhook event handling
+- `2025-12-30 09:24` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
