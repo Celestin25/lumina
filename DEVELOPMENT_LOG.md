@@ -272,3 +272,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-30 14:30` feat(media): implement WebP conversion on upload pipeline
 - `2025-12-30 14:46` fix(hydration): resolve client-server mismatch on timestamp display
 - `2025-12-31 10:33` perf: enable Brotli compression and edge caching for static assets
+- `2025-12-31 11:49` perf: optimize font loading with next/font and preload directives
