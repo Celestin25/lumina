@@ -271,3 +271,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-30 13:54` refactor(hooks): consolidate auth state management into useAuth context
 - `2025-12-30 14:30` feat(media): implement WebP conversion on upload pipeline
 - `2025-12-30 14:46` fix(hydration): resolve client-server mismatch on timestamp display
+- `2025-12-31 10:33` perf: enable Brotli compression and edge caching for static assets
