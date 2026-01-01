@@ -284,3 +284,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-01 14:39` chore: set up GitHub Actions CI with build, type-check and test steps
 - `2026-01-01 14:42` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
 - `2026-01-01 15:43` feat(export): add CSV export for transaction summaries
+- `2026-01-01 16:24` fix(images): handle broken image URLs with graceful lazy-load fallback
