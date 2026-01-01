@@ -277,3 +277,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-01 10:56` perf: enable Brotli compression and edge caching for static assets
 - `2026-01-01 11:48` feat(filter): add multi-tag faceted filtering to catalog
 - `2026-01-01 13:21` feat(payment): integrate Stripe checkout with webhook event handling
+- `2026-01-01 13:55` fix(nav): correct active route indicator on nested paths
