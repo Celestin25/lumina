@@ -275,3 +275,4 @@ Tracking engineering progress and feature updates.
 - `2025-12-31 11:49` perf: optimize font loading with next/font and preload directives
 - `2026-01-01 10:22` refactor(api): consolidate error handling into reusable middleware factory
 - `2026-01-01 10:56` perf: enable Brotli compression and edge caching for static assets
+- `2026-01-01 11:48` feat(filter): add multi-tag faceted filtering to catalog
