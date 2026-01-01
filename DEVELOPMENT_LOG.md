@@ -285,3 +285,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-01 14:42` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
 - `2026-01-01 15:43` feat(export): add CSV export for transaction summaries
 - `2026-01-01 16:24` fix(images): handle broken image URLs with graceful lazy-load fallback
+- `2026-01-01 16:34` fix(routing): handle 404 gracefully with fallback UI and back navigation
