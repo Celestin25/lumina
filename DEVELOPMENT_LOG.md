@@ -282,3 +282,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-01 14:19` feat(admin): build user management table with sort, filter and bulk actions
 - `2026-01-01 14:20` fix(forms): enforce client-side validation before hitting API endpoints
 - `2026-01-01 14:39` chore: set up GitHub Actions CI with build, type-check and test steps
+- `2026-01-01 14:42` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
