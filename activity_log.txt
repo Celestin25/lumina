@@ -428,3 +428,4 @@
 [2025-12-24T10:24:00] docs: update api documentation
 [2025-12-30T13:37:00] test: fix flaky integration tests
 [2026-01-01T11:14:00] test: fix flaky integration tests
+[2026-01-02T13:36:00] feat: update user authentication flow
