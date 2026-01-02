@@ -288,3 +288,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-01 16:34` fix(routing): handle 404 gracefully with fallback UI and back navigation
 - `2026-01-01 16:55` fix(auth): prevent session fixation by regenerating ID after login
 - `2026-01-02 11:22` fix(search): trim whitespace from search terms before querying
+- `2026-01-02 13:10` fix(perf): memoize expensive filter computations to prevent extra renders
