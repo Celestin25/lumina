@@ -292,3 +292,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-02 13:16` feat(export): add CSV export for transaction summaries
 - `2026-01-02 13:25` chore: add Zod schema validation for all environment variables on startup
 - `2026-01-05 09:01` feat(payment): integrate Stripe checkout with webhook event handling
+- `2026-01-05 10:39` feat(i18n): add locale switcher with persistent preference in cookies
