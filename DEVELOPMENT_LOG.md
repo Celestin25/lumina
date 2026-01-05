@@ -291,3 +291,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-02 13:10` fix(perf): memoize expensive filter computations to prevent extra renders
 - `2026-01-02 13:16` feat(export): add CSV export for transaction summaries
 - `2026-01-02 13:25` chore: add Zod schema validation for all environment variables on startup
+- `2026-01-05 09:01` feat(payment): integrate Stripe checkout with webhook event handling
