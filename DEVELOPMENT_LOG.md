@@ -294,3 +294,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-05 09:01` feat(payment): integrate Stripe checkout with webhook event handling
 - `2026-01-05 10:39` feat(i18n): add locale switcher with persistent preference in cookies
 - `2026-01-07 11:27` fix(images): handle broken image URLs with graceful lazy-load fallback
+- `2026-01-07 12:44` fix(images): handle broken image URLs with graceful lazy-load fallback
