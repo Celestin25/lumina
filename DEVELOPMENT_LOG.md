@@ -297,3 +297,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-07 12:44` fix(images): handle broken image URLs with graceful lazy-load fallback
 - `2026-01-07 13:18` feat(seo): add structured data markup and dynamic OpenGraph meta tags
 - `2026-01-07 15:18` feat(models): add profile verification badge and approval workflow
+- `2026-01-07 15:20` chore: add Zod schema validation for all environment variables on startup
