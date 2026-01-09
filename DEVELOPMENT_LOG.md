@@ -302,3 +302,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-07 16:47` fix(prisma): fix schema migration conflict blocking production deploy
 - `2026-01-08 12:02` test: add E2E tests for registration, login and profile update flows
 - `2026-01-08 12:56` feat(search): implement full-text search with debounce and highlighted results
+- `2026-01-09 11:47` feat(media): implement WebP conversion on upload pipeline
