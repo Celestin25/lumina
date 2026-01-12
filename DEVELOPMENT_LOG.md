@@ -310,3 +310,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-12 14:37` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
 - `2026-01-12 15:29` feat(search): implement full-text search with debounce and highlighted results
 - `2026-01-12 15:50` fix(auth): prevent session fixation by regenerating ID after login
+- `2026-01-12 16:30` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
