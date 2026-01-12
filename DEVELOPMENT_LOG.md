@@ -306,3 +306,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-09 13:30` feat(profile): implement step-by-step profile completion wizard
 - `2026-01-12 12:01` fix(modal): lock body scroll when dialog is active
 - `2026-01-12 12:33` feat(export): add CSV export for transaction summaries
+- `2026-01-12 14:08` fix(images): handle broken image URLs with graceful lazy-load fallback
