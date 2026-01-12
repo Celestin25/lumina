@@ -307,3 +307,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-12 12:01` fix(modal): lock body scroll when dialog is active
 - `2026-01-12 12:33` feat(export): add CSV export for transaction summaries
 - `2026-01-12 14:08` fix(images): handle broken image URLs with graceful lazy-load fallback
+- `2026-01-12 14:37` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
