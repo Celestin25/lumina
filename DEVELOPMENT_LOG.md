@@ -314,3 +314,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-12 16:57` chore: set up GitHub Actions CI with build, type-check and test steps
 - `2026-01-12 17:29` feat(auth): implement JWT refresh token rotation and device session tracking
 - `2026-01-13 10:08` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
+- `2026-01-13 10:12` feat(profile): implement step-by-step profile completion wizard
