@@ -321,3 +321,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-14 12:51` feat(models): add profile verification badge and approval workflow
 - `2026-01-14 13:08` feat(profile): implement step-by-step profile completion wizard
 - `2026-01-14 13:19` feat(analytics): integrate client-side event tracking telemetry
+- `2026-01-14 15:45` fix(styles): resolve z-index stacking collision between modal and header
