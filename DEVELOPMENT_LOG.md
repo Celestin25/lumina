@@ -318,3 +318,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-13 10:44` feat(i18n): add locale switcher with persistent preference in cookies
 - `2026-01-14 11:21` fix(api): return proper 422 status for malformed request payloads
 - `2026-01-14 11:34` fix(prisma): fix schema migration conflict blocking production deploy
+- `2026-01-14 12:51` feat(models): add profile verification badge and approval workflow
