@@ -322,3 +322,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-14 13:08` feat(profile): implement step-by-step profile completion wizard
 - `2026-01-14 13:19` feat(analytics): integrate client-side event tracking telemetry
 - `2026-01-14 15:45` fix(styles): resolve z-index stacking collision between modal and header
+- `2026-01-14 15:53` refactor(hooks): consolidate auth state management into useAuth context
