@@ -316,3 +316,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-13 10:08` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
 - `2026-01-13 10:12` feat(profile): implement step-by-step profile completion wizard
 - `2026-01-13 10:44` feat(i18n): add locale switcher with persistent preference in cookies
+- `2026-01-14 11:21` fix(api): return proper 422 status for malformed request payloads
