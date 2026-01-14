@@ -324,3 +324,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-14 15:45` fix(styles): resolve z-index stacking collision between modal and header
 - `2026-01-14 15:53` refactor(hooks): consolidate auth state management into useAuth context
 - `2026-01-14 16:16` fix(perf): memoize expensive filter computations to prevent extra renders
+- `2026-01-14 17:04` refactor(hooks): consolidate auth state management into useAuth context
