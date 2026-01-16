@@ -449,3 +449,4 @@
 [2026-01-15T11:22:00] feat: integrate payment gateway
 [2026-01-16T16:13:00] perf: improve image loading speed
 [2026-01-16T16:58:00] fix: typo in landing page
+[2026-01-16T10:50:00] style: update button colors
