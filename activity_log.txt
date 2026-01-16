@@ -450,3 +450,4 @@
 [2026-01-16T16:13:00] perf: improve image loading speed
 [2026-01-16T16:58:00] fix: typo in landing page
 [2026-01-16T10:50:00] style: update button colors
+[2026-01-16T14:46:00] refactor: clean up legacy code
