@@ -330,3 +330,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-15 09:13` fix(styles): resolve z-index stacking collision between modal and header
 - `2026-01-15 09:16` feat(filter): add multi-tag faceted filtering to catalog
 - `2026-01-16 09:26` feat(seo): add structured data markup and dynamic OpenGraph meta tags
+- `2026-01-20 10:30` docs: update README with environment setup and database migration steps
