@@ -336,3 +336,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-20 11:05` refactor(api): consolidate error handling into reusable middleware factory
 - `2026-01-20 11:16` fix(search): trim whitespace from search terms before querying
 - `2026-01-20 11:17` fix(api): return proper 422 status for malformed request payloads
+- `2026-01-20 11:22` feat(notifications): build real-time push notifications with SSE
