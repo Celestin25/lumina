@@ -334,3 +334,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-20 10:40` feat(api): add rate limiting middleware with Redis-backed token bucket
 - `2026-01-20 10:44` feat(profile): implement step-by-step profile completion wizard
 - `2026-01-20 11:05` refactor(api): consolidate error handling into reusable middleware factory
+- `2026-01-20 11:16` fix(search): trim whitespace from search terms before querying
