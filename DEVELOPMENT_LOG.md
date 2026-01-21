@@ -341,3 +341,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-21 10:08` fix(perf): memoize expensive filter computations to prevent extra renders
 - `2026-01-21 10:24` feat(filter): add multi-tag faceted filtering to catalog
 - `2026-01-21 11:47` feat(admin): build user management table with sort, filter and bulk actions
+- `2026-01-21 12:58` feat(dashboard): build revenue analytics with recharts and date-range picker
