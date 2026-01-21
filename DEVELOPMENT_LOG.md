@@ -339,3 +339,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-20 11:22` feat(notifications): build real-time push notifications with SSE
 - `2026-01-21 09:35` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
 - `2026-01-21 10:08` fix(perf): memoize expensive filter computations to prevent extra renders
+- `2026-01-21 10:24` feat(filter): add multi-tag faceted filtering to catalog
