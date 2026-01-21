@@ -337,3 +337,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-20 11:16` fix(search): trim whitespace from search terms before querying
 - `2026-01-20 11:17` fix(api): return proper 422 status for malformed request payloads
 - `2026-01-20 11:22` feat(notifications): build real-time push notifications with SSE
+- `2026-01-21 09:35` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
