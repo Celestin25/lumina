@@ -343,3 +343,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-21 11:47` feat(admin): build user management table with sort, filter and bulk actions
 - `2026-01-21 12:58` feat(dashboard): build revenue analytics with recharts and date-range picker
 - `2026-01-21 14:56` feat(export): add CSV export for transaction summaries
+- `2026-01-23 09:30` fix(api): return proper 422 status for malformed request payloads
