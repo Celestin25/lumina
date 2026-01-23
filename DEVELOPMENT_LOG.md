@@ -345,3 +345,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-21 14:56` feat(export): add CSV export for transaction summaries
 - `2026-01-23 09:30` fix(api): return proper 422 status for malformed request payloads
 - `2026-01-23 09:33` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
+- `2026-01-23 09:55` chore: set up GitHub Actions CI with build, type-check and test steps
