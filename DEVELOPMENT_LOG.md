@@ -347,3 +347,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-23 09:33` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
 - `2026-01-23 09:55` chore: set up GitHub Actions CI with build, type-check and test steps
 - `2026-01-23 10:13` feat(search): implement full-text search with debounce and highlighted results
+- `2026-01-23 10:58` fix(forms): enforce client-side validation before hitting API endpoints
