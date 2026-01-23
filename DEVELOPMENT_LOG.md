@@ -350,3 +350,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-23 10:58` fix(forms): enforce client-side validation before hitting API endpoints
 - `2026-01-23 11:43` feat(dashboard): build revenue analytics with recharts and date-range picker
 - `2026-01-23 12:09` chore: set up GitHub Actions CI with build, type-check and test steps
+- `2026-01-23 14:11` fix(prisma): fix schema migration conflict blocking production deploy
