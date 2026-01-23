@@ -352,3 +352,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-23 12:09` chore: set up GitHub Actions CI with build, type-check and test steps
 - `2026-01-23 14:11` fix(prisma): fix schema migration conflict blocking production deploy
 - `2026-01-23 15:11` chore: add Zod schema validation for all environment variables on startup
+- `2026-01-23 15:29` fix(auth): prevent session fixation by regenerating ID after login
