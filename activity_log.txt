@@ -463,3 +463,4 @@
 [2026-01-26T14:17:00] chore: simple config change
 [2026-01-28T11:51:00] fix: typo in landing page
 [2026-01-28T16:23:00] refactor: clean up legacy code
+[2026-01-28T10:00:00] fix: handle null states in profile
