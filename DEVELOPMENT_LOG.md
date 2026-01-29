@@ -358,3 +358,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-28 13:22` feat(dashboard): build revenue analytics with recharts and date-range picker
 - `2026-01-28 13:49` feat(dashboard): build revenue analytics with recharts and date-range picker
 - `2026-01-29 10:07` refactor(api): consolidate error handling into reusable middleware factory
+- `2026-01-29 10:37` feat(search): implement full-text search with debounce and highlighted results
