@@ -473,3 +473,4 @@
 [2026-01-30T15:18:00] test: fix flaky integration tests
 [2026-02-02T11:35:00] refactor: split large components
 [2026-02-02T13:23:00] feat: update user authentication flow
+[2026-02-03T15:35:00] feat: add export to csv feature
