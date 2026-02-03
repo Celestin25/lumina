@@ -362,3 +362,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-29 10:58` fix(hydration): resolve client-server mismatch on timestamp display
 - `2026-01-30 10:17` feat(models): add profile verification badge and approval workflow
 - `2026-01-30 11:38` chore: configure Husky pre-commit hooks with lint-staged for auto-format
+- `2026-02-03 09:57` perf: enable Brotli compression and edge caching for static assets
