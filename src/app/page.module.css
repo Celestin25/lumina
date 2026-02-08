@@ -1,0 +1,123 @@
+.main {
+  min-height: 100vh;
+}
+
+.hero {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  background-image: url("https://images.unsplash.com/photo-1542282088-fe8426682b8f?q=80&w=2574&auto=format&fit=crop"); /* Placeholder Unsplash Image */
+  background-size: cover;
+  background-position: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, var(--color-bg-primary) 0%, rgba(0,0,0,0.4) 100%);
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 2.5rem;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: var(--color-bg-secondary);
+  border-radius: var(--border-radius-generic);
+  overflow: hidden;
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card);
+  border-color: var(--color-accent-primary);
+}
+
+.cardImagePlaceholder {
+  height: 400px;
+  background-color: #222;
+  background-image: url("https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2864&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+}
+
+.cardContent {
+  padding: 1.5rem;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.cardHeader h3 {
+  font-size: 1.5rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-accent-primary);
+  font-weight: 600;
+}
+
+.location {
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.price {
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+}

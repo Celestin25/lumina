@@ -1,0 +1,89 @@
+.main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px; /* Navbar height */
+  background-image: url("https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=2940&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.card {
+  background: rgba(18, 18, 18, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 3rem;
+  border-radius: var(--border-radius-generic);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  color: var(--color-accent-primary);
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--color-text-secondary);
+  margin-bottom: 2.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.formGroup input,
+.formGroup select {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.75rem;
+  border-radius: var(--border-radius-generic);
+  color: var(--color-text-primary);
+  font-family: inherit;
+  transition: border-color var(--transition-fast);
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  outline: none;
+  border-color: var(--color-accent-primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.loginLink {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.loginLink a {
+  color: var(--color-accent-primary);
+  font-weight: 600;
+}

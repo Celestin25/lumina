@@ -1,0 +1,102 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Enums removed for SQLite compatibility
+// Role: CLIENT, MODEL, ADMIN
+// BookingStatus: PENDING, CONFIRMED, COMPLETED, CANCELLED
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  password      String    // Hashed password
+  role          String    @default("CLIENT")
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  // Relationships
+  modelProfile  ModelProfile?
+  bookings      Booking[]     @relation("ClientBookings")
+  reviews       Review[]
+}
+
+model ModelProfile {
+  id            String    @id @default(cuid())
+  userId        String    @unique
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  displayName   String
+  bio           String?
+  country       String
+  city          String
+  age           Int
+  height        Int?      // in cm
+  weight        Int?      // in kg
+  
+  hourlyRate    Float
+  services      Service[]
+  photos        Photo[]
+  
+  isVerified    Boolean   @default(false)
+  isFeatured    Boolean   @default(false)
+  
+  rating        Float     @default(0)
+  reviewCount   Int       @default(0)
+  
+  bookings      Booking[] @relation("ModelBookings")
+  reviews       Review[]  @relation("ModelReviews")
+
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+model Photo {
+  id            String        @id @default(cuid())
+  url           String
+  modelId       String
+  model         ModelProfile  @relation(fields: [modelId], references: [id], onDelete: Cascade)
+}
+
+model Service {
+  id            String        @id @default(cuid())
+  name          String
+  modelId       String
+  model         ModelProfile  @relation(fields: [modelId], references: [id], onDelete: Cascade)
+}
+
+model Booking {
+  id            String        @id @default(cuid())
+  clientId      String
+  client        User          @relation("ClientBookings", fields: [clientId], references: [id])
+  
+  modelId       String
+  model         ModelProfile  @relation("ModelBookings", fields: [modelId], references: [id])
+  
+  startTime     DateTime
+  endTime       DateTime
+  totalPrice    Float
+  status        String    @default("PENDING")
+  
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+}
+
+model Review {
+  id            String        @id @default(cuid())
+  rating        Int           // 1-5
+  comment       String?
+  
+  authorId      String
+  author        User          @relation(fields: [authorId], references: [id])
+  
+  modelId       String
+  model         ModelProfile  @relation("ModelReviews", fields: [modelId], references: [id])
+  
+  createdAt     DateTime      @default(now())
+}
