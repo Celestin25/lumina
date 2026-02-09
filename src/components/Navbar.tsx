@@ -16,6 +16,7 @@ export default async function Navbar() {
         <div className={styles.links}>
           <Link href="/search" className={styles.link}>Models</Link>
           <Link href="/locations" className={styles.link}>Locations</Link>
+          <Link href="/news" className={styles.link}>News</Link>
           <Link href="/about" className={styles.link}>About</Link>
         </div>
         <div className={styles.actions}>
