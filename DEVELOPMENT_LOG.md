@@ -370,3 +370,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-10 11:59` fix(db): resolve N+1 query in listing endpoint with Prisma eager loading
 - `2026-02-10 12:35` refactor(components): split ModelCard into composable atomic components
 - `2026-02-10 14:38` fix(routing): handle 404 gracefully with fallback UI and back navigation
+- `2026-02-10 14:40` perf: enable Brotli compression and edge caching for static assets
