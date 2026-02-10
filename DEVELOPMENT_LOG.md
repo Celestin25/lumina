@@ -364,3 +364,4 @@ Tracking engineering progress and feature updates.
 - `2026-01-30 11:38` chore: configure Husky pre-commit hooks with lint-staged for auto-format
 - `2026-02-03 09:57` perf: enable Brotli compression and edge caching for static assets
 - `2026-02-09 11:09` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
+- `2026-02-10 11:11` feat(filter): add multi-tag faceted filtering to catalog
