@@ -1,5 +1,6 @@
 import { PrismaClient } from '@prisma/client'
 import { africanLocations, worldLocations, servicesList, modelNames, bios, photoUrls } from '../src/locations/data'
+import bcrypt from 'bcryptjs'
 
 const prisma = new PrismaClient()
 
@@ -15,6 +16,8 @@ const randomInt = (min: number, max: number) => Math.floor(Math.random() * (max 
 async function main() {
   console.log('Start seeding ...')
   
+  const hashedPassword = await bcrypt.hash('password123', 10);
+  
   // Cleanup existing data (optional, but good for clean state)
   // await prisma.review.deleteMany({});
   // await prisma.booking.deleteMany({});
@@ -28,10 +31,12 @@ async function main() {
   // Create/Ensure Client
   const client = await prisma.user.upsert({
     where: { email: 'client@example.com' },
-    update: {},
+    update: {
+      password: hashedPassword
+    },
     create: {
       email: 'client@example.com',
-      password: 'password123',
+      password: hashedPassword,
       role: 'CLIENT',
       name: 'John Doe',
     },
@@ -40,10 +45,12 @@ async function main() {
   // Create Admin User
   const admin = await prisma.user.upsert({
     where: { email: 'admin@lumina.com' },
-    update: {},
+    update: {
+      password: hashedPassword
+    },
     create: {
       email: 'admin@lumina.com',
-      password: 'password123', // In prod, use hashed password
+      password: hashedPassword,
       role: 'ADMIN',
       name: 'Admin User',
     },
@@ -62,10 +69,12 @@ async function main() {
             try {
                 const user = await prisma.user.upsert({
                     where: { email },
-                    update: {},
+                    update: {
+                        password: hashedPassword
+                    },
                     create: {
                         email,
-                        password: 'password123',
+                        password: hashedPassword,
                         role: 'MODEL',
                         name: name,
                     },
