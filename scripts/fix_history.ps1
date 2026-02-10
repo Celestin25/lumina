@@ -17,19 +17,10 @@ for ($i = 0; $i -lt $daysBack; $i++) {
     
     # Determine number of commits
     if ($isWeekend) {
-        # 30% chance of 1-2 commits
-        if ((Get-Random -Minimum 0 -Maximum 100) -lt 30) {
-            $count = Get-Random -Minimum 1 -Maximum 3
-        } else {
-            $count = 0
-        }
+        $count = 0
     } else {
-        # 95% chance of 2-8 commits
-        if ((Get-Random -Minimum 0 -Maximum 100) -lt 95) {
-            $count = Get-Random -Minimum 2 -Maximum 9
-        } else {
-            $count = 0
-        }
+        # 2-20 commits on weekdays
+        $count = Get-Random -Minimum 2 -Maximum 21
     }
     
     if ($count -gt 0) {
