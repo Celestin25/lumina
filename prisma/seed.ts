@@ -37,6 +37,19 @@ async function main() {
     },
   });
 
+  // Create Admin User
+  const admin = await prisma.user.upsert({
+    where: { email: 'admin@lumina.com' },
+    update: {},
+    create: {
+      email: 'admin@lumina.com',
+      password: 'password123', // In prod, use hashed password
+      role: 'ADMIN',
+      name: 'Admin User',
+    },
+  });
+  console.log('Created Admin User: admin@lumina.com / password123');
+
   // Seed African Models
   for (const loc of africanLocations) {
     for (const city of loc.cities) {
