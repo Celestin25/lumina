@@ -374,3 +374,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-10 15:29` fix(perf): memoize expensive filter computations to prevent extra renders
 - `2026-02-10 16:29` fix(hydration): resolve client-server mismatch on timestamp display
 - `2026-02-10 16:43` fix(api): return proper 422 status for malformed request payloads
+- `2026-02-10 17:15` chore: configure Husky pre-commit hooks with lint-staged for auto-format
