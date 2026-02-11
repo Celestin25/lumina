@@ -382,3 +382,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-11 10:13` feat(notifications): build real-time push notifications with SSE
 - `2026-02-11 10:16` feat(auth): implement JWT refresh token rotation and device session tracking
 - `2026-02-11 10:19` refactor(hooks): consolidate auth state management into useAuth context
+- `2026-02-11 10:58` feat(admin): build user management table with sort, filter and bulk actions
