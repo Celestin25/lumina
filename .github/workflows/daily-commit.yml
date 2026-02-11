@@ -1,0 +1,41 @@
+name: Daily Contribution Automation
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight UTC
+  workflow_dispatch: # Allows manual triggering
+
+permissions:
+  contents: write
+
+jobs:
+  daily-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Git
+        run: |
+          git config --global user.name "Celestin25"
+          git config --global user.email "celestinhakorimana25@gmail.com"
+
+      - name: Generate 20+ Daily Commits
+        run: |
+          # Array of random messages
+          messages=("Refactoring the void" "Optimizing for laziness" "Squashing bugs that don't exist" "Commiting to the bit" "AI took the wheel" "Testing in production" "Coffee overflow" "Pixel perfect chaos" "Undefined behavior defined" "Reticulating splines" "Loading progress bar..." "Error 418: I'm a teapot" "sudo make me a sandwich" "To be or not to be" "Hello World 2.0")
+          
+          # Random number of commits between 20 and 30
+          limit=$((20 + RANDOM % 11))
+          
+          echo "Generating $limit commits for today..."
+          
+          for ((i=1; i<=limit; i++)); do
+            msg=${messages[$RANDOM % ${#messages[@]}]}
+            echo "[$(date)] $msg (Automated #$i)" >> activity_log.txt
+            git add activity_log.txt
+            git commit -m "chore: $msg (Auto-Commit #$i)"
+          done
+
+      - name: Push changes
+        run: git push
