@@ -381,3 +381,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-11 10:00` feat(payment): integrate Stripe checkout with webhook event handling
 - `2026-02-11 10:13` feat(notifications): build real-time push notifications with SSE
 - `2026-02-11 10:16` feat(auth): implement JWT refresh token rotation and device session tracking
+- `2026-02-11 10:19` refactor(hooks): consolidate auth state management into useAuth context
