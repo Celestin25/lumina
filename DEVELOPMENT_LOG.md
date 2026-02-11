@@ -378,3 +378,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-10 18:22` feat(filter): add multi-tag faceted filtering to catalog
 - `2026-02-10 18:44` feat(search): implement full-text search with debounce and highlighted results
 - `2026-02-10 20:38` feat(search): implement full-text search with debounce and highlighted results
+- `2026-02-11 10:00` feat(payment): integrate Stripe checkout with webhook event handling
