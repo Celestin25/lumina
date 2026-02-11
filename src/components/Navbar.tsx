@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { User, Search, Menu, LogOut } from "lucide-react";
+import { User, Search, Menu, LogOut, LayoutDashboard } from "lucide-react";
 import { auth } from "@/auth";
 import { handleSignOut } from "@/actions/auth";
 import styles from "./Navbar.module.css";
@@ -16,6 +16,7 @@ export default async function Navbar() {
         <div className={styles.links}>
           <Link href="/search" className={styles.link}>Models</Link>
           <Link href="/locations" className={styles.link}>Locations</Link>
+          <Link href="/news" className={styles.link}>News</Link>
           <Link href="/about" className={styles.link}>About</Link>
         </div>
         <div className={styles.actions}>
@@ -26,6 +27,14 @@ export default async function Navbar() {
           {session ? (
             <div className={styles.userMenu}>
               <span className={styles.userName}>Hello, {session.user?.name?.split(' ')[0]}</span>
+              
+              {/* Admin Dashboard Link */}
+              {(session.user as any)?.role === 'ADMIN' && (
+                <Link href="/admin" className={styles.iconBtn} title="Admin Dashboard" style={{color: '#10b981'}}>
+                  <LayoutDashboard size={20} />
+                </Link>
+              )}
+
               <form action={handleSignOut}>
                 <button type="submit" className={styles.logoutBtn}>
                   <LogOut size={18} />
