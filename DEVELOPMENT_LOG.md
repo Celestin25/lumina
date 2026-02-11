@@ -379,3 +379,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-10 18:44` feat(search): implement full-text search with debounce and highlighted results
 - `2026-02-10 20:38` feat(search): implement full-text search with debounce and highlighted results
 - `2026-02-11 10:00` feat(payment): integrate Stripe checkout with webhook event handling
+- `2026-02-11 10:13` feat(notifications): build real-time push notifications with SSE
