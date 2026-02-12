@@ -386,3 +386,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-12 12:42` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
 - `2026-02-12 13:14` feat(payment): integrate Stripe checkout with webhook event handling
 - `2026-02-12 13:20` fix(db): resolve N+1 query in listing endpoint with Prisma eager loading
+- `2026-02-12 13:39` feat(upload): support batch image upload with drag-and-drop reorder
