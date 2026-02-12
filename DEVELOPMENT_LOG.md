@@ -384,3 +384,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-11 10:19` refactor(hooks): consolidate auth state management into useAuth context
 - `2026-02-11 10:58` feat(admin): build user management table with sort, filter and bulk actions
 - `2026-02-12 12:42` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
+- `2026-02-12 13:14` feat(payment): integrate Stripe checkout with webhook event handling
