@@ -389,3 +389,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-12 13:39` feat(upload): support batch image upload with drag-and-drop reorder
 - `2026-02-13 12:14` feat(api): add rate limiting middleware with Redis-backed token bucket
 - `2026-02-13 12:21` chore: configure Husky pre-commit hooks with lint-staged for auto-format
+- `2026-02-13 14:23` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
