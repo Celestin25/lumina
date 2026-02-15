@@ -40,5 +40,5 @@ for ($i = 1; $i -le 100; $i++) {
     }
 }
 
-Write-Host "Done! 100 commits generated."
+Write-Host "Done! 10 commits generated."
 Write-Host "Run 'git push' to unleash the chaos."
