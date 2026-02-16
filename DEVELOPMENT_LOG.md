@@ -391,3 +391,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-13 12:21` chore: configure Husky pre-commit hooks with lint-staged for auto-format
 - `2026-02-13 14:23` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
 - `2026-02-13 15:50` refactor(components): split ModelCard into composable atomic components
+- `2026-02-16 10:31` fix(forms): enforce client-side validation before hitting API endpoints
