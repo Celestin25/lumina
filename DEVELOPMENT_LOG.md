@@ -393,3 +393,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-13 15:50` refactor(components): split ModelCard into composable atomic components
 - `2026-02-16 10:31` fix(forms): enforce client-side validation before hitting API endpoints
 - `2026-02-16 10:55` fix(api): return proper 422 status for malformed request payloads
+- `2026-02-17 11:58` refactor: enforce strict TypeScript mode and resolve all implicit any types
