@@ -395,3 +395,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-16 10:55` fix(api): return proper 422 status for malformed request payloads
 - `2026-02-17 11:58` refactor: enforce strict TypeScript mode and resolve all implicit any types
 - `2026-02-17 12:26` fix(forms): enforce client-side validation before hitting API endpoints
+- `2026-02-17 14:12` chore: set up GitHub Actions CI with build, type-check and test steps
