@@ -398,3 +398,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-17 14:12` chore: set up GitHub Actions CI with build, type-check and test steps
 - `2026-02-17 14:40` feat(seo): add structured data markup and dynamic OpenGraph meta tags
 - `2026-02-17 15:10` fix(perf): memoize expensive filter computations to prevent extra renders
+- `2026-02-17 15:29` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
