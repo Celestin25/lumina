@@ -404,3 +404,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-18 10:03` feat(notifications): build real-time push notifications with SSE
 - `2026-02-18 10:33` chore: add Zod schema validation for all environment variables on startup
 - `2026-02-18 11:08` fix(forms): enforce client-side validation before hitting API endpoints
+- `2026-02-18 11:28` refactor(api): consolidate error handling into reusable middleware factory
