@@ -401,3 +401,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-17 15:29` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
 - `2026-02-17 17:09` docs: update README with environment setup and database migration steps
 - `2026-02-17 17:50` refactor: enforce strict TypeScript mode and resolve all implicit any types
+- `2026-02-18 10:03` feat(notifications): build real-time push notifications with SSE
