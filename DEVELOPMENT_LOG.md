@@ -406,3 +406,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-18 11:08` fix(forms): enforce client-side validation before hitting API endpoints
 - `2026-02-18 11:28` refactor(api): consolidate error handling into reusable middleware factory
 - `2026-02-18 11:31` test: add E2E tests for registration, login and profile update flows
+- `2026-02-18 11:50` feat(admin): build user management table with sort, filter and bulk actions
