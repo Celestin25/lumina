@@ -408,3 +408,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-18 11:31` test: add E2E tests for registration, login and profile update flows
 - `2026-02-18 11:50` feat(admin): build user management table with sort, filter and bulk actions
 - `2026-02-18 12:05` feat(profile): implement step-by-step profile completion wizard
+- `2026-02-18 12:20` feat(admin): build user management table with sort, filter and bulk actions
