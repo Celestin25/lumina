@@ -410,3 +410,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-18 12:05` feat(profile): implement step-by-step profile completion wizard
 - `2026-02-18 12:20` feat(admin): build user management table with sort, filter and bulk actions
 - `2026-02-19 13:54` fix(perf): memoize expensive filter computations to prevent extra renders
+- `2026-02-19 14:03` refactor(api): consolidate error handling into reusable middleware factory
