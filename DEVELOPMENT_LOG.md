@@ -413,3 +413,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-19 14:03` refactor(api): consolidate error handling into reusable middleware factory
 - `2026-02-19 14:08` perf: optimize font loading with next/font and preload directives
 - `2026-02-19 14:15` feat(ui): add dark mode toggle with system preference fallback
+- `2026-02-20 12:00` perf: optimize font loading with next/font and preload directives
