@@ -417,3 +417,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-23 11:00` fix(prisma): fix schema migration conflict blocking production deploy
 - `2026-02-23 11:05` feat(seo): add structured data markup and dynamic OpenGraph meta tags
 - `2026-02-23 11:15` feat(i18n): add locale switcher with persistent preference in cookies
+- `2026-02-23 11:47` docs: update README with environment setup and database migration steps
