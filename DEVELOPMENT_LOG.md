@@ -419,3 +419,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-23 11:15` feat(i18n): add locale switcher with persistent preference in cookies
 - `2026-02-23 11:47` docs: update README with environment setup and database migration steps
 - `2026-02-23 11:52` feat(admin): build user management table with sort, filter and bulk actions
+- `2026-02-23 11:56` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
