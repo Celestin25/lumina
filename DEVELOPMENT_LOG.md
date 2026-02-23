@@ -420,3 +420,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-23 11:47` docs: update README with environment setup and database migration steps
 - `2026-02-23 11:52` feat(admin): build user management table with sort, filter and bulk actions
 - `2026-02-23 11:56` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
+- `2026-02-23 12:08` perf: optimize font loading with next/font and preload directives
