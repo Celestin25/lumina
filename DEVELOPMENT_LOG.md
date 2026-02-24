@@ -429,3 +429,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-23 14:48` test: add E2E tests for registration, login and profile update flows
 - `2026-02-23 15:16` refactor: extract date formatting helpers into shared utils
 - `2026-02-24 13:27` fix(search): trim whitespace from search terms before querying
+- `2026-02-24 13:45` feat(profile): implement step-by-step profile completion wizard
