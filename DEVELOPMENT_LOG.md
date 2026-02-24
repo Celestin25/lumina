@@ -431,3 +431,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-24 13:27` fix(search): trim whitespace from search terms before querying
 - `2026-02-24 13:45` feat(profile): implement step-by-step profile completion wizard
 - `2026-02-24 13:49` feat(notifications): build real-time push notifications with SSE
+- `2026-02-24 14:36` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
