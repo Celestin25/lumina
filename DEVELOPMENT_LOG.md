@@ -434,3 +434,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-24 14:36` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
 - `2026-02-25 10:03` feat(filter): add multi-tag faceted filtering to catalog
 - `2026-02-25 10:05` refactor: extract date formatting helpers into shared utils
+- `2026-02-25 11:04` perf: enable Brotli compression and edge caching for static assets
