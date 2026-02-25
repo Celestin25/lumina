@@ -442,3 +442,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-25 11:45` feat(payment): integrate Stripe checkout with webhook event handling
 - `2026-02-25 11:47` feat(auth): implement JWT refresh token rotation and device session tracking
 - `2026-02-25 11:49` feat(i18n): add locale switcher with persistent preference in cookies
+- `2026-02-25 11:50` feat(media): implement WebP conversion on upload pipeline
