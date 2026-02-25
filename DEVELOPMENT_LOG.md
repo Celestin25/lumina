@@ -439,3 +439,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-25 11:24` docs: update README with environment setup and database migration steps
 - `2026-02-25 11:27` fix(routing): handle 404 gracefully with fallback UI and back navigation
 - `2026-02-25 11:41` fix(nav): correct active route indicator on nested paths
+- `2026-02-25 11:45` feat(payment): integrate Stripe checkout with webhook event handling
