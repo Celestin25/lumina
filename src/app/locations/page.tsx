@@ -1,33 +1,76 @@
-export default function LocationsPage() {
-  const locations = [
-    { country: 'France', cities: ['Paris', 'Nice', 'Cannes'] },
-    { country: 'United Kingdom', cities: ['London', 'Manchester'] },
-    { country: 'United Arab Emirates', cities: ['Dubai', 'Abu Dhabi'] },
-    { country: 'USA', cities: ['New York', 'Los Angeles', 'Miami'] },
-  ];
+import Link from 'next/link';
+import { africanLocations, worldLocations } from '@/locations/data';
+import styles from './locations.module.css';
 
+export const dynamic = 'force-dynamic';
+
+export default function LocationsPage() {
   return (
-    <main style={{ paddingTop: '120px', paddingBottom: '4rem', minHeight: '100vh' }}>
-      <div className="container">
-        <h1 style={{ marginBottom: '3rem', fontSize: '3rem' }}>Our Locations</h1>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '2rem' }}>
-          {locations.map((loc) => (
-            <div key={loc.country} style={{ 
-              background: 'var(--color-bg-secondary)', 
-              padding: '2rem', 
-              borderRadius: 'var(--border-radius-generic)',
-              border: '1px solid rgba(255,255,255,0.05)'
-            }}>
-              <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--color-accent-primary)' }}>{loc.country}</h2>
-              <ul style={{ listStyle: 'none', padding: 0 }}>
-                {loc.cities.map((city) => (
-                  <li key={city} style={{ marginBottom: '0.5rem', color: 'var(--color-text-secondary)' }}>
-                    {city}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+    <main className={styles.main}>
+      <div className={`container ${styles.container}`}>
+        {/* Hero */}
+        <div className={styles.hero}>
+          <span className={styles.badge}>Worldwide Presence</span>
+          <h1>Our Locations</h1>
+          <p className={styles.subtitle}>
+            Lumina escorts are available across Africa, Europe, the Americas, Asia, and beyond.
+            Find your perfect companion wherever you are in the world.
+          </p>
+        </div>
+
+        {/* Africa Section */}
+        <section className={styles.section}>
+          <div className={styles.sectionHeader}>
+            <span className={styles.sectionIcon}>🌍</span>
+            <h2>Africa</h2>
+          </div>
+          <div className={styles.grid}>
+            {africanLocations.map((loc) => (
+              <div key={loc.country} className={styles.card}>
+                <h3 className={styles.country}>{loc.country}</h3>
+                <ul className={styles.cities}>
+                  {loc.cities.map((city) => (
+                    <li key={city}>
+                      <Link href={`/search?city=${encodeURIComponent(city)}&country=${encodeURIComponent(loc.country)}`}>
+                        {city}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* World Section */}
+        <section className={styles.section}>
+          <div className={styles.sectionHeader}>
+            <span className={styles.sectionIcon}>🌐</span>
+            <h2>Worldwide</h2>
+          </div>
+          <div className={styles.grid}>
+            {worldLocations.map((loc) => (
+              <div key={loc.country} className={styles.card}>
+                <h3 className={styles.country}>{loc.country}</h3>
+                <ul className={styles.cities}>
+                  {loc.cities.map((city) => (
+                    <li key={city}>
+                      <Link href={`/search?city=${encodeURIComponent(city)}&country=${encodeURIComponent(loc.country)}`}>
+                        {city}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* CTA */}
+        <div className={styles.cta}>
+          <h2>Don&apos;t see your city?</h2>
+          <p>Our network is constantly growing. Contact us to request coverage in your area.</p>
+          <Link href="/search" className="btn-primary">Browse All Escorts</Link>
         </div>
       </div>
     </main>

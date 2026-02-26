@@ -2,23 +2,24 @@
 
 import { signIn } from '@/auth';
 import { AuthError } from 'next-auth';
-import { redirect } from 'next/navigation';
 import { prisma } from '@/lib/prisma';
 
-export async function authenticate(formData: FormData) {
+export async function authenticate(
+  prevState: string | undefined,
+  formData: FormData
+): Promise<string | undefined> {
   try {
     const email = formData.get('email') as string;
-    let redirectTo = '/';
+    let redirectTo = '/dashboard';
 
     if (email) {
       const user = await prisma.user.findUnique({
         where: { email },
-        select: { role: true }
+        select: { role: true },
       });
 
-      if (user?.role === 'ADMIN') {
-        redirectTo = '/admin';
-      }
+      if (user?.role === 'ADMIN') redirectTo = '/admin';
+      else if (user?.role === 'MODEL') redirectTo = '/dashboard/escort';
     }
     
     await signIn('credentials', {

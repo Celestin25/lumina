@@ -24,44 +24,35 @@ export async function registerUser(formData: FormData) {
   const { name, email, password, role } = validatedFields.data;
 
   try {
-    // Check if user exists
-    const existingUser = await prisma.user.findUnique({
-      where: { email },
-    });
+    const existingUser = await prisma.user.findUnique({ where: { email } });
+    if (existingUser) redirect('/register?error=EmailExists');
 
-    if (existingUser) {
-      redirect('/register?error=EmailExists');
-    }
-
-    // Hash password
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // Create user
-    await prisma.user.create({
-      data: {
-        name,
-        email,
-        password: hashedPassword,
-        role,
-      },
+    const user = await prisma.user.create({
+      data: { name, email, password: hashedPassword, role },
     });
 
-    // If model, create empty profile? 
-    // For MVP, we can leave it and create it on first dashboard access or right here.
-    // Let's keep it simple for now.
+    // Auto-create a ModelProfile stub for escort accounts
+    if (role === 'MODEL') {
+      await prisma.modelProfile.create({
+        data: {
+          userId: user.id,
+          displayName: name,
+          country: '',
+          city: '',
+          age: 21,
+          hourlyRate: 0,
+        },
+      });
+    }
 
-  } catch (error) {
-    // console.error('Registration error:', error); // can log but rethrow if needed
-    // If it's a redirect error (NEXT_REDIRECT), allow it to pass
-    if ((error as Error).message === 'NEXT_REDIRECT') throw error; // actually redirect throws an error with digest NEXT_REDIRECT
-    
-    // For now simplistic handling:
-    // redirect('/register?error=ServerError'); 
-    // We cannot redirect inside catch block if it masks the original redirect unless we check for it.
-    // simpler:
-    console.error(error); 
+  } catch (error: any) {
+    // Re-throw Next.js redirect errors so they work correctly
+    if (error?.digest?.startsWith('NEXT_REDIRECT')) throw error;
+    console.error('Registration error:', error);
+    redirect('/register?error=ServerError');
   }
   
-  // If we got here without throwing/redirecting:
   redirect('/login?registered=true');
 }

@@ -50,6 +50,16 @@
   border: 1px solid rgba(76, 175, 80, 0.2);
 }
 
+.errorMessage {
+  background: rgba(244, 63, 94, 0.1);
+  color: #f43f5e;
+  padding: 0.75rem;
+  border-radius: var(--border-radius-generic);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(244, 63, 94, 0.2);
+}
+
 .form {
   display: flex;
   flex-direction: column;

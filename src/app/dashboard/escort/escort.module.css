@@ -1,0 +1,166 @@
+.main {
+  min-height: 100vh;
+  padding: 2rem 0;
+  background: var(--color-bg);
+}
+
+.container { max-width: 1100px; padding: 0 1.5rem; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 { font-size: 1.75rem; font-weight: 700; color: var(--color-text); }
+.subtitle { color: var(--color-text-secondary); margin-top: 0.25rem; }
+
+.headerActions { display: flex; align-items: center; gap: 1rem; }
+
+.activeBadge {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.alertBanner {
+  background: rgba(244, 63, 94, 0.08);
+  border: 1px solid rgba(244, 63, 94, 0.3);
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-text);
+  font-size: 0.95rem;
+}
+
+.alertBanner a { color: var(--color-gold); text-decoration: underline; }
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.statCard {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.statVal { font-size: 1.75rem; font-weight: 700; color: var(--color-gold); }
+.statLbl { font-size: 0.8rem; color: var(--color-text-secondary); margin-top: 0.3rem; }
+
+.card {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cardHeader h2 { font-size: 1.1rem; font-weight: 600; color: var(--color-text); }
+.cardTitle { font-size: 1.1rem; font-weight: 600; color: var(--color-text); margin-bottom: 1rem; }
+
+.plansSection { margin-top: 1.5rem; }
+.plansSection h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-text); }
+.plansSubtitle { color: var(--color-text-secondary); margin-bottom: 1.5rem; }
+
+.plansGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.planCard {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 1.75rem;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.planCard:hover { transform: translateY(-3px); }
+
+.planCardPopular {
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 1px var(--color-gold);
+}
+
+.popularBadge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-gold);
+  color: #000;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.planName { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+
+.planPrice {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+.planPrice span { font-size: 1rem; color: var(--color-text-secondary); font-weight: 400; }
+
+.planFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.planFeatures li { font-size: 0.88rem; color: var(--color-text-secondary); }
+
+.planActions { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.paymentList { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.paymentItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: var(--color-bg);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+.payDesc { font-weight: 600; font-size: 0.9rem; color: var(--color-text); }
+.payMeta { font-size: 0.78rem; color: var(--color-text-secondary); margin-top: 0.15rem; }
+.payRight { text-align: right; }
+.payAmount { font-weight: 700; color: var(--color-gold); margin-top: 0.25rem; }
+
+.badge { font-size: 0.7rem; padding: 2px 8px; border-radius: 20px; font-weight: 600; text-transform: uppercase; }
+.badge_ok { background: rgba(16,185,129,0.15); color: #10b981; }
+.badge_pending { background: rgba(245,158,11,0.15); color: #f59e0b; }
+
+@media (max-width: 768px) {
+  .header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+  .plansGrid { grid-template-columns: 1fr; }
+}

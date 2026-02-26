@@ -2,74 +2,67 @@ import Link from 'next/link';
 import styles from './admin.module.css';
 import { 
   LayoutDashboard, 
-  BarChart2, 
-  Mail, 
-  Send, 
-  Briefcase, 
+  Users, 
+  UserCheck,
+  CreditCard,
+  BookOpen,
   Settings, 
   LogOut, 
-  Menu
+  Crown,
+  BarChart2,
 } from 'lucide-react';
+import { auth } from '@/auth';
+import { handleSignOut } from '@/actions/auth';
 
-export default function AdminLayout({
+export default async function AdminLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const session = await auth();
+
+  const navItems = [
+    { href: '/admin', label: 'Dashboard', icon: LayoutDashboard },
+    { href: '/admin/users', label: 'Users', icon: Users },
+    { href: '/admin/escorts', label: 'Escorts', icon: UserCheck },
+    { href: '/admin/payments', label: 'Payments', icon: CreditCard },
+  ];
+
   return (
     <div className={styles.adminContainer}>
       {/* Sidebar */}
       <aside className={styles.sidebar}>
         <div className={styles.sidebarHeader}>
           <Link href="/" className={styles.logo}>
-            go<span style={{color: '#10b981'}}>now</span>
+            Lumina<span style={{color: '#d4af37'}}>✦</span>
           </Link>
-          <div style={{color: '#10b981', fontSize: '0.7rem', border: '1px solid #10b981', padding: '2px 6px', borderRadius: '4px'}}>
-            DEVELOPMENT
+          <div style={{color: '#d4af37', fontSize: '0.65rem', border: '1px solid rgba(212,175,55,0.4)', padding: '2px 6px', borderRadius: '4px', fontWeight:700}}>
+            ADMIN
           </div>
         </div>
 
         <nav className={styles.nav}>
           <div className={styles.navSection}>
-            <Link href="/admin" className={`${styles.navLink} ${styles.active}`}>
-              <LayoutDashboard size={18} />
-              <span>Dashboard</span>
-            </Link>
-            <Link href="/admin/stats" className={styles.navLink}>
-              <BarChart2 size={18} />
-              <span>Statistics</span>
-            </Link>
-            <Link href="/admin/email" className={styles.navLink}>
-              <Mail size={18} />
-              <span>Email Marketing</span>
-            </Link>
-            <Link href="/admin/send" className={styles.navLink}>
-              <Send size={18} />
-              <span>Send Email</span>
-            </Link>
-          </div>
-
-          <div className={styles.navSection}>
-            <h4 className={styles.navSectionTitle}>Business</h4>
-            <Link href="/admin/businesses" className={styles.navLink}>
-              <Briefcase size={18} />
-              <span>Businesses</span>
-            </Link>
-            <Link href="/admin/orders" className={styles.navLink}>
-              <Briefcase size={18} />
-              <span>Orders</span>
-            </Link>
-             <Link href="/admin/reviews" className={styles.navLink}>
-              <Settings size={18} />
-              <span>Reviews</span>
-            </Link>
+            <h4 className={styles.navSectionTitle}>Overview</h4>
+            {navItems.map(({ href, label, icon: Icon }) => (
+              <Link key={href} href={href} className={styles.navLink}>
+                <Icon size={17} />
+                <span>{label}</span>
+              </Link>
+            ))}
           </div>
 
           <div className={styles.navSection} style={{marginTop: 'auto'}}>
             <Link href="/" className={styles.navLink}>
-               <LogOut size={18} />
-               <span>Back to Site</span>
+              <LayoutDashboard size={17} />
+              <span>View Site</span>
             </Link>
+            <form action={handleSignOut}>
+              <button type="submit" className={styles.navLink} style={{background:'none', border:'none', cursor:'pointer', width:'100%', color:'var(--color-text-secondary)'}}>
+                <LogOut size={17} />
+                <span>Sign Out</span>
+              </button>
+            </form>
           </div>
         </nav>
       </aside>
@@ -77,14 +70,17 @@ export default function AdminLayout({
       {/* Main Content */}
       <div className={styles.mainContent}>
         <header className={styles.header}>
-            <div style={{display: 'flex', alignItems: 'center', gap: '15px'}}>
-               <Menu size={20} className="lg:hidden" />
-               <h2 className={styles.headerTitle}>Dashboard & Stats</h2>
-            </div>
-            
-            <div style={{display: 'flex', gap: '15px'}}>
-               {/* User Profile or Actions */}
-            </div>
+          <div style={{display: 'flex', alignItems: 'center', gap: '15px'}}>
+            <h2 className={styles.headerTitle}>Admin Panel</h2>
+          </div>
+          
+          <div style={{display: 'flex', gap: '15px', alignItems: 'center'}}>
+            {session?.user && (
+              <span style={{color: 'var(--color-text-secondary)', fontSize: '0.85rem'}}>
+                {session.user.name || session.user.email}
+              </span>
+            )}
+          </div>
         </header>
 
         <main className={styles.contentBody}>

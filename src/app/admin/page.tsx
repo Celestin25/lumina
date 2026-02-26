@@ -1,130 +1,127 @@
-import { 
-  ShoppingCart, 
-  DollarSign, 
-  Users, 
-  Clock, 
-  Mail 
-} from 'lucide-react';
+import { auth } from '@/auth';
+import { prisma } from '@/lib/prisma';
+import { redirect } from 'next/navigation';
+import { Users, DollarSign, BookOpen, UserCheck, Crown } from 'lucide-react';
 import styles from './admin.module.css';
+import Link from 'next/link';
 
-export default function AdminDashboard() {
+export const dynamic = 'force-dynamic';
+
+export default async function AdminDashboard() {
+  const session = await auth();
+  if (!session?.user || (session.user as any).role !== 'ADMIN') redirect('/');
+
+  // Real DB stats
+  const [
+    totalUsers,
+    totalEscorts,
+    totalBookings,
+    pendingBookings,
+    totalRevenue,
+    activeSubscriptions,
+    newUsersThisWeek,
+    recentPayments,
+  ] = await Promise.all([
+    prisma.user.count(),
+    prisma.modelProfile.count(),
+    prisma.booking.count(),
+    prisma.booking.count({ where: { status: 'PENDING' } }),
+    prisma.payment.aggregate({ where: { status: 'completed' }, _sum: { amount: true } }),
+    prisma.subscription.count({ where: { status: 'active' } }),
+    prisma.user.count({
+      where: { createdAt: { gte: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000) } }
+    }),
+    prisma.payment.findMany({
+      orderBy: { createdAt: 'desc' },
+      take: 8,
+      include: { user: { select: { name: true, email: true } } },
+    }),
+  ]);
+
+  const revenue = totalRevenue._sum.amount || 0;
+
+  const stats = [
+    { label: 'Total Users', value: totalUsers, icon: Users, color: '#6366f1', sub: `+${newUsersThisWeek} this week` },
+    { label: 'Active Subscriptions', value: activeSubscriptions, icon: Crown, color: '#d4af37', sub: 'Paying escorts' },
+    { label: 'Total Revenue', value: `$${revenue.toFixed(0)}`, icon: DollarSign, color: '#10b981', sub: 'All time' },
+    { label: 'Total Bookings', value: totalBookings, icon: BookOpen, color: '#0ea5e9', sub: `${pendingBookings} pending` },
+    { label: 'Escort Profiles', value: totalEscorts, icon: UserCheck, color: '#f59e0b', sub: 'In directory' },
+  ];
+
   return (
     <div>
-      <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem'}}>
+      <div className={styles.pageHeader}>
         <div>
-          <h1 style={{fontSize: '1.5rem', fontWeight: 700, marginBottom: '0.5rem', color: '#1f2937'}}>GoNow Dashboard</h1>
-          <p style={{color: '#6b7280'}}>Welcome back! Here's your platform overview.</p>
+          <h1>Admin Dashboard</h1>
+          <p className={styles.pageSubtitle}>Platform overview — real-time data</p>
         </div>
-        <div style={{display: 'flex', gap: '10px'}}>
-            <button style={{background: 'white', border: '1px solid #e5e7eb', padding: '10px 16px', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer'}}>
-                <Mail size={16} /> Send Email
-            </button>
-             <button style={{background: '#1f2937', color: 'white', border: 'none', padding: '10px 16px', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer'}}>
-                <Mail size={16} /> Email Marketing
-            </button>
+        <div style={{display:'flex', gap:'10px'}}>
+          <Link href="/admin/users" className="btn-outline" style={{fontSize:'0.85rem'}}>Manage Users</Link>
+          <Link href="/admin/escorts" className="btn-primary" style={{fontSize:'0.85rem'}}>Manage Escorts</Link>
         </div>
       </div>
 
       {/* Stats Grid */}
       <div className={styles.statsGrid}>
-        <div className={styles.statCard}>
-          <div className={styles.statHeader}>
-            <div className={styles.statIcon} style={{background: '#0ea5e9'}}>
-              <ShoppingCart size={24} />
+        {stats.map((s) => (
+          <div key={s.label} className={styles.statCard}>
+            <div className={styles.statHeader}>
+              <div className={styles.statIcon} style={{background: s.color}}>
+                <s.icon size={22} color="white" />
+              </div>
+            </div>
+            <div className={styles.statValue}>{s.value}</div>
+            <div className={styles.statLabel}>{s.label}</div>
+            <div className={styles.statFooter}>
+              <span className={`${styles.statTrend} ${styles.trendUp}`}>{s.sub}</span>
             </div>
           </div>
-          <div className={styles.statValue}>27</div>
-          <div className={styles.statLabel}>Total Orders</div>
-          <div className={styles.statFooter} style={{marginTop: '1rem'}}>
-             <span className={`${styles.statTrend} ${styles.trendUp}`}>0 today</span>
-          </div>
-        </div>
-
-        <div className={styles.statCard}>
-          <div className={styles.statHeader}>
-            <div className={styles.statIcon} style={{background: '#10b981'}}>
-              <DollarSign size={24} />
-            </div>
-          </div>
-          <div className={styles.statValue}>$0</div>
-          <div className={styles.statLabel}>Total Revenue</div>
-           <div className={styles.statFooter} style={{marginTop: '1rem'}}>
-             <span className={`${styles.statTrend} ${styles.trendUp}`}>$0 this week</span>
-          </div>
-        </div>
-
-        <div className={styles.statCard}>
-          <div className={styles.statHeader}>
-            <div className={styles.statIcon} style={{background: '#6366f1'}}>
-              <Users size={24} />
-            </div>
-          </div>
-          <div className={styles.statValue}>15</div>
-          <div className={styles.statLabel}>Total Users</div>
-           <div className={styles.statFooter} style={{marginTop: '1rem'}}>
-             <span className={`${styles.statTrend} ${styles.trendUp}`}>+8 new this week</span>
-          </div>
-        </div>
-
-        <div className={styles.statCard}>
-           <div className={styles.statHeader}>
-            <div className={styles.statIcon} style={{background: '#f59e0b'}}>
-              <Clock size={24} />
-            </div>
-          </div>
-          <div className={styles.statValue}>0</div>
-          <div className={styles.statLabel}>Pending Orders</div>
-           <div className={styles.statFooter} style={{marginTop: '1rem'}}>
-             <span className={`${styles.statTrend} ${styles.trendUp}`}>1 open tickets</span>
-          </div>
-        </div>
+        ))}
       </div>
 
-      {/* Charts */}
-      <div className={styles.chartsGrid}>
+      {/* Recent Payments */}
+      <div className={styles.chartsGrid} style={{gridTemplateColumns:'1fr'}}>
         <div className={styles.chartCard}>
-           <h3 className={styles.chartTitle}>Orders & Revenue (Last 30 Days)</h3>
-           <div className={styles.chartArea}>
-              {/* Fake Bar Chart */}
-              <div style={{width: '100%', height: '100%', display: 'flex', alignItems: 'flex-end', gap: '10px'}}>
-                  {[30, 45, 25, 60, 40, 70, 50, 80, 55, 35, 90, 65].map((h, i) => (
-                      <div key={i} className={styles.bar} style={{height: `${h}%`, background: '#3b82f6'}}></div>
-                  ))}
-                   {[30, 45, 25, 60, 40, 70, 50, 80, 55, 35, 90, 65].map((h, i) => (
-                      <div key={`rev-${i}`} className={styles.bar} style={{height: `${h * 0.7}%`, background: '#10b981'}}></div>
-                  ))}
-              </div>
-           </div>
-           <div style={{display: 'flex', justifyContent: 'center', gap: '20px', marginTop: '1rem'}}>
-               <div style={{display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.9rem', color: '#64748b'}}>
-                   <span style={{width: '12px', height: '12px', background: '#3b82f6', borderRadius: '2px'}}></span> Orders
-               </div>
-                <div style={{display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.9rem', color: '#64748b'}}>
-                   <span style={{width: '12px', height: '12px', background: '#10b981', borderRadius: '2px'}}></span> Revenue ($)
-               </div>
-           </div>
-        </div>
-
-        <div className={styles.chartCard}>
-           <h3 className={styles.chartTitle}>Order Status</h3>
-           <div className={styles.donutContainer}>
-               <div className={styles.donut}></div>
-               <div className={styles.donutHole}></div>
-           </div>
-           <div style={{marginTop: '1.5rem'}}>
-               <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem', fontSize: '0.9rem'}}>
-                   <span style={{display: 'flex', alignItems: 'center', gap: '6px'}}><span style={{width: '10px', height: '10px', background: '#10b981', borderRadius: '50%'}}></span> Completed</span>
-                   <span style={{fontWeight: 600}}>65%</span>
-               </div>
-               <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem', fontSize: '0.9rem'}}>
-                   <span style={{display: 'flex', alignItems: 'center', gap: '6px'}}><span style={{width: '10px', height: '10px', background: '#f43f5e', borderRadius: '50%'}}></span> Cancelled</span>
-                   <span style={{fontWeight: 600}}>20%</span>
-               </div>
-               <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem', fontSize: '0.9rem'}}>
-                   <span style={{display: 'flex', alignItems: 'center', gap: '6px'}}><span style={{width: '10px', height: '10px', background: '#3b82f6', borderRadius: '50%'}}></span> Pending</span>
-                   <span style={{fontWeight: 600}}>15%</span>
-               </div>
-           </div>
+          <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:'1rem'}}>
+            <h3 className={styles.chartTitle}>Recent Transactions</h3>
+            <Link href="/admin/payments" style={{fontSize:'0.85rem', color:'var(--color-gold)'}}>View all →</Link>
+          </div>
+          <table style={{width:'100%', borderCollapse:'collapse', fontSize:'0.9rem'}}>
+            <thead>
+              <tr style={{borderBottom:'1px solid var(--color-border)', color:'var(--color-text-secondary)'}}>
+                <th style={{textAlign:'left', padding:'0.5rem 0'}}>User</th>
+                <th style={{textAlign:'left', padding:'0.5rem 0'}}>Description</th>
+                <th style={{textAlign:'left', padding:'0.5rem 0'}}>Provider</th>
+                <th style={{textAlign:'right', padding:'0.5rem 0'}}>Amount</th>
+                <th style={{textAlign:'right', padding:'0.5rem 0'}}>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {recentPayments.length === 0 ? (
+                <tr><td colSpan={5} style={{textAlign:'center', padding:'2rem', color:'var(--color-text-secondary)'}}>No payments yet</td></tr>
+              ) : recentPayments.map((p: any) => (
+                <tr key={p.id} style={{borderBottom:'1px solid rgba(255,255,255,0.05)'}}>
+                  <td style={{padding:'0.75rem 0'}}>{p.user.name || p.user.email}</td>
+                  <td style={{color:'var(--color-text-secondary)'}}>{p.description || '—'}</td>
+                  <td>
+                    <span style={{
+                      background: p.provider === 'BTC' ? 'rgba(245,158,11,0.15)' : 'rgba(99,102,241,0.15)',
+                      color: p.provider === 'BTC' ? '#f59e0b' : '#6366f1',
+                      padding:'2px 8px', borderRadius:'20px', fontSize:'0.75rem', fontWeight:600
+                    }}>{p.provider}</span>
+                  </td>
+                  <td style={{textAlign:'right', fontWeight:700, color:'var(--color-gold)'}}>${p.amount.toFixed(2)}</td>
+                  <td style={{textAlign:'right'}}>
+                    <span style={{
+                      background: p.status === 'completed' ? 'rgba(16,185,129,0.15)' : 'rgba(245,158,11,0.15)',
+                      color: p.status === 'completed' ? '#10b981' : '#f59e0b',
+                      padding:'2px 8px', borderRadius:'20px', fontSize:'0.75rem', fontWeight:600
+                    }}>{p.status}</span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
 }
 
 datasource db {
@@ -7,96 +8,126 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// Enums removed for SQLite compatibility
-// Role: CLIENT, MODEL, ADMIN
-// BookingStatus: PENDING, CONFIRMED, COMPLETED, CANCELLED
-
 model User {
-  id            String    @id @default(cuid())
-  name          String?
-  email         String    @unique
-  password      String    // Hashed password
-  role          String    @default("CLIENT")
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
+  id                 String    @id @default(cuid())
+  name               String?
+  email              String    @unique
+  password           String
+  role               String    @default("CLIENT")
+  stripeCustomerId   String?
+  subscriptionStatus String    @default("inactive") // inactive, active, past_due, canceled
+  subscriptionPlan   String?   // basic, featured, vip
+  createdAt          DateTime  @default(now())
+  updatedAt          DateTime  @updatedAt
 
-  // Relationships
   modelProfile  ModelProfile?
   bookings      Booking[]     @relation("ClientBookings")
   reviews       Review[]
+  payments      Payment[]
+  subscriptions Subscription[]
 }
 
 model ModelProfile {
-  id            String    @id @default(cuid())
-  userId        String    @unique
-  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-  
-  displayName   String
-  bio           String?
-  country       String
-  city          String
-  age           Int
-  height        Int?      // in cm
-  weight        Int?      // in kg
-  
-  hourlyRate    Float
-  services      Service[]
-  photos        Photo[]
-  
-  isVerified    Boolean   @default(false)
-  isFeatured    Boolean   @default(false)
-  
-  rating        Float     @default(0)
-  reviewCount   Int       @default(0)
-  
-  bookings      Booking[] @relation("ModelBookings")
-  reviews       Review[]  @relation("ModelReviews")
+  id          String  @id @default(cuid())
+  userId      String  @unique
+  user        User    @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
+  displayName String
+  bio         String?
+  country     String  @default("")
+  city        String  @default("")
+  age         Int     @default(18)
+  height      Int?
+  weight      Int?
+  btcAddress  String?
+
+  hourlyRate  Float   @default(0)
+  services    Service[]
+  photos      Photo[]
+
+  isVerified  Boolean  @default(false)
+  isFeatured  Boolean  @default(false)
+  isActive    Boolean  @default(true)
+
+  rating      Float    @default(0)
+  reviewCount Int      @default(0)
+
+  bookings    Booking[]  @relation("ModelBookings")
+  reviews     Review[]   @relation("ModelReviews")
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }
 
 model Photo {
-  id            String        @id @default(cuid())
-  url           String
-  modelId       String
-  model         ModelProfile  @relation(fields: [modelId], references: [id], onDelete: Cascade)
+  id      String       @id @default(cuid())
+  url     String
+  modelId String
+  model   ModelProfile @relation(fields: [modelId], references: [id], onDelete: Cascade)
 }
 
 model Service {
-  id            String        @id @default(cuid())
-  name          String
-  modelId       String
-  model         ModelProfile  @relation(fields: [modelId], references: [id], onDelete: Cascade)
+  id      String       @id @default(cuid())
+  name    String
+  modelId String
+  model   ModelProfile @relation(fields: [modelId], references: [id], onDelete: Cascade)
 }
 
 model Booking {
-  id            String        @id @default(cuid())
-  clientId      String
-  client        User          @relation("ClientBookings", fields: [clientId], references: [id])
-  
-  modelId       String
-  model         ModelProfile  @relation("ModelBookings", fields: [modelId], references: [id])
-  
-  startTime     DateTime
-  endTime       DateTime
-  totalPrice    Float
-  status        String    @default("PENDING")
-  
-  createdAt     DateTime      @default(now())
-  updatedAt     DateTime      @updatedAt
+  id         String       @id @default(cuid())
+  clientId   String
+  client     User         @relation("ClientBookings", fields: [clientId], references: [id])
+  modelId    String
+  model      ModelProfile @relation("ModelBookings", fields: [modelId], references: [id])
+  startTime  DateTime
+  endTime    DateTime
+  totalPrice Float
+  status     String       @default("PENDING") // PENDING, CONFIRMED, COMPLETED, CANCELLED
+  notes      String?
+  payments   Payment[]
+  createdAt  DateTime     @default(now())
+  updatedAt  DateTime     @updatedAt
 }
 
 model Review {
-  id            String        @id @default(cuid())
-  rating        Int           // 1-5
-  comment       String?
-  
-  authorId      String
-  author        User          @relation(fields: [authorId], references: [id])
-  
-  modelId       String
-  model         ModelProfile  @relation("ModelReviews", fields: [modelId], references: [id])
-  
-  createdAt     DateTime      @default(now())
+  id       String       @id @default(cuid())
+  rating   Int
+  comment  String?
+  authorId String
+  author   User         @relation(fields: [authorId], references: [id])
+  modelId  String
+  model    ModelProfile @relation("ModelReviews", fields: [modelId], references: [id])
+  createdAt DateTime    @default(now())
+}
+
+model Subscription {
+  id                  String   @id @default(cuid())
+  userId              String
+  user                User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  plan                String   // basic, featured, vip
+  status              String   // active, canceled, past_due, trialing
+  provider            String   @default("STRIPE") // STRIPE, BTC
+  stripeSubId         String?
+  stripeSubItemId     String?
+  currentPeriodStart  DateTime?
+  currentPeriodEnd    DateTime?
+  cancelAtPeriodEnd   Boolean  @default(false)
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+}
+
+model Payment {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+  bookingId   String?
+  booking     Booking? @relation(fields: [bookingId], references: [id])
+  amount      Float
+  currency    String   @default("USD")
+  provider    String   // STRIPE, BTC
+  status      String   @default("pending") // pending, completed, failed, refunded
+  stripePayId String?
+  btcChargeId String?
+  description String?
+  createdAt   DateTime @default(now())
 }

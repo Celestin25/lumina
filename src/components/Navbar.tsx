@@ -1,22 +1,23 @@
 import Link from "next/link";
-import { User, Search, Menu, LogOut, LayoutDashboard } from "lucide-react";
+import { User, Search, LogOut, LayoutDashboard, Crown } from "lucide-react";
 import { auth } from "@/auth";
 import { handleSignOut } from "@/actions/auth";
 import styles from "./Navbar.module.css";
 
 export default async function Navbar() {
   const session = await auth();
+  const user = session?.user as any;
 
   return (
     <nav className={styles.nav}>
       <div className={`container ${styles.container}`}>
         <Link href="/" className={styles.logo}>
-          Lumina
+          Lumina<span className="text-gold">✦</span>
         </Link>
         <div className={styles.links}>
           <Link href="/search" className={styles.link}>Models</Link>
           <Link href="/locations" className={styles.link}>Locations</Link>
-          <Link href="/news" className={styles.link}>News</Link>
+          <Link href="/pricing" className={styles.link}>Pricing</Link>
           <Link href="/about" className={styles.link}>About</Link>
         </div>
         <div className={styles.actions}>
@@ -26,11 +27,23 @@ export default async function Navbar() {
           
           {session ? (
             <div className={styles.userMenu}>
-              <span className={styles.userName}>Hello, {session.user?.name?.split(' ')[0]}</span>
+              <span className={styles.userName}>
+                {user?.name?.split(' ')[0] || 'Account'}
+              </span>
               
-              {/* Admin Dashboard Link */}
-              {(session.user as any)?.role === 'ADMIN' && (
-                <Link href="/admin" className={styles.iconBtn} title="Admin Dashboard" style={{color: '#10b981'}}>
+              {/* Role-based dashboard link */}
+              {user?.role === 'ADMIN' && (
+                <Link href="/admin" className={styles.iconBtn} title="Admin Dashboard" style={{color: '#d4af37'}}>
+                  <LayoutDashboard size={20} />
+                </Link>
+              )}
+              {user?.role === 'MODEL' && (
+                <Link href="/dashboard/escort" className={styles.iconBtn} title="Escort Dashboard" style={{color: '#6366f1'}}>
+                  <Crown size={20} />
+                </Link>
+              )}
+              {user?.role === 'CLIENT' && (
+                <Link href="/dashboard" className={styles.iconBtn} title="My Dashboard">
                   <LayoutDashboard size={20} />
                 </Link>
               )}
@@ -42,10 +55,15 @@ export default async function Navbar() {
               </form>
             </div>
           ) : (
-            <Link href="/login" className={styles.loginBtn}>
-              <User size={18} />
-              <span>Login</span>
-            </Link>
+            <div className={styles.actions}>
+              <Link href="/login" className={styles.loginBtn}>
+                <User size={18} />
+                <span>Login</span>
+              </Link>
+              <Link href="/register" className="btn-primary" style={{fontSize:'0.85rem', padding:'0.5rem 1rem'}}>
+                Join
+              </Link>
+            </div>
           )}
         </div>
       </div>

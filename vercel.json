@@ -1,0 +1,23 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "prisma generate && next build",
+  "installCommand": "npm install",
+  "outputDirectory": ".next",
+  "env": {
+    "DATABASE_URL": "@database_url",
+    "TURSO_DATABASE_URL": "@turso_database_url",
+    "TURSO_AUTH_TOKEN": "@turso_auth_token",
+    "NEXTAUTH_SECRET": "@nextauth_secret",
+    "NEXTAUTH_URL": "@nextauth_url",
+    "STRIPE_SECRET_KEY": "@stripe_secret_key",
+    "STRIPE_PUBLISHABLE_KEY": "@stripe_publishable_key",
+    "STRIPE_WEBHOOK_SECRET": "@stripe_webhook_secret",
+    "STRIPE_ESCORT_BASIC_PRICE_ID": "@stripe_escort_basic_price_id",
+    "STRIPE_ESCORT_FEATURED_PRICE_ID": "@stripe_escort_featured_price_id",
+    "STRIPE_ESCORT_VIP_PRICE_ID": "@stripe_escort_vip_price_id",
+    "COINBASE_COMMERCE_API_KEY": "@coinbase_commerce_api_key",
+    "COINBASE_COMMERCE_WEBHOOK_SECRET": "@coinbase_commerce_webhook_secret",
+    "NEXT_PUBLIC_APP_URL": "@next_public_app_url",
+    "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY": "@next_public_stripe_publishable_key"
+  }
+}

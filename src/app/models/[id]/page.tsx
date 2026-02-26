@@ -1,10 +1,10 @@
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '@/lib/prisma';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { MapPin, Star, Check, ArrowLeft } from 'lucide-react';
 import styles from './page.module.css';
 
-const prisma = new PrismaClient();
+export const dynamic = 'force-dynamic';
 
 async function getModel(id: string) {
   const model = await prisma.modelProfile.findUnique({

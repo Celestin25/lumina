@@ -1,16 +1,13 @@
 import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
-
 import bcrypt from "bcryptjs";
 import { z } from "zod";
-
 import { prisma } from "@/lib/prisma";
+import { authConfig } from "@/auth.config";
 
 async function getUser(email: string) {
   try {
-    const user = await prisma.user.findUnique({
-      where: { email },
-    });
+    const user = await prisma.user.findUnique({ where: { email } });
     return user;
   } catch (error) {
     console.error("Failed to fetch user:", error);
@@ -19,6 +16,7 @@ async function getUser(email: string) {
 }
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
+  ...authConfig,
   providers: [
     Credentials({
       async authorize(credentials) {
@@ -30,33 +28,29 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           const { email, password } = parsedCredentials.data;
           const user = await getUser(email);
           if (!user) return null;
-          
           const passwordsMatch = await bcrypt.compare(password, user.password);
           if (passwordsMatch) return user;
         }
 
-        console.log("Invalid credentials");
         return null;
       },
     }),
   ],
-  pages: {
-    signIn: "/login",
-  },
   callbacks: {
-    async jwt({ token, user }: { token: any, user: any }) {
+    ...authConfig.callbacks,
+    async jwt({ token, user }: { token: any; user: any }) {
       if (user) {
         token.role = user.role;
         token.sub = user.id;
       }
       return token;
     },
-    async session({ session, token }: { session: any, token: any }) {
+    async session({ session, token }: { session: any; token: any }) {
       if (token.sub && session.user) {
         session.user.id = token.sub;
         session.user.role = token.role;
       }
       return session;
-    }
-  }
+    },
+  },
 });
