@@ -9,6 +9,7 @@ interface ProfileFormData {
   bio: string;
   country: string;
   city: string;
+  phone: string;
   age: string;
   height: string;
   weight: string;
@@ -28,6 +29,7 @@ export default function EscortProfilePage() {
     bio: '',
     country: '',
     city: '',
+    phone: '',
     age: '21',
     height: '',
     weight: '',
@@ -122,6 +124,10 @@ export default function EscortProfilePage() {
               <div className={styles.field}>
                 <label>City *</label>
                 <input name="city" value={form.city} onChange={handleChange} required placeholder="London" />
+              </div>
+              <div className={styles.field}>
+                <label>Phone / WhatsApp *</label>
+                <input name="phone" value={form.phone} onChange={handleChange} required placeholder="+44 7123 456789" />
               </div>
             </div>
           </div>

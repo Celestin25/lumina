@@ -20,12 +20,17 @@ async function getModel(id: string) {
   return model;
 }
 
-export default async function ModelPage({ params }: { params: { id: string } }) {
-  const model = await getModel(params.id);
+export default async function ModelPage({ params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = await params;
+  const model = await getModel(resolvedParams.id);
 
   if (!model) {
     notFound();
   }
+
+  // Format WhatsApp Link using the model's phone number or a placeholder if missing
+  const cleanPhone = model.phone ? model.phone.replace(/[^0-9]/g, '') : '1234567890';
+  const whatsappLink = `https://wa.me/${cleanPhone}?text=Hi%20${model.displayName},%20I%20saw%20your%20profile%20on%20Lumina.`;
 
   return (
     <main className={styles.main}>
@@ -98,7 +103,12 @@ export default async function ModelPage({ params }: { params: { id: string } }) 
               <span className={styles.priceLabel}>Hourly Rate</span>
               <span className={styles.priceValue}>${model.hourlyRate}</span>
             </div>
-            <button className="btn-primary" style={{width: '100%'}}>
+            
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{width: '100%', display: 'flex', justifyContent: 'center', marginBottom: '1rem'}}>
+              Contact via WhatsApp
+            </a>
+            
+            <button className="btn-outline" style={{width: '100%'}}>
               Request Booking
             </button>
             <p className={styles.disclaimer}>* No payment required until confirmation</p>

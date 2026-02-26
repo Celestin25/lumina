@@ -19,6 +19,7 @@ interface ModelProps {
   photos: { id: string; url: string }[];
   services?: Service[];
   isVerified?: boolean;
+  phone?: string | null;
 }
 
 export default function ModelCard({ model }: { model: ModelProps }) {
@@ -27,6 +28,10 @@ export default function ModelCard({ model }: { model: ModelProps }) {
   
   // Get first service or default
   const mainService = model.services && model.services.length > 0 ? model.services[0].name : 'Companion';
+
+  // Format WhatsApp Link
+  const cleanPhone = model.phone ? model.phone.replace(/[^0-9]/g, '') : '1234567890';
+  const whatsappLink = `https://wa.me/${cleanPhone}?text=Hi%20${model.displayName},%20I%20saw%20your%20profile%20on%20Lumina.`;
 
   return (
     <div className={styles.card}>
@@ -65,11 +70,11 @@ export default function ModelCard({ model }: { model: ModelProps }) {
             <Briefcase size={20} />
           </button>
           
-          <Link href={`/models/${model.id}`} className={`${styles.actionBtn} ${styles.btnCall}`} title="Contact">
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className={`${styles.actionBtn} ${styles.btnCall}`} title="Contact on WhatsApp">
              <Phone size={18} />
-          </Link>
+          </a>
           
-          <button className={`${styles.actionBtn} ${styles.btnLike}`} title="Save">
+          <button className={`${styles.actionBtn} ${styles.btnLike}`} title="Save to Favorites">
             <Heart size={20} />
           </button>
         </div>

@@ -17,11 +17,11 @@ export async function POST(req: NextRequest) {
     }
 
     const {
-      displayName, bio, country, city, age, height, weight,
+      displayName, bio, country, city, phone, age, height, weight,
       hourlyRate, btcAddress, services, photoUrls,
     } = await req.json();
 
-    if (!displayName || !country || !city || !hourlyRate) {
+    if (!displayName || !country || !city || !phone || !hourlyRate) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
 
@@ -50,6 +50,7 @@ export async function POST(req: NextRequest) {
           bio: bio || null,
           country,
           city,
+          phone,
           age: parseInt(age) || 21,
           height: height ? parseInt(height) : null,
           weight: weight ? parseInt(weight) : null,
@@ -67,6 +68,7 @@ export async function POST(req: NextRequest) {
           bio: bio || null,
           country,
           city,
+          phone,
           age: parseInt(age) || 21,
           height: height ? parseInt(height) : null,
           weight: weight ? parseInt(weight) : null,
