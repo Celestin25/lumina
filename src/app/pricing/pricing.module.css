@@ -28,8 +28,8 @@
 
 .toggle {
   display: inline-flex;
-  background: var(--color-bg-secondary);
-  border: 1px solid var(--color-border);
+  background: #1a1a2e;
+  border: 1px solid rgba(212, 175, 55, 0.3);
   border-radius: 10px;
   padding: 4px;
   gap: 4px;
@@ -38,27 +38,36 @@
 .toggle button {
   background: transparent;
   border: none;
-  padding: 0.5rem 1.25rem;
+  padding: 0.6rem 1.5rem;
   border-radius: 7px;
-  color: var(--color-text-secondary);
+  color: #c8c8d8;
   cursor: pointer;
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 0.95rem;
+  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   transition: all 0.2s;
 }
 
-.toggleActive { background: var(--color-gold) !important; color: #000 !important; font-weight: 600 !important; }
+.toggle button:hover:not(.toggleActive) {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.toggleActive { 
+  background: #d4af37 !important; 
+  color: #000000 !important; 
+  font-weight: 700 !important; 
+}
 
 .toggleSave {
   background: rgba(16, 185, 129, 0.2);
   color: #10b981;
-  padding: 1px 6px;
+  padding: 2px 8px;
   border-radius: 10px;
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-size: 0.75rem;
+  font-weight: 800;
 }
 
 .plansGrid {
@@ -80,22 +89,23 @@
 .planCard:hover { transform: translateY(-4px); }
 
 .planCardPopular {
-  border-color: var(--color-gold);
-  box-shadow: 0 0 30px rgba(212, 175, 55, 0.1);
+  border-color: #d4af37;
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
 }
 
 .popularBadge {
   position: absolute;
-  top: -13px;
+  top: -15px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--color-gold);
-  color: #000;
-  font-size: 0.72rem;
+  background: #d4af37;
+  color: #000000;
+  font-size: 0.8rem;
   font-weight: 800;
-  padding: 4px 14px;
+  padding: 6px 16px;
   border-radius: 20px;
   white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
 }
 
 .planHeader { margin-bottom: 1.5rem; }
