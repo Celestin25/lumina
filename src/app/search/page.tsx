@@ -6,9 +6,7 @@ import styles from './page.module.css';
 
 const prisma = new PrismaClient();
 
-async function getModels(searchParams: { country?: string; city?: string }) {
-  const { country, city } = searchParams;
-  
+async function getModels(country?: string, city?: string) {
   return await prisma.modelProfile.findMany({
     where: {
       isVerified: true,
@@ -24,9 +22,10 @@ async function getModels(searchParams: { country?: string; city?: string }) {
 export default async function SearchPage({
   searchParams,
 }: {
-  searchParams: { country?: string; city?: string };
+  searchParams: Promise<{ country?: string; city?: string }>;
 }) {
-  const models = await getModels(searchParams);
+  const resolvedParams = await searchParams;
+  const models = await getModels(resolvedParams.country, resolvedParams.city);
 
   return (
     <main className={styles.main}>

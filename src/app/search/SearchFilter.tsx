@@ -9,6 +9,7 @@ export default function SearchFilter() {
   const router = useRouter();
   const searchParams = useSearchParams();
   
+  // Convert URLSearchParams to state
   const currentCountry = searchParams.get('country') || '';
   const currentCity = searchParams.get('city') || '';
   
