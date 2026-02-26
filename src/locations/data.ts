@@ -34,9 +34,10 @@ export const servicesList = [
 ];
 
 export const modelNames = [
-  "Layla", "Amara", "Zahara", "Nia", "Imani", "Amina", "Eshe", "Zola", "Keyara", "Sienna", // African-inspired
+  "Layla", "Amara", "Zahara", "Nia", "Imani", "Amina", "Eshe", "Zola", "Keyara", "Sienna", // African/Black
   "Elena", "Sophia", "Isabella", "Sophie", "Chloe", "Emma", "Olivia", "Ava", "Mia", "Lily", // Western
-  "Yuki", "Hana", "Mei", "Zara", "Yasmin", "Priya", "Ananya", "Valentina", "Camila", "Luna" // Global
+  "Yuki", "Hana", "Mei", "Zara", "Yasmin", "Fatima", "Noor", "Aisha", "Mariam", "Leila", // Asian/Arab
+  "Valentina", "Camila", "Luna", "Sofia", "Isabella", "Gabriela", "Carmen", "Maria", "Rosa", "Lucia" // Latina
 ];
 
 export const bios = [
@@ -51,14 +52,17 @@ export const bios = [
 ];
 
 export const photoUrls = [
-  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2864&auto=format&fit=crop",
+  // Diverse & Realistic
+  "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=2787&auto=format&fit=crop", // Black
+  "https://images.unsplash.com/photo-1542596594-649edbc13630?q=80&w=2787&auto=format&fit=crop", // Arab/Middle Eastern
+  "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=2787&auto=format&fit=crop", // Mixed/Curly
+  "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=2787&auto=format&fit=crop", // Asian
+  "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=2787&auto=format&fit=crop", // Latina
+  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2864&auto=format&fit=crop", // Generic
   "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=2788&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=2550&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=2459&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=2787&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=2787&auto=format&fit=crop", // Male
-  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2787&auto=format&fit=crop", // Male
-  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=2787&auto=format&fit=crop", // Male
   "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=2787&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=2787&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1503104834685-7205e8607eb9?q=80&w=2560&auto=format&fit=crop"
