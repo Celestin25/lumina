@@ -75,6 +75,9 @@ export default function EscortDashboardClient({
 
   const isActive = user.subscriptionStatus === 'active';
   const currentPlan = user.subscriptionPlan;
+  
+  // A profile is considered complete if they have set a bio and uploaded at least one photo
+  const isProfileComplete = profile && profile.bio && profile.photos && profile.photos.length > 0;
 
   return (
     <main className={styles.main}>
@@ -93,9 +96,9 @@ export default function EscortDashboardClient({
         </div>
 
         {/* Status Banner */}
-        {!profile ? (
+        {!isProfileComplete ? (
           <div className={styles.alertBanner}>
-            <p>⚠️ Your profile is incomplete. <a href="/dashboard/escort/profile">Complete your profile</a> to get listed.</p>
+            <p>⚠️ Your profile is incomplete. <a href="/dashboard/escort/profile">Complete your profile</a> (add photos and bio) to get listed.</p>
           </div>
         ) : !isActive ? (
           <div className={styles.alertBanner} style={{borderColor:'#f59e0b', background:'rgba(245,158,11,0.08)'}}>

@@ -41,6 +41,7 @@ export async function registerUser(formData: FormData) {
           displayName: name,
           country: '',
           city: '',
+          phone: '',
           age: 21,
           hourlyRate: 0,
         },
