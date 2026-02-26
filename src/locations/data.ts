@@ -52,18 +52,25 @@ export const bios = [
 ];
 
 export const photoUrls = [
-  // Diverse & Realistic
+  // Diverse & Realistic (No Duplicates)
   "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=2787&auto=format&fit=crop", // Black
   "https://images.unsplash.com/photo-1542596594-649edbc13630?q=80&w=2787&auto=format&fit=crop", // Arab/Middle Eastern
   "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=2787&auto=format&fit=crop", // Mixed/Curly
   "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=2787&auto=format&fit=crop", // Asian
   "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=2787&auto=format&fit=crop", // Latina
-  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2864&auto=format&fit=crop", // Generic
-  "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=2788&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=2550&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=2459&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=2787&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=2787&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=2787&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1503104834685-7205e8607eb9?q=80&w=2560&auto=format&fit=crop"
+  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2864&auto=format&fit=crop", // Latina/Mixed
+  "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=2788&auto=format&fit=crop", // White/Brunette
+  "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=2550&auto=format&fit=crop", // Black/Natural Hair
+  "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=2459&auto=format&fit=crop", // White/Blonde
+  "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=2787&auto=format&fit=crop", // White/Fashion
+  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=2787&auto=format&fit=crop", // European
+  "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=2787&auto=format&fit=crop", // Eastern European
+  "https://images.unsplash.com/photo-1503104834685-7205e8607eb9?q=80&w=2560&auto=format&fit=crop", // Mixed
+  "https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?q=80&w=2787&auto=format&fit=crop", // Arab/North African
+  "https://images.unsplash.com/photo-1545912452-8aea7e25a3d3?q=80&w=2787&auto=format&fit=crop", // Latina
+  "https://images.unsplash.com/photo-1526382551041-3c8172c91a0c?q=80&w=2787&auto=format&fit=crop", // Black/Elegant
+  "https://images.unsplash.com/photo-1531746430391-7f99f1faaeac?q=80&w=2550&auto=format&fit=crop", // Asian/Fashion
+  "https://images.unsplash.com/photo-1520110120835-c96534a4c984?q=80&w=2787&auto=format&fit=crop", // African
+  "https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?q=80&w=2787&auto=format&fit=crop", // Mixed/Fashion
+  "https://images.unsplash.com/photo-1513379733131-47fc74b45fc7?q=80&w=2487&auto=format&fit=crop"  // White/Elegant
 ];

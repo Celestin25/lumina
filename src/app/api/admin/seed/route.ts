@@ -14,13 +14,30 @@ export async function GET() {
   try {
     const hashedPassword = await bcrypt.hash('password123', 10);
     
-    // Seed Diverse Models across some world locations
+    // 1. Remove previously seeded models to prevent duplicates
+    await prisma.user.deleteMany({
+      where: {
+        role: 'MODEL',
+        email: { endsWith: '@lumina.com' }
+      }
+    });
+
+    // 2. Shuffle photos strictly so we only use each photo exactly once
+    const uniquePhotos = [...photoUrls].sort(() => 0.5 - Math.random());
+    
+    // 3. Flat list of all available cities for random assignment
+    const allCities = [...worldLocations].flatMap(loc => 
+      loc.cities.map(city => ({ city, country: loc.country }))
+    );
+
     let seededCount = 0;
     
-    for (const loc of worldLocations.slice(0, 5)) { // Just first 5 countries to be fast
-      for (const city of loc.cities) {
+    // 4. Create up to the length of our unique photo pool (20)
+    for (let i = 0; i < uniquePhotos.length; i++) {
+        const photoUrl = uniquePhotos[i];
+        const location = random(allCities);
         const name = random(modelNames);
-        const email = `${name.toLowerCase()}.${city.replace(' ', '').toLowerCase()}${randomInt(1, 999)}@lumina.com`;
+        const email = `${name.toLowerCase()}.${location.city.replace(' ', '').toLowerCase()}${randomInt(1, 999)}@lumina.com`;
         
         try {
             const user = await prisma.user.upsert({
@@ -36,19 +53,14 @@ export async function GET() {
 
             const hourlyRate = randomInt(200, 1000);
             const services = randomSubset(servicesList, 4).map((s: string) => ({ name: s }));
-            const photoUrl = random(photoUrls);
 
-             await prisma.modelProfile.upsert({
-                where: { userId: user.id },
-                update: {
-                    photos: { create: [{ url: photoUrl }] } // Append new realistic photo if it exists
-                },
-                create: {
+             await prisma.modelProfile.create({
+                data: {
                     userId: user.id,
                     displayName: `${name} ${String.fromCharCode(65 + randomInt(0, 25))}.`,
                     bio: random(bios),
-                    country: loc.country,
-                    city: city,
+                    country: location.country,
+                    city: location.city,
                     phone: '',
                     age: randomInt(20, 30),
                     height: randomInt(165, 180),
@@ -66,10 +78,9 @@ export async function GET() {
         } catch (e) {
             console.warn(`Skipping duplicate for ${email}`);
         }
-      }
     }
 
-    return NextResponse.json({ success: true, message: `Successfully seeded ${seededCount} diverse models into the live database.` });
+    return NextResponse.json({ success: true, message: `Successfully cleared duplicates and seeded ${seededCount} unique, diverse models into the live database.` });
   } catch (error: any) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
