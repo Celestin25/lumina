@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Star, MapPin, Briefcase, Phone, Heart } from 'lucide-react';
+import { Star, MapPin, Briefcase, Phone } from 'lucide-react';
+import FavoriteButton from './FavoriteButton';
 import styles from './ModelCard.module.css';
 
 interface Service {
@@ -74,9 +75,7 @@ export default function ModelCard({ model }: { model: ModelProps }) {
              <Phone size={18} />
           </a>
           
-          <button className={`${styles.actionBtn} ${styles.btnLike}`} title="Save to Favorites">
-            <Heart size={20} />
-          </button>
+          <FavoriteButton modelId={model.id} />
         </div>
       </div>
     </div>
