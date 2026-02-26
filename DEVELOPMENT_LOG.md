@@ -446,3 +446,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-25 11:54` feat(ui): add dark mode toggle with system preference fallback
 - `2026-02-26 10:07` feat(notifications): build real-time push notifications with SSE
 - `2026-02-26 11:29` fix(modal): lock body scroll when dialog is active
+- `2026-02-26 12:58` fix(forms): enforce client-side validation before hitting API endpoints
