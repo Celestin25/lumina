@@ -42,10 +42,10 @@ export default async function AdminDashboard() {
 
   const stats = [
     { label: 'Total Users', value: totalUsers, icon: Users, color: '#6366f1', sub: `+${newUsersThisWeek} this week` },
-    { label: 'Active Subscriptions', value: activeSubscriptions, icon: Crown, color: '#d4af37', sub: 'Paying escorts' },
+    { label: 'Active Subscriptions', value: activeSubscriptions, icon: Crown, color: '#d4af37', sub: 'Paying models' },
     { label: 'Total Revenue', value: `$${revenue.toFixed(0)}`, icon: DollarSign, color: '#10b981', sub: 'All time' },
     { label: 'Total Bookings', value: totalBookings, icon: BookOpen, color: '#0ea5e9', sub: `${pendingBookings} pending` },
-    { label: 'Escort Profiles', value: totalEscorts, icon: UserCheck, color: '#f59e0b', sub: 'In directory' },
+    { label: 'Model Profiles', value: totalEscorts, icon: UserCheck, color: '#f59e0b', sub: 'In directory' },
   ];
 
   return (
@@ -57,7 +57,7 @@ export default async function AdminDashboard() {
         </div>
         <div style={{display:'flex', gap:'10px'}}>
           <Link href="/admin/users" className="btn-outline" style={{fontSize:'0.85rem'}}>Manage Users</Link>
-          <Link href="/admin/escorts" className="btn-primary" style={{fontSize:'0.85rem'}}>Manage Escorts</Link>
+          <Link href="/admin/escorts" className="btn-primary" style={{fontSize:'0.85rem'}}>Manage Models</Link>
         </div>
       </div>
 

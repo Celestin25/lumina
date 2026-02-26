@@ -30,8 +30,8 @@ export default function AdminEscortsClient({ escorts }: { escorts: any[] }) {
     <div>
       <div className={styles.pageHeader}>
         <div>
-          <h1>Escort Management</h1>
-          <p className={styles.pageSubtitle}>{escorts.length} escort profiles</p>
+          <h1>Model Management</h1>
+          <p className={styles.pageSubtitle}>{escorts.length} model profiles</p>
         </div>
       </div>
 
@@ -51,7 +51,7 @@ export default function AdminEscortsClient({ escorts }: { escorts: any[] }) {
         <table style={{width:'100%', borderCollapse:'collapse', fontSize:'0.88rem'}}>
           <thead>
             <tr style={{borderBottom:'1px solid var(--color-border)', color:'var(--color-text-secondary)', textAlign:'left'}}>
-              <th style={{padding:'0.75rem 0.5rem'}}>Escort</th>
+              <th style={{padding:'0.75rem 0.5rem'}}>Model</th>
               <th style={{padding:'0.75rem 0.5rem'}}>Location</th>
               <th style={{padding:'0.75rem 0.5rem'}}>Subscription</th>
               <th style={{padding:'0.75rem 0.5rem'}}>Stats</th>
@@ -62,7 +62,7 @@ export default function AdminEscortsClient({ escorts }: { escorts: any[] }) {
           </thead>
           <tbody>
             {filtered.length === 0 ? (
-              <tr><td colSpan={7} style={{textAlign:'center', padding:'2rem', color:'var(--color-text-secondary)'}}>No escorts found</td></tr>
+              <tr><td colSpan={7} style={{textAlign:'center', padding:'2rem', color:'var(--color-text-secondary)'}}>No models found</td></tr>
             ) : filtered.map(e => (
               <tr key={e.id} style={{borderBottom:'1px solid rgba(255,255,255,0.05)'}}>
                 <td style={{padding:'0.75rem 0.5rem'}}>

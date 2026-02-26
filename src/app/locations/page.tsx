@@ -13,7 +13,7 @@ export default function LocationsPage() {
           <span className={styles.badge}>Worldwide Presence</span>
           <h1>Our Locations</h1>
           <p className={styles.subtitle}>
-            Lumina escorts are available across Africa, Europe, the Americas, Asia, and beyond.
+            Lumina models are available across Africa, Europe, the Americas, Asia, and beyond.
             Find your perfect companion wherever you are in the world.
           </p>
         </div>
@@ -70,7 +70,7 @@ export default function LocationsPage() {
         <div className={styles.cta}>
           <h2>Don&apos;t see your city?</h2>
           <p>Our network is constantly growing. Contact us to request coverage in your area.</p>
-          <Link href="/search" className="btn-primary">Browse All Escorts</Link>
+          <Link href="/search" className="btn-primary">Browse All Models</Link>
         </div>
       </div>
     </main>

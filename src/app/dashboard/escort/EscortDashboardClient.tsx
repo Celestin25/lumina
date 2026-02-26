@@ -81,7 +81,7 @@ export default function EscortDashboardClient({
       <div className={`container ${styles.container}`}>
         <div className={styles.header}>
           <div>
-            <h1>Escort Dashboard</h1>
+            <h1>Model Dashboard</h1>
             <p className={styles.subtitle}>Manage your listing and subscription</p>
           </div>
           <div className={styles.headerActions}>

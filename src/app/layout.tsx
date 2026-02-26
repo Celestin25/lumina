@@ -17,8 +17,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Lumina | Exclusive Escort Services & Luxury Companions",
-  description: "Discover verified, high-end companions worldwide. Lumina offers a premium selection of elite escorts for travel, events, and intimate encounters.",
+  title: "Lumina | Exclusive Model Services & Luxury Companions",
+  description: "Discover verified, high-end companions worldwide. Lumina offers a premium selection of elite models for travel, events, and intimate encounters.",
 };
 
 export default function RootLayout({

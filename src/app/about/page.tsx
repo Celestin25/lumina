@@ -8,7 +8,7 @@ export default function AboutPage() {
           We prioritize potential, elegance, and discretion above all else.
         </p>
         <p style={{ fontSize: '1.1rem', color: 'var(--color-text-secondary)' }}>
-          Founded in 2026, our mission is to redefine the industry standards by providing a safe, 
+          Founded in 2002, our mission is to redefine the industry standards by providing a safe, 
           transparent, and high-end environment for both models and clients.
         </p>
       </div>

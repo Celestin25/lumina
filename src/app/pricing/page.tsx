@@ -11,7 +11,7 @@ const plans = [
     color: '#6366f1',
     description: 'Perfect for getting started',
     features: [
-      'Listed in escort directory',
+      'Listed in model directory',
       'Up to 5 profile photos',
       'Standard search placement',
       'Contact via platform',
@@ -24,7 +24,7 @@ const plans = [
     price: 99,
     color: '#f59e0b',
     popular: true,
-    description: 'Most popular for serious escorts',
+    description: 'Most popular for serious models',
     features: [
       'Featured placement in search',
       'Up to 20 profile photos',
@@ -112,10 +112,10 @@ export default function PricingPage() {
     <main className={styles.main}>
       <div className={`container ${styles.container}`}>
         <div className={styles.hero}>
-          <span className={styles.badge}>Escort Listings</span>
+          <span className={styles.badge}>Model Listings</span>
           <h1>Choose Your Plan</h1>
           <p className={styles.subtitle}>
-            Join the most exclusive escort directory. Start getting clients today.
+            Join the most exclusive model directory. Start getting clients today.
           </p>
 
           <div className={styles.toggle}>

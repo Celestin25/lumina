@@ -38,7 +38,7 @@ export default async function Navbar() {
                 </Link>
               )}
               {user?.role === 'MODEL' && (
-                <Link href="/dashboard/escort" className={styles.iconBtn} title="Escort Dashboard" style={{color: '#6366f1'}}>
+                <Link href="/dashboard/escort" className={styles.iconBtn} title="Model Dashboard" style={{color: '#6366f1'}}>
                   <Crown size={20} />
                 </Link>
               )}

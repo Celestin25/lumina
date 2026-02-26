@@ -84,7 +84,7 @@ export default function EscortProfilePage() {
       <div className={`container ${styles.container}`}>
         <div className={styles.header}>
           <h1>Set Up Your Profile</h1>
-          <p className={styles.subtitle}>Complete your escort profile to get listed in the directory</p>
+          <p className={styles.subtitle}>Complete your model profile to get listed in the directory</p>
         </div>
 
         <form onSubmit={handleSubmit} className={styles.form}>
@@ -151,7 +151,7 @@ export default function EscortProfilePage() {
             <div className={styles.field}>
               <label>Services Offered (comma separated)</label>
               <input name="services" value={form.services} onChange={handleChange}
-                placeholder="Dinner date, Travel companion, Massage, Social escort..." />
+                placeholder="Dinner date, Travel companion, Massage, Social model..." />
             </div>
           </div>
 
