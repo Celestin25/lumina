@@ -44,18 +44,39 @@
 .input, .select {
   width: 100%;
   padding: 0.75rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #1a1a2e;
+  border: 1px solid rgba(212, 175, 55, 0.3);
   border-radius: 8px;
-  color: var(--color-text-primary);
+  color: #ffffff;
   font-size: 0.95rem;
   transition: all 0.2s;
+  cursor: pointer;
+  /* Force OS dropdown to use dark colors */
+  color-scheme: dark;
 }
 
 .input:focus, .select:focus {
   outline: none;
-  border-color: var(--color-accent-primary);
-  background: rgba(255, 255, 255, 0.05);
+  border-color: #d4af37;
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+}
+
+/* Style each option in the dropdown list */
+.select option {
+  background: #1a1a2e;
+  color: #ffffff;
+  padding: 8px;
+}
+
+.select option:hover,
+.select option:checked {
+  background: #d4af37;
+  color: #1a1a2e;
+}
+
+.select:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 
 .regionBtn {
