@@ -18,7 +18,7 @@ function LoginForm() {
         <div className={styles.card}>
           <h1 className={styles.title}>Welcome Back</h1>
           <p className={styles.subtitle}>Log in to your exclusive account</p>
-          
+
           {registered && (
             <div className={styles.successMessage}>
               Account created! Please log in.
@@ -34,7 +34,7 @@ function LoginForm() {
           <form action={formAction} className={styles.form}>
             <div className={styles.formGroup}>
               <label htmlFor="email">Email Address</label>
-              <input type="email" id="email" name="email" required placeholder="john@example.com" />
+              <input type="email" id="email" name="email" required placeholder="your@email.com" />
             </div>
 
             <div className={styles.formGroup}>
@@ -42,7 +42,12 @@ function LoginForm() {
               <input type="password" id="password" name="password" required placeholder="••••••••" />
             </div>
 
-            <button type="submit" className="btn-primary" disabled={pending} style={{ width: '100%', marginTop: '1rem' }}>
+            <button
+              type="submit"
+              className="btn-primary"
+              disabled={pending}
+              style={{ width: '100%', marginTop: '1rem' }}
+            >
               {pending ? 'Signing in...' : 'Sign In'}
             </button>
           </form>
