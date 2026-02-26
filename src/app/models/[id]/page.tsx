@@ -29,7 +29,7 @@ export default async function ModelPage({ params }: { params: Promise<{ id: stri
   }
 
   // Format WhatsApp Link using the model's phone number or a placeholder if missing
-  const cleanPhone = model.phone ? model.phone.replace(/[^0-9]/g, '') : '1234567890';
+  const cleanPhone = (model as any).phone ? (model as any).phone.replace(/[^0-9]/g, '') : '1234567890';
   const whatsappLink = `https://wa.me/${cleanPhone}?text=Hi%20${model.displayName},%20I%20saw%20your%20profile%20on%20Lumina.`;
 
   return (

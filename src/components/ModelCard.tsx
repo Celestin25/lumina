@@ -44,7 +44,9 @@ export default function ModelCard({ model }: { model: ModelProps }) {
       
       <div className={styles.content}>
         <div className={styles.header}>
-          <h3 className={styles.name}>{model.displayName}</h3>
+          <Link href={`/models/${model.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <h3 className={styles.name}>{model.displayName}</h3>
+          </Link>
           <div className={styles.location}>
             <MapPin size={12} />
             <span>{model.city || 'Unknown'}</span>
@@ -67,9 +69,9 @@ export default function ModelCard({ model }: { model: ModelProps }) {
         </p>
 
         <div className={styles.footer}>
-          <button className={`${styles.actionBtn} ${styles.btnBriefcase}`} title="Portfolio">
+          <Link href={`/models/${model.id}`} className={`${styles.actionBtn} ${styles.btnBriefcase}`} title="View Profile">
             <Briefcase size={20} />
-          </button>
+          </Link>
           
           <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className={`${styles.actionBtn} ${styles.btnCall}`} title="Contact on WhatsApp">
              <Phone size={18} />
