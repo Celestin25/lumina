@@ -39,6 +39,7 @@ model ModelProfile {
   age         Int     @default(18)
   height      Int?
   weight      Int?
+  ethnicity   String?
   phone       String?
   btcAddress  String?
 

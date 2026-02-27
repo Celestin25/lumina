@@ -16,6 +16,7 @@ interface ModelProps {
   country: string;
   hourlyRate: number;
   rating: number;
+  ethnicity?: string | null;
   bio?: string | null;
   photos: { id: string; url: string }[];
   services?: Service[];
@@ -49,7 +50,7 @@ export default function ModelCard({ model }: { model: ModelProps }) {
           </Link>
           <div className={styles.location}>
             <MapPin size={12} />
-            <span>{model.city || 'Unknown'}</span>
+            <span>{model.city || 'Unknown'} {model.ethnicity ? `• ${model.ethnicity}` : ''}</span>
           </div>
         </div>
         

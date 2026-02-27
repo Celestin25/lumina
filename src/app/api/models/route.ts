@@ -10,6 +10,7 @@ export async function GET(request: Request) {
   const city = searchParams.get('city');
   const minPrice = searchParams.get('minPrice');
   const maxPrice = searchParams.get('maxPrice');
+  const ethnicity = searchParams.get('ethnicity');
 
   try {
     const where: any = {
@@ -22,6 +23,10 @@ export async function GET(request: Request) {
     
     if (city) {
       where.city = { contains: city };
+    }
+
+    if (ethnicity) {
+      where.ethnicity = { contains: ethnicity };
     }
 
     if (minPrice || maxPrice) {

@@ -17,12 +17,15 @@ export default function SearchFilter() {
   const isAfrica = africanLocations.some(l => l.country === currentCountry);
   const isWorld = worldLocations.some(l => l.country === currentCountry);
   
+  const currentEthnicity = searchParams.get('ethnicity') || '';
+  
   const [region, setRegion] = useState<'africa' | 'world' | ''>(
     isAfrica ? 'africa' : isWorld ? 'world' : ''
   );
   
   const [selectedCountry, setSelectedCountry] = useState(currentCountry);
   const [selectedCity, setSelectedCity] = useState(currentCity);
+  const [selectedEthnicity, setSelectedEthnicity] = useState(currentEthnicity);
 
   // Get available countries based on region
   const availableCountries = region === 'africa' 
@@ -102,6 +105,21 @@ export default function SearchFilter() {
           {availableCities.map(city => (
             <option key={city} value={city}>{city}</option>
           ))}
+        </select>
+      </div>
+
+      <div className={styles.formGroup}>
+        <label>Ethnicity</label>
+        <select 
+          value={selectedEthnicity} 
+          onChange={(e) => setSelectedEthnicity(e.target.value)}
+          className={styles.select}
+        >
+          <option value="">All Ethnicities</option>
+          <option value="Black">Black</option>
+          <option value="White">White</option>
+          <option value="Mixed">Mixed</option>
+          <option value="Latino">Latino</option>
         </select>
       </div>
 
