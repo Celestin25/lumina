@@ -448,3 +448,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-26 11:29` fix(modal): lock body scroll when dialog is active
 - `2026-02-26 12:58` fix(forms): enforce client-side validation before hitting API endpoints
 - `2026-02-27 11:58` fix(perf): memoize expensive filter computations to prevent extra renders
+- `2026-02-27 13:02` refactor: extract date formatting helpers into shared utils
