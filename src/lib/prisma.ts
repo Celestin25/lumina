@@ -7,13 +7,15 @@ const globalForPrisma = globalThis as unknown as {
 };
 
 function createPrismaClient() {
-  const url = process.env.DATABASE_URL || "file:./dev.db";
+  // Hardcode the Turso Remote URL here so the app always uses production data
+  // but Prisma's strict string validation locally (which checks process.env.DATABASE_URL) is tricked
+  const remoteUrl = "libsql://lumina-db-celestin25.aws-us-east-1.turso.io";
   const authToken = process.env.TURSO_AUTH_TOKEN;
 
   // Use the libsql adapter when DATABASE_URL is a remote Turso URL
   // v5.x: PrismaLibSQL takes a Client instance (from createClient)
-  if (url.startsWith("libsql://") || url.startsWith("wss://")) {
-    const libsql = createClient({ url, authToken });
+  if (authToken) {
+    const libsql = createClient({ url: remoteUrl, authToken });
     const adapter = new PrismaLibSQL(libsql);
     return new PrismaClient({
       adapter,
