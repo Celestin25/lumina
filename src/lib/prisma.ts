@@ -1,24 +1,32 @@
 import { PrismaClient } from "@prisma/client";
 import { createClient } from "@libsql/client";
-import { PrismaLibSQL } from "@prisma/adapter-libsql";
+import { PrismaLibSql } from "@prisma/adapter-libsql";
 
 const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined;
 };
 
-const libsql = createClient({
-  url: process.env.DATABASE_URL || "file:./dev.db",
-  authToken: process.env.TURSO_AUTH_TOKEN, // Optional: Only required if they are using a full remote Turso URL with an auth token
-});
+function createPrismaClient() {
+  const url = process.env.DATABASE_URL || "file:./dev.db";
+  const authToken = process.env.TURSO_AUTH_TOKEN;
 
-const adapter = new PrismaLibSQL(libsql);
+  // Use the libsql adapter when DATABASE_URL is a remote Turso URL
+  if (url.startsWith("libsql://") || url.startsWith("wss://")) {
+    const libsql = createClient({ url, authToken });
+    const adapter = new PrismaLibSql(libsql);
+    return new PrismaClient({
+      adapter,
+      log: process.env.NODE_ENV === "development" ? ["error", "warn"] : ["error"],
+    } as any);
+  }
 
-export const prisma =
-  globalForPrisma.prisma ??
-  new PrismaClient({
-    adapter,
+  // Fallback to regular local SQLite for local development
+  return new PrismaClient({
     log: process.env.NODE_ENV === "development" ? ["error", "warn"] : ["error"],
   });
+}
+
+export const prisma = globalForPrisma.prisma ?? createPrismaClient();
 
 if (process.env.NODE_ENV !== "production") {
   globalForPrisma.prisma = prisma;
