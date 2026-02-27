@@ -1,8 +1,6 @@
-import { PrismaClient } from '@prisma/client'
+import { prisma } from '../src/lib/prisma'
 import { africanLocations, worldLocations, servicesList, modelNames, bios, photoUrls } from '../src/locations/data'
 import bcrypt from 'bcryptjs'
-
-const prisma = new PrismaClient()
 
 // Helper to get random item from array
 const random = (arr: any[]) => arr[Math.floor(Math.random() * arr.length)];
@@ -125,10 +123,13 @@ async function main() {
         try {
             const user = await prisma.user.upsert({
                 where: { email },
-                update: {},
+                update: {
+                    password: hashedPassword,
+                    role: 'MODEL',
+                },
                 create: {
                     email,
-                    password: 'password123',
+                    password: hashedPassword,
                     role: 'MODEL',
                     name: name,
                 },

@@ -3,6 +3,50 @@ import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/auth';
 import { prisma } from '@/lib/prisma';
 
+export async function GET(req: NextRequest) {
+  try {
+    const session = await auth();
+    if (!session?.user) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
+    const userId = (session.user as any).id;
+    const profile = await prisma.modelProfile.findUnique({
+      where: { userId },
+      include: {
+        photos: true,
+        services: true,
+      },
+    });
+
+    if (!profile) {
+      return NextResponse.json({ error: 'Profile not found' }, { status: 404 });
+    }
+
+    // Convert photos and services back to string format for the form
+    const formData = {
+      displayName: profile.displayName,
+      bio: profile.bio || '',
+      country: profile.country,
+      city: profile.city,
+      phone: profile.phone,
+      age: profile.age.toString(),
+      height: profile.height?.toString() || '',
+      weight: profile.weight?.toString() || '',
+      hourlyRate: profile.hourlyRate.toString(),
+      ethnicity: profile.ethnicity || '',
+      btcAddress: profile.btcAddress || '',
+      services: profile.services.map(s => s.name).join(', '),
+      photoUrls: profile.photos.map(p => p.url).join('\n'),
+    };
+
+    return NextResponse.json(formData);
+  } catch (error: any) {
+    console.error('Profile fetch error:', error);
+    return NextResponse.json({ error: error.message }, { status: 500 });
+  }
+}
+
 export async function POST(req: NextRequest) {
   try {
     const session = await auth();
@@ -19,7 +63,7 @@ export async function POST(req: NextRequest) {
 
     const {
       displayName, bio, country, city, phone, age, height, weight,
-      hourlyRate, btcAddress, services, photoUrls,
+      hourlyRate, btcAddress, services, photoUrls, ethnicity
     } = await req.json();
 
     if (!displayName || !country || !city || !phone || !hourlyRate) {
@@ -39,6 +83,22 @@ export async function POST(req: NextRequest) {
     // Upsert ModelProfile
     const existing = await prisma.modelProfile.findUnique({ where: { userId } });
 
+    const profileData = {
+      displayName,
+      bio: bio || null,
+      country,
+      city,
+      phone,
+      age: parseInt(age) || 21,
+      height: height ? parseInt(height) : null,
+      weight: weight ? parseInt(weight) : null,
+      hourlyRate: parseFloat(hourlyRate),
+      ethnicity: ethnicity || null,
+      btcAddress: btcAddress || null,
+      photos: { create: photoList.map((url: string) => ({ url })) },
+      services: { create: serviceList.map((name: string) => ({ name })) },
+    };
+
     if (existing) {
       // Delete existing photos and services first
       await prisma.photo.deleteMany({ where: { modelId: existing.id } });
@@ -46,37 +106,13 @@ export async function POST(req: NextRequest) {
 
       await prisma.modelProfile.update({
         where: { userId },
-        data: {
-          displayName,
-          bio: bio || null,
-          country,
-          city,
-          phone,
-          age: parseInt(age) || 21,
-          height: height ? parseInt(height) : null,
-          weight: weight ? parseInt(weight) : null,
-          hourlyRate: parseFloat(hourlyRate),
-          btcAddress: btcAddress || null,
-          photos: { create: photoList.map((url: string) => ({ url })) },
-          services: { create: serviceList.map((name: string) => ({ name })) },
-        },
+        data: profileData,
       });
     } else {
       await prisma.modelProfile.create({
         data: {
           userId,
-          displayName,
-          bio: bio || null,
-          country,
-          city,
-          phone,
-          age: parseInt(age) || 21,
-          height: height ? parseInt(height) : null,
-          weight: weight ? parseInt(weight) : null,
-          hourlyRate: parseFloat(hourlyRate),
-          btcAddress: btcAddress || null,
-          photos: { create: photoList.map((url: string) => ({ url })) },
-          services: { create: serviceList.map((name: string) => ({ name })) },
+          ...profileData,
         },
       });
     }

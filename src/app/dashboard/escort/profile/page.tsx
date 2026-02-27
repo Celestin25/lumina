@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import styles from './profile.module.css';
 
@@ -14,6 +14,7 @@ interface ProfileFormData {
   height: string;
   weight: string;
   hourlyRate: string;
+  ethnicity: string;
   btcAddress: string;
   services: string;
   photoUrls: string;
@@ -22,6 +23,7 @@ interface ProfileFormData {
 export default function EscortProfilePage() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
+  const [fetching, setFetching] = useState(true);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
   const [form, setForm] = useState<ProfileFormData>({
@@ -34,10 +36,29 @@ export default function EscortProfilePage() {
     height: '',
     weight: '',
     hourlyRate: '',
+    ethnicity: '',
     btcAddress: '',
     services: '',
     photoUrls: '',
   });
+
+  // Fetch existing profile data on mount
+  useEffect(() => {
+    async function fetchProfile() {
+      try {
+        const res = await fetch('/api/escort/profile');
+        if (res.ok) {
+          const data = await res.json();
+          setForm(data);
+        }
+      } catch (err) {
+        console.error('Error fetching profile:', err);
+      } finally {
+        setFetching(false);
+      }
+    }
+    fetchProfile();
+  }, []);
 
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -77,6 +98,14 @@ export default function EscortProfilePage() {
           <h2>Profile Saved!</h2>
           <p>Redirecting to your dashboard...</p>
         </div>
+      </div>
+    );
+  }
+
+  if (fetching) {
+    return (
+      <div className={styles.loadingPage}>
+        <p>Loading your profile...</p>
       </div>
     );
   }
@@ -136,6 +165,16 @@ export default function EscortProfilePage() {
           <div className={styles.section}>
             <h2 className={styles.sectionTitle}>Physical Details (Optional)</h2>
             <div className={styles.grid3}>
+              <div className={styles.field}>
+                <label>Ethnicity *</label>
+                <select name="ethnicity" value={form.ethnicity} onChange={handleChange} required className={styles.select}>
+                  <option value="">Select Ethnicity</option>
+                  <option value="Black">Black</option>
+                  <option value="White">White</option>
+                  <option value="Mixed">Mixed</option>
+                  <option value="Latino">Latino</option>
+                </select>
+              </div>
               <div className={styles.field}>
                 <label>Height (cm)</label>
                 <input name="height" type="number" value={form.height} onChange={handleChange} placeholder="170" />
