@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@libsql/client": "^0.17.0",
-    "@prisma/adapter-libsql": "^7.4.1",
+    "@prisma/adapter-libsql": "^5.4.2",
     "@prisma/client": "^5.18.0",
     "@stripe/stripe-js": "^8.8.0",
     "@types/bcryptjs": "^3.0.0",
