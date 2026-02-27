@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 import { PrismaClient } from "@prisma/client";
 import ModelCard from "@/components/ModelCard";
 
-const prisma = new PrismaClient();
+import { prisma } from '@/lib/prisma';
 
 async function getFeaturedModels() {
   return await prisma.modelProfile.findMany({

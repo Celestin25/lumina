@@ -1,11 +1,11 @@
 export const dynamic = 'force-dynamic';
 import SearchFilter from './SearchFilter';
-import { PrismaClient } from '@prisma/client';
+
 import ModelCard from '@/components/ModelCard';
 import { Search } from 'lucide-react';
 import styles from './page.module.css';
 
-const prisma = new PrismaClient();
+import { prisma } from '@/lib/prisma';
 
 async function getModels(country?: string, city?: string) {
   return await prisma.modelProfile.findMany({
