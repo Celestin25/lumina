@@ -450,3 +450,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-27 11:58` fix(perf): memoize expensive filter computations to prevent extra renders
 - `2026-02-27 13:02` refactor: extract date formatting helpers into shared utils
 - `2026-02-27 13:14` feat(api): add rate limiting middleware with Redis-backed token bucket
+- `2026-02-27 13:55` feat(i18n): add locale switcher with persistent preference in cookies
