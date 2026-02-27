@@ -28,9 +28,13 @@ export default function Navbar() {
           
           {session ? (
             <div className={styles.userMenu}>
-              <span className={styles.userName}>
-                {user?.name?.split(' ')[0] || 'Account'}
-              </span>
+              {user?.image ? (
+                <img src={user.image} alt={user.name || 'User'} className={styles.navAvatar} />
+              ) : (
+                <span className={styles.userName}>
+                  {user?.name?.split(' ')[0] || 'Account'}
+                </span>
+              )}
               
               {user?.role === 'ADMIN' && (
                 <Link href="/admin" className={styles.iconBtn} title="Admin Dashboard" style={{color: '#d4af37'}}>
@@ -48,7 +52,7 @@ export default function Navbar() {
                 </Link>
               )}
 
-              <button type="button" className={styles.logoutBtn} onClick={() => signOut()}>
+              <button type="button" className={styles.logoutBtn} onClick={() => signOut()} title="Sign Out">
                 <LogOut size={18} />
               </button>
             </div>

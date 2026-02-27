@@ -1,0 +1,30 @@
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\Lenovo\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\Lenovo\lumina\package-lock.json
+
+file:///C:/Users/Lenovo/lumina/node_modules/@prisma/client/runtime/library.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: TypeError [ERR_INVALID_ARG_TYPE]: The "payload" argument must be of type object. Received null
+Error fetching models: Error [PrismaClientKnownRequestError]: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lumina$2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].modelProfile.findMany()` invocation in
+C:\Users\Lenovo\lumina\.next\dev\server\chunks\[root-of-the-server]__f784409b._.js:158:182
+
+  155     if (minPrice) where.hourlyRate.gte = parseFloat(minPrice);
+  156     if (maxPrice) where.hourlyRate.lte = parseFloat(maxPrice);
+  157 }
+→ 158 const models = await __TURBOPACK__imported__module__$5b$project$5d2f$lumina$2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].modelProfile.findMany(
+SQL_INPUT_ERROR: SQLite input error: no such column: main.ModelProfile.ethnicity (at offset 289)
+    at <unknown> (src\app\api\models\route.ts:38:46)
+    at async GET (src\app\api\models\route.ts:38:20)
+  36 |     }
+  37 |
+> 38 |     const models = await prisma.modelProfile.findMany({
+     |                                              ^
+  39 |       where,
+  40 |       include: {
+  41 |         photos: true, {
+  code: 'SQL_INPUT_ERROR',
+  clientVersion: '5.18.0',
+  meta: [Object]
+}

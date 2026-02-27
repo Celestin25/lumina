@@ -13,6 +13,7 @@ model User {
   name               String?
   email              String    @unique
   password           String
+  image              String?
   role               String    @default("CLIENT")
   stripeCustomerId   String?
   subscriptionStatus String    @default("inactive") // inactive, active, past_due, canceled
