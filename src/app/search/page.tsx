@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import SearchFilter from './SearchFilter';
 import { PrismaClient } from '@prisma/client';
 import ModelCard from '@/components/ModelCard';

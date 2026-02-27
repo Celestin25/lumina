@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import Link from "next/link";
 import { ArrowRight, Star, MapPin } from "lucide-react";
 import styles from "./page.module.css";

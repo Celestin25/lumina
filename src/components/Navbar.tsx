@@ -1,11 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import { User, Search, LogOut, LayoutDashboard, Crown } from "lucide-react";
-import { auth } from "@/auth";
-import { handleSignOut } from "@/actions/auth";
+import { useSession, signOut } from "next-auth/react";
 import styles from "./Navbar.module.css";
 
-export default async function Navbar() {
-  const session = await auth();
+export default function Navbar() {
+  const { data: session } = useSession();
   const user = session?.user as any;
 
   return (
@@ -31,7 +32,6 @@ export default async function Navbar() {
                 {user?.name?.split(' ')[0] || 'Account'}
               </span>
               
-              {/* Role-based dashboard link */}
               {user?.role === 'ADMIN' && (
                 <Link href="/admin" className={styles.iconBtn} title="Admin Dashboard" style={{color: '#d4af37'}}>
                   <LayoutDashboard size={20} />
@@ -48,11 +48,9 @@ export default async function Navbar() {
                 </Link>
               )}
 
-              <form action={handleSignOut}>
-                <button type="submit" className={styles.logoutBtn}>
-                  <LogOut size={18} />
-                </button>
-              </form>
+              <button type="button" className={styles.logoutBtn} onClick={() => signOut()}>
+                <LogOut size={18} />
+              </button>
             </div>
           ) : (
             <div className={styles.actions}>
