@@ -5,6 +5,7 @@ import { User, Search, LogOut, LayoutDashboard, Crown } from "lucide-react";
 import { useSession, signOut } from "next-auth/react";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { handleSignOut } from "@/actions/auth";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
@@ -92,10 +93,12 @@ export default function Navbar() {
                 </Link>
               )}
 
-              <button type="button" className={styles.logoutBtn} onClick={() => signOut({ callbackUrl: '/' })} title="Sign Out">
-                <LogOut size={18} />
-                <span className={styles.logoutText}>Sign Out</span>
-              </button>
+              <form action={handleSignOut}>
+                <button type="submit" className={styles.logoutBtn} title="Sign Out">
+                  <LogOut size={18} />
+                  <span className={styles.logoutText}>Sign Out</span>
+                </button>
+              </form>
             </div>
           ) : (
             <div className={styles.actions}>

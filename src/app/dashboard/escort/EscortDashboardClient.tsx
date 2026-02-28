@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { LogOut, Edit3, Home } from 'lucide-react';
-import { signOut } from 'next-auth/react';
+import { handleSignOut } from '@/actions/auth';
 import styles from './escort.module.css';
 
 interface EscortDashboardClientProps {
@@ -108,9 +108,11 @@ export default function EscortDashboardClient({
             <Link href="/dashboard/escort/profile" className={styles.btnSecondary}>
               <Edit3 size={18} /> Edit Profile
             </Link>
-            <button onClick={() => signOut({ callbackUrl: '/' })} className={styles.btnDanger}>
-              <LogOut size={18} /> Sign Out
-            </button>
+            <form action={handleSignOut}>
+              <button type="submit" className={styles.btnDanger}>
+                <LogOut size={18} /> Sign Out
+              </button>
+            </form>
           </div>
         </div>
 

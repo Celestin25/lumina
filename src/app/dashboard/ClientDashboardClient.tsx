@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { signOut } from 'next-auth/react';
+import { handleSignOut } from '@/actions/auth';
 import Link from 'next/link';
 import { Calendar, CreditCard, User, Star, Clock, CheckCircle, Camera, LogOut, Home } from 'lucide-react';
 import styles from './dashboard.module.css';
@@ -87,9 +87,11 @@ export default function ClientDashboardClient({
               <Home size={16} style={{marginRight: '6px'}} /> Home
             </Link>
             <Link href="/search" className="btn-primary">Browse Companions</Link>
-            <button onClick={() => signOut({ callbackUrl: '/' })} className={styles.signOutBtn}>
-              <LogOut size={16} /> Sign Out
-            </button>
+            <form action={handleSignOut}>
+              <button type="submit" className={styles.signOutBtn}>
+                <LogOut size={16} /> Sign Out
+              </button>
+            </form>
           </div>
         </div>
 

@@ -1,6 +1,7 @@
 import { auth } from '@/auth';
 import { prisma } from '@/lib/prisma';
 import { redirect } from 'next/navigation';
+import { cleanModelData } from '@/lib/data-utils';
 
 export const dynamic = 'force-dynamic';
 
@@ -36,14 +37,11 @@ export default async function ClientDashboard() {
 
   const completedBookings = user.bookings.filter(b => b.status === 'COMPLETED').length;
 
-  const safeUser = user as any;
-  if (safeUser.image && safeUser.image.length > 1000) {
-    safeUser.image = `/api/avatar/${safeUser.id}`;
-  }
+  const cleanedUser = cleanModelData(user);
 
   return (
     <ClientDashboardClient 
-      user={user} 
+      user={cleanedUser} 
       totalSpent={totalSpent} 
       completedBookings={completedBookings} 
     />

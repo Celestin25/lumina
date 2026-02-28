@@ -38,6 +38,8 @@ async function main() {
       password: hashedPassword,
       role: 'CLIENT',
       name: 'John Doe',
+      isApproved: true,
+      emailVerified: new Date(),
     },
   });
 
@@ -52,6 +54,8 @@ async function main() {
       password: hashedPassword,
       role: 'ADMIN',
       name: 'Admin User',
+      isApproved: true,
+      emailVerified: new Date(),
     },
   });
   console.log('Created Admin User: admin@lumina.com / password123');
