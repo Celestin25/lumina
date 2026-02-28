@@ -28,6 +28,7 @@ export async function authenticate(
     });
   } catch (error) {
     if (error instanceof AuthError) {
+      console.error("AuthError caught in login:", error.type, error);
       switch (error.type) {
         case 'CredentialsSignin':
           return 'Invalid credentials.';

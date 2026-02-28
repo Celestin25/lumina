@@ -15,8 +15,6 @@ model User {
   password           String
   image              String?
   role               String    @default("CLIENT")
-  isApproved         Boolean   @default(false)
-  emailVerified      DateTime? // Added for email verification (legacy)
   stripeCustomerId   String?
   subscriptionStatus String    @default("inactive") // inactive, active, past_due, canceled
   subscriptionPlan   String?   // basic, featured, vip
@@ -28,15 +26,6 @@ model User {
   reviews       Review[]
   payments      Payment[]
   subscriptions Subscription[]
-}
-
-model VerificationToken {
-  id      String   @id @default(cuid())
-  email   String
-  token   String   @unique
-  expires DateTime
-
-  @@unique([email, token])
 }
 
 model ModelProfile {
