@@ -7,10 +7,13 @@ export default function AdminEscortsClient({ escorts }: { escorts: any[] }) {
   const [updating, setUpdating] = useState<string | null>(null);
   const [search, setSearch] = useState('');
 
-  const filtered = escorts.filter(e =>
-    !search || e.displayName?.toLowerCase().includes(search.toLowerCase()) || 
-    e.user?.email?.toLowerCase().includes(search.toLowerCase())
-  );
+  const filtered = escorts.filter(e => {
+    if (!search) return true;
+    const s = search.toLowerCase();
+    const nameMatch = e.displayName ? e.displayName.toLowerCase().includes(s) : false;
+    const emailMatch = e.user?.email ? e.user.email.toLowerCase().includes(s) : false;
+    return nameMatch || emailMatch;
+  });
 
   const handleToggle = async (escortId: string, field: 'isVerified' | 'isFeatured' | 'isActive', current: boolean) => {
     setUpdating(`${escortId}-${field}`);

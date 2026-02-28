@@ -9,9 +9,10 @@ export default function AdminUsersClient({ users }: { users: any[] }) {
   const [updating, setUpdating] = useState<string | null>(null);
 
   const filtered = users.filter(u => {
-    const matchSearch = !search || 
-      u.name?.toLowerCase().includes(search.toLowerCase()) ||
-      u.email.toLowerCase().includes(search.toLowerCase());
+    const s = search.toLowerCase();
+    const matchName = u.name ? u.name.toLowerCase().includes(s) : false;
+    const matchEmail = u.email ? u.email.toLowerCase().includes(s) : false;
+    const matchSearch = !search || matchName || matchEmail;
     const matchFilter = filter === 'ALL' || u.role === filter;
     return matchSearch && matchFilter;
   });
