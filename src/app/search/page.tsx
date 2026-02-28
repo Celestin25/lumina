@@ -9,17 +9,25 @@ import styles from './page.module.css';
 import { prisma } from '@/lib/prisma';
 
 async function getModels(country?: string, city?: string) {
-  return await prisma.modelProfile.findMany({
-    where: {
-      isVerified: true,
-      isActive: true,
-      ...(country && { country: { contains: country } }),
-      ...(city && { city: { contains: city } }),
-    },
-    include: {
-      photos: true,
-    },
-  });
+  try {
+    return await prisma.modelProfile.findMany({
+      where: {
+        isVerified: true,
+        isActive: true,
+        ...(country && { country: { contains: country } }),
+        ...(city && { city: { contains: city } }),
+      },
+      include: {
+        photos: true,
+      },
+      orderBy: { // Added orderBy consistent with page.tsx
+        createdAt: 'desc'
+      }
+    });
+  } catch (error: any) {
+    console.error("Database search query failed:", error);
+    return { error: error.message || error.toString() };
+  }
 }
 
 import { Suspense } from 'react';
@@ -31,7 +39,19 @@ export default async function SearchPage({
 }) {
   const resolvedParams = await searchParams;
   const modelsData = await getModels(resolvedParams.country, resolvedParams.city);
-  const models = cleanModelsList(modelsData);
+  
+  if ((modelsData as any).error) {
+    return (
+      <main className={styles.main}>
+        <div className={`container ${styles.container}`} style={{ color: 'red' }}>
+          <h2>Database Error</h2>
+          <pre>{(modelsData as any).error}</pre>
+        </div>
+      </main>
+    );
+  }
+
+  const models = cleanModelsList(modelsData as any[]);
 
   return (
     <main className={styles.main}>

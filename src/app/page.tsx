@@ -9,22 +9,39 @@ import { prisma } from '@/lib/prisma';
 import { cleanModelsList } from '@/lib/data-utils';
 
 async function getFeaturedModels() {
-  return await prisma.modelProfile.findMany({
-    where: { 
-      isFeatured: true,
-      isVerified: true,
-      isActive: true,
-    },
-    take: 3,
-    include: {
-      photos: true,
-    }
-  });
+  try {
+    return await prisma.modelProfile.findMany({
+      where: { 
+        isFeatured: true,
+        isVerified: true,
+        isActive: true,
+      },
+      take: 3,
+      include: {
+        photos: true,
+      }
+    });
+  } catch (error: any) {
+    console.error("Database featured search failed:", error);
+    return { error: error.message || error.toString() };
+  }
 }
 
 export default async function Home() {
   const featuredModelsData = await getFeaturedModels();
-  const featuredModels = cleanModelsList(featuredModelsData);
+  
+  if ((featuredModelsData as any).error) {
+    return (
+      <main className={styles.main}>
+        <div className="container" style={{ paddingTop: '100px', paddingBottom: '100px', color: 'red' }}>
+          <h2>Database Error on Home Page</h2>
+          <pre>{(featuredModelsData as any).error}</pre>
+        </div>
+      </main>
+    );
+  }
+
+  const featuredModels = cleanModelsList(featuredModelsData as any[]);
 
   return (
     <main className={styles.main}>

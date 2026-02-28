@@ -5,24 +5,41 @@ import { cleanModelsList } from '@/lib/data-utils';
 import styles from './page.module.css';
 
 async function getModels() {
-  return await prisma.modelProfile.findMany({
-    where: {
-      isVerified: true,
-      isActive: true,
-    },
-    include: {
-      photos: true,
-      services: true,
-    },
-    orderBy: {
-      createdAt: 'desc',
-    },
-  });
+  try {
+    return await prisma.modelProfile.findMany({
+      where: {
+        isVerified: true,
+        isActive: true,
+      },
+      include: {
+        photos: true,
+        services: true,
+      },
+      orderBy: {
+        createdAt: 'desc',
+      },
+    });
+  } catch (error: any) {
+    console.error("Database query failed:", error);
+    return { error: error.message || error.toString() };
+  }
 }
 
 export default async function ModelsPage() {
   const modelsData = await getModels();
-  const models = cleanModelsList(modelsData);
+  
+  if ((modelsData as any).error) {
+    return (
+      <main className={styles.main}>
+        <div className="container" style={{ paddingTop: '100px', color: 'red' }}>
+          <h2>Database Error</h2>
+          <pre>{(modelsData as any).error}</pre>
+        </div>
+      </main>
+    );
+  }
+
+  const models = cleanModelsList(modelsData as any[]);
 
   return (
     <main className={styles.main}>
