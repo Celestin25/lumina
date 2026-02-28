@@ -81,7 +81,7 @@ export default function AdminEscortsClient({ escorts }: { escorts: any[] }) {
           <tbody>
             {filtered.length === 0 ? (
               <tr><td colSpan={8} style={{textAlign:'center', padding:'2rem', color:'var(--color-text-secondary)'}}>No models found</td></tr>
-            ) : filtered.map(e => (
+            ) : filtered.map((e: any) => (
               <tr key={e.id} style={{borderBottom:'1px solid rgba(255,255,255,0.05)'}}>
                 <td style={{padding:'0.75rem 0.5rem'}}>
                   <div style={{fontWeight:600}}>{e.displayName}</div>

@@ -52,7 +52,7 @@ export default async function ModelPage({ params }: { params: Promise<{ id: stri
             }}
           />
           <div className={styles.thumbnails}>
-            {model.photos.slice(1).map((photo) => (
+            {model.photos.slice(1).map((photo: any) => (
               <div 
                 key={photo.id} 
                 className={styles.thumbnail}
@@ -98,7 +98,7 @@ export default async function ModelPage({ params }: { params: Promise<{ id: stri
           <section className={styles.section}>
             <h2>Services</h2>
             <div className={styles.tags}>
-              {model.services.map((service) => (
+              {model.services.map((service: any) => (
                 <span key={service.id} className={styles.tag}>{service.name}</span>
               ))}
             </div>

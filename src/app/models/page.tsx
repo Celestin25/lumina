@@ -32,7 +32,7 @@ export default async function ModelsPage() {
 
         {models.length > 0 ? (
           <div className={styles.grid}>
-            {models.map((model) => (
+            {models.map((model: any) => (
               <ModelCard key={model.id} model={model} />
             ))}
           </div>

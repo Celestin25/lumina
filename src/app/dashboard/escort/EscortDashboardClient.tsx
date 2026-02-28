@@ -150,13 +150,13 @@ export default function EscortDashboardClient({
             <h2>Choose Your Plan</h2>
             <p className={styles.plansSubtitle}>Select a subscription to activate your listing</p>
             <div className={styles.plansGrid}>
-              {plans.map((plan) => (
+              {plans.map((plan: any) => (
                 <div key={plan.key} className={`${styles.planCard} ${plan.key === 'featured' ? styles.planCardPopular : ''}`}>
                   {plan.key === 'featured' && <div className={styles.popularBadge}>Most Popular</div>}
                   <div className={styles.planName} style={{color: plan.color}}>{plan.name}</div>
                   <div className={styles.planPrice}>${plan.price}<span>/mo</span></div>
                   <ul className={styles.planFeatures}>
-                    {plan.features.map(f => <li key={f}>✓ {f}</li>)}
+                    {plan.features.map((f: any) => <li key={f}>✓ {f}</li>)}
                   </ul>
                   <div className={styles.planActions}>
                     <button
@@ -187,7 +187,7 @@ export default function EscortDashboardClient({
           <div className={styles.card} style={{marginTop:'1.5rem'}}>
             <h2 className={styles.cardTitle}>Payment History</h2>
             <div className={styles.paymentList}>
-              {recentPayments.map(p => (
+              {recentPayments.map((p: any) => (
                 <div key={p.id} className={styles.paymentItem}>
                   <div>
                     <p className={styles.payDesc}>{p.description || 'Payment'}</p>
