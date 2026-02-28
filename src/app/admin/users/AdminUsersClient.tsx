@@ -111,20 +111,46 @@ export default function AdminUsersClient({ users }: { users: any[] }) {
                   {new Date(u.createdAt).toLocaleDateString()}
                 </td>
                 <td style={{padding:'0.75rem 0.5rem'}}>
-                  <select
-                    value={u.role}
-                    disabled={updating === u.id}
-                    onChange={e => handleRoleChange(u.id, e.target.value)}
-                    style={{
-                      background:'var(--color-bg)', border:'1px solid var(--color-border)',
-                      borderRadius:'6px', padding:'0.3rem 0.5rem', color:'var(--color-text)',
-                      fontSize:'0.8rem', cursor:'pointer'
-                    }}
-                  >
-                    <option value="CLIENT">CLIENT</option>
-                    <option value="MODEL">MODEL</option>
-                    <option value="ADMIN">ADMIN</option>
-                  </select>
+                  <div style={{display:'flex', gap:'0.5rem', alignItems:'center'}}>
+                    <select
+                      value={u.role}
+                      disabled={updating === u.id}
+                      onChange={e => handleRoleChange(u.id, e.target.value)}
+                      style={{
+                        background:'var(--color-bg)', border:'1px solid var(--color-border)',
+                        borderRadius:'6px', padding:'0.3rem 0.5rem', color:'var(--color-text)',
+                        fontSize:'0.8rem', cursor:'pointer'
+                      }}
+                    >
+                      <option value="CLIENT">CLIENT</option>
+                      <option value="MODEL">MODEL</option>
+                      <option value="ADMIN">ADMIN</option>
+                    </select>
+
+                    <button
+                      onClick={async () => {
+                        if (confirm(`Are you sure you want to completely delete user ${u.email}?`)) {
+                          setUpdating(u.id);
+                          try {
+                            const res = await fetch(`/api/admin/users?userId=${u.id}`, { method: 'DELETE' });
+                            if (res.ok) window.location.reload();
+                            else alert('Failed to delete user');
+                          } catch {
+                            alert('Error deleting user');
+                          } finally {
+                            setUpdating(null);
+                          }
+                        }
+                      }}
+                      disabled={updating === u.id}
+                      style={{
+                        background:'rgba(244,63,94,0.1)', color:'#f43f5e', border:'1px solid rgba(244,63,94,0.2)',
+                        padding:'0.3rem 0.6rem', borderRadius:'6px', fontSize:'0.75rem', fontWeight:'bold', cursor:'pointer'
+                      }}
+                    >
+                      Delete
+                    </button>
+                  </div>
                 </td>
               </tr>
             ))}
