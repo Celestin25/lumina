@@ -12,6 +12,7 @@ async function getModels(country?: string, city?: string) {
   return await prisma.modelProfile.findMany({
     where: {
       isVerified: true,
+      isActive: true,
       ...(country && { country: { contains: country } }),
       ...(city && { city: { contains: city } }),
     },

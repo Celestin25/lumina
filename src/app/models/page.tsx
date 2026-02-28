@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { prisma } from '@/lib/prisma';
 import ModelCard from '@/components/ModelCard';
 import { cleanModelsList } from '@/lib/data-utils';
@@ -7,6 +8,7 @@ async function getModels() {
   return await prisma.modelProfile.findMany({
     where: {
       isVerified: true,
+      isActive: true,
     },
     include: {
       photos: true,

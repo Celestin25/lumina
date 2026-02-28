@@ -12,7 +12,8 @@ async function getFeaturedModels() {
   return await prisma.modelProfile.findMany({
     where: { 
       isFeatured: true,
-      isVerified: true 
+      isVerified: true,
+      isActive: true,
     },
     take: 3,
     include: {
