@@ -84,10 +84,6 @@ export default function ClientDashboardClient({
           </div>
           <div className={styles.headerActions}>
             <Link href="/search" className="btn-outline">Browse Companions</Link>
-            <button onClick={() => signOut()} className={styles.signOutBtn}>
-              <LogOut size={18} />
-              <span>Sign Out</span>
-            </button>
           </div>
         </div>
 

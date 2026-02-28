@@ -54,6 +54,7 @@ export default function Navbar() {
 
               <button type="button" className={styles.logoutBtn} onClick={() => signOut()} title="Sign Out">
                 <LogOut size={18} />
+                <span className={styles.logoutText}>Sign Out</span>
               </button>
             </div>
           ) : (

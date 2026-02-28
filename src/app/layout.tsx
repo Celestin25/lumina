@@ -17,20 +17,24 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
+import { auth } from "@/auth";
+
 export const metadata: Metadata = {
   title: "Lumina | Exclusive Model Services & Luxury Companions",
   description: "Discover verified, high-end companions worldwide. Lumina offers a premium selection of elite models for travel, events, and intimate encounters.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const session = await auth();
+
   return (
     <html lang="en">
       <body className={`${inter.variable} ${playfair.variable}`}>
-        <AuthProvider>
+        <AuthProvider session={session}>
           <Navbar />
           {children}
           <Footer />
