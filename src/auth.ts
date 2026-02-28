@@ -28,10 +28,6 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           const { email, password } = parsedCredentials.data;
           const user = await getUser(email);
           if (!user) return null;
-          
-          if (!user.isApproved) {
-            throw new Error("Your account is pending review. We will verify you soon.");
-          }
 
           const passwordsMatch = await bcrypt.compare(password, user.password);
           if (passwordsMatch) {
