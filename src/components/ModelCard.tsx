@@ -25,8 +25,13 @@ interface ModelProps {
 }
 
 export default function ModelCard({ model }: { model: ModelProps }) {
-  // Use first photo or placeholder
-  const mainPhoto = model.photos.length > 0 ? model.photos[0].url : 'https://via.placeholder.com/400x500?text=No+Photo';
+  // Use first photo or placeholder, avoiding massive Base64 DOM crashes
+  let mainPhoto = 'https://via.placeholder.com/400x500?text=No+Photo';
+  if (model.photos && model.photos.length > 0) {
+    mainPhoto = model.photos[0].url.startsWith('data:') 
+      ? `/api/photos/${model.photos[0].id}` 
+      : model.photos[0].url;
+  }
   
   // Get first service or default
   const mainService = model.services && model.services.length > 0 ? model.services[0].name : 'Companion';

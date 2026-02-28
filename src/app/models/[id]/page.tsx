@@ -43,14 +43,18 @@ export default async function ModelPage({ params }: { params: Promise<{ id: stri
         <div className={styles.gallery}>
           <div 
             className={styles.mainImage}
-            style={{ backgroundImage: `url(${model.photos[0]?.url || ''})` }}
+            style={{ 
+              backgroundImage: `url(${
+                model.photos[0] ? (model.photos[0].url.startsWith('data:') ? `/api/photos/${model.photos[0].id}` : model.photos[0].url) : ''
+              })` 
+            }}
           />
           <div className={styles.thumbnails}>
             {model.photos.slice(1).map((photo) => (
               <div 
                 key={photo.id} 
                 className={styles.thumbnail}
-                style={{ backgroundImage: `url(${photo.url})` }}
+                style={{ backgroundImage: `url(${photo.url.startsWith('data:') ? `/api/photos/${photo.id}` : photo.url})` }}
               />
             ))}
           </div>

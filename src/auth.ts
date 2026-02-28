@@ -43,6 +43,13 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         token.role = user.role;
         token.sub = user.id;
       }
+      
+      // NextAuth automatically populates token.picture with user.image
+      // If the user's image is a massive Base64 string, it will bloat the JWT cookie and completely break login!
+      if (token.picture && token.picture.length > 1000) {
+        token.picture = ''; 
+      }
+
       return token;
     },
     async session({ session, token }: { session: any; token: any }) {

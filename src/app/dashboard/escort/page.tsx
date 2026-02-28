@@ -39,6 +39,14 @@ export default async function EscortDashboard() {
 
   const activeSubscription = user.subscriptions[0] || null;
 
+  // WARNING: We must NOT pass massive Base64 strings to the Client Component natively, Netlify will crash!
+  if (user.modelProfile && user.modelProfile.photos) {
+    user.modelProfile.photos = user.modelProfile.photos.map((p: any) => ({
+      ...p,
+      url: p.url.startsWith('data:') ? `/api/photos/${p.id}` : p.url,
+    }));
+  }
+
   return (
     <EscortDashboardClient
       user={user}
