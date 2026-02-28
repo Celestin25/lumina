@@ -28,6 +28,11 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           const { email, password } = parsedCredentials.data;
           const user = await getUser(email);
           if (!user) return null;
+          
+          if (!user.emailVerified) {
+            throw new Error("Please verify your email before logging in.");
+          }
+
           const passwordsMatch = await bcrypt.compare(password, user.password);
           if (passwordsMatch) {
             // Strip massive base64 images from the User object BEFORE NextAuth touches it!
