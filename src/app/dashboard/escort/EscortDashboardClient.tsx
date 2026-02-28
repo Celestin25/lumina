@@ -2,6 +2,9 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import { LogOut, Edit3, Home } from 'lucide-react';
+import { signOut } from 'next-auth/react';
 import styles from './escort.module.css';
 
 interface EscortDashboardClientProps {
@@ -78,20 +81,36 @@ export default function EscortDashboardClient({
   
   // A profile is considered complete if they have set a bio and uploaded at least one photo
   const isProfileComplete = profile && profile.bio && profile.photos && profile.photos.length > 0;
+  
+  const displayName = profile?.displayName || user?.name || 'Model';
+  const avatarUrl = profile?.photos?.[0]?.url?.startsWith('data:') ? `/api/photos/${profile.photos[0].id}` : (profile?.photos?.[0]?.url || user?.image || 'https://via.placeholder.com/150');
 
   return (
     <main className={styles.main}>
       <div className={`container ${styles.container}`}>
-        <div className={styles.header}>
-          <div>
-            <h1>Model Dashboard</h1>
-            <p className={styles.subtitle}>Manage your listing and subscription</p>
+        
+        {/* PREMIUM CREATOR HEADER */}
+        <div className={styles.profileHeader}>
+          <div className={styles.profileInfo}>
+            <img src={avatarUrl} alt={displayName} className={styles.avatar} />
+            <div className={styles.profileText}>
+              <h1>{displayName}</h1>
+              <p className={styles.profileSubtitle}>
+                {isActive ? <span className={styles.activeBadge}>✓ {currentPlan?.toUpperCase()} ACTIVE</span> : 'Listing Inactive'}
+              </p>
+            </div>
           </div>
+          
           <div className={styles.headerActions}>
-            {isActive && (
-              <span className={styles.activeBadge}>✓ {currentPlan?.toUpperCase()} Active</span>
-            )}
-            <a href="/dashboard/escort/profile" className="btn-primary">Edit Profile</a>
+            <Link href="/" className={styles.btnSecondary} style={{ padding: '0.6rem 1rem' }}>
+              <Home size={18} /> Home
+            </Link>
+            <Link href="/dashboard/escort/profile" className={styles.btnSecondary}>
+              <Edit3 size={18} /> Edit Profile
+            </Link>
+            <button onClick={() => signOut({ callbackUrl: '/' })} className={styles.btnDanger}>
+              <LogOut size={18} /> Sign Out
+            </button>
           </div>
         </div>
 

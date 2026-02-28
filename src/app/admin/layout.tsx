@@ -10,6 +10,7 @@ import {
   LogOut, 
   Crown,
   BarChart2,
+  Home
 } from 'lucide-react';
 import { auth } from '@/auth';
 import { handleSignOut } from '@/actions/auth';
@@ -54,8 +55,8 @@ export default async function AdminLayout({
 
           <div className={styles.navSection} style={{marginTop: 'auto'}}>
             <Link href="/" className={styles.navLink}>
-              <LayoutDashboard size={17} />
-              <span>View Site</span>
+              <Home size={17} />
+              <span>Return Home</span>
             </Link>
             <form action={handleSignOut}>
               <button type="submit" className={styles.navLink} style={{background:'none', border:'none', cursor:'pointer', width:'100%', color:'var(--color-text-secondary)'}}>

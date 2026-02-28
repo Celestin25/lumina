@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { signOut } from 'next-auth/react';
 import Link from 'next/link';
-import { Calendar, CreditCard, User, Star, Clock, CheckCircle, Camera, LogOut } from 'lucide-react';
+import { Calendar, CreditCard, User, Star, Clock, CheckCircle, Camera, LogOut, Home } from 'lucide-react';
 import styles from './dashboard.module.css';
 
 interface ClientDashboardClientProps {
@@ -83,7 +83,13 @@ export default function ClientDashboardClient({
             </div>
           </div>
           <div className={styles.headerActions}>
-            <Link href="/search" className="btn-outline">Browse Companions</Link>
+            <Link href="/" className="btn-outline">
+              <Home size={16} style={{marginRight: '6px'}} /> Home
+            </Link>
+            <Link href="/search" className="btn-primary">Browse Companions</Link>
+            <button onClick={() => signOut({ callbackUrl: '/' })} className={styles.signOutBtn}>
+              <LogOut size={16} /> Sign Out
+            </button>
           </div>
         </div>
 

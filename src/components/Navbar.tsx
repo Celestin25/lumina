@@ -4,11 +4,13 @@ import Link from "next/link";
 import { User, Search, LogOut, LayoutDashboard, Crown } from "lucide-react";
 import { useSession, signOut } from "next-auth/react";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
   const { data: session } = useSession();
   const user = session?.user as any;
+  const pathname = usePathname();
 
   const [registerOpen, setRegisterOpen] = useState(false);
   const [isRegistering, setIsRegistering] = useState(false);
@@ -41,6 +43,11 @@ export default function Navbar() {
       setIsRegistering(false);
     }
   };
+
+  // Completely hide Navbar on distinct dashboard/app routes
+  if (pathname?.startsWith('/admin') || pathname?.startsWith('/dashboard')) {
+    return null;
+  }
 
   return (
     <nav className={styles.nav}>

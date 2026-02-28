@@ -2,6 +2,8 @@
 
 import { useState, useCallback, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import { ArrowLeft } from 'lucide-react';
 import styles from './profile.module.css';
 
 interface ProfileFormData {
@@ -110,9 +112,15 @@ export default function EscortProfilePage() {
     );
   }
 
+
   return (
     <main className={styles.main}>
       <div className={`container ${styles.container}`}>
+        <div style={{ marginBottom: '1rem' }}>
+          <Link href="/dashboard/escort" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: 'var(--color-text-secondary)', textDecoration: 'none', fontSize: '0.9rem' }}>
+            <ArrowLeft size={16} /> Back to Dashboard
+          </Link>
+        </div>
         <div className={styles.header}>
           <h1>Set Up Your Profile</h1>
           <p className={styles.subtitle}>Complete your model profile to get listed in the directory</p>
