@@ -8,8 +8,9 @@ const globalForPrisma = globalThis as unknown as {
 
 function createPrismaClient() {
   // Hardcode the Turso Remote URL here so the app always uses production data
-  // but Prisma's strict string validation locally (which checks process.env.DATABASE_URL) is tricked
-  const remoteUrl = "libsql://lumina-db-celestin25.turso.io";
+  // Use https:// instead of libsql:// to force HTTP protocol, which prevents 
+  // "Connection closed" WebSocket errors in Serverless environments (Netlify/Vercel)
+  const remoteUrl = "https://lumina-db-celestin25.turso.io";
   const authToken = process.env.TURSO_AUTH_TOKEN;
 
   // Use the libsql adapter when DATABASE_URL is a remote Turso URL
