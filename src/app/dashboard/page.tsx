@@ -36,6 +36,11 @@ export default async function ClientDashboard() {
 
   const completedBookings = user.bookings.filter(b => b.status === 'COMPLETED').length;
 
+  const safeUser = user as any;
+  if (safeUser.image && safeUser.image.length > 1000) {
+    safeUser.image = `/api/avatar/${safeUser.id}`;
+  }
+
   return (
     <ClientDashboardClient 
       user={user} 

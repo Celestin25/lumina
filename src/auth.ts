@@ -29,7 +29,14 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           const user = await getUser(email);
           if (!user) return null;
           const passwordsMatch = await bcrypt.compare(password, user.password);
-          if (passwordsMatch) return user;
+          if (passwordsMatch) {
+            // Strip massive base64 images from the User object BEFORE NextAuth touches it!
+            const mutableUser = user as any;
+            if (mutableUser.image && mutableUser.image.length > 1000) {
+              mutableUser.image = `/api/avatar/${mutableUser.id}`;
+            }
+            return mutableUser;
+          }
         }
 
         return null;
@@ -42,12 +49,12 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       if (user) {
         token.role = user.role;
         token.sub = user.id;
+        if (user.image) token.picture = user.image;
       }
       
-      // NextAuth automatically populates token.picture with user.image
-      // If the user's image is a massive Base64 string, it will bloat the JWT cookie and completely break login!
+      // Secondary absolute failsafe for JWT cookie serialization
       if (token.picture && token.picture.length > 1000) {
-        token.picture = ''; 
+        token.picture = `/api/avatar/${token.sub}`; 
       }
 
       return token;
