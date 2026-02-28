@@ -82,12 +82,12 @@ export default function AdminEscortsClient({ escorts }: { escorts: any[] }) {
               <tr key={e.id} style={{borderBottom:'1px solid rgba(255,255,255,0.05)'}}>
                 <td style={{padding:'0.75rem 0.5rem'}}>
                   <div style={{fontWeight:600}}>{e.displayName}</div>
-                  <div style={{fontSize:'0.75rem', color:'var(--color-text-secondary)'}}>{e.user.email}</div>
+                  <div style={{fontSize:'0.75rem', color:'var(--color-text-secondary)'}}>{e.user?.email || 'No Email'}</div>
                 </td>
                 <td style={{padding:'0.75rem 0.5rem', color:'var(--color-text-secondary)'}}>{e.city}, {e.country}</td>
                 <td style={{padding:'0.75rem 0.5rem'}}>
-                  {e.user.subscriptionStatus === 'active' ? (
-                    <span style={{color:'#10b981', fontWeight:600, fontSize:'0.8rem'}}>✓ {e.user.subscriptionPlan}</span>
+                  {e.user?.subscriptionStatus === 'active' ? (
+                    <span style={{color:'#10b981', fontWeight:600, fontSize:'0.8rem'}}>✓ {e.user?.subscriptionPlan}</span>
                   ) : (
                     <span style={{color:'var(--color-text-secondary)', fontSize:'0.8rem'}}>No sub</span>
                   )}

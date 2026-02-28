@@ -20,23 +20,24 @@ async function getModels(country?: string, city?: string) {
   });
 }
 
+import { Suspense } from 'react';
+
 export default async function SearchPage({
   searchParams,
 }: {
-  searchParams: Promise<{ country?: string; city?: string }>;
+  searchParams: { country?: string; city?: string };
 }) {
-  const resolvedParams = await searchParams;
-  const models = await getModels(resolvedParams.country, resolvedParams.city);
+  const models = await getModels(searchParams.country, searchParams.city);
 
   return (
     <main className={styles.main}>
       <div className={`container ${styles.container}`}>
         {/* Sidebar Filters */}
         <aside className={styles.sidebar}>
-          <SearchFilter />
-        </aside>
-
-        {/* Results Grid */}
+          <Suspense fallback={<div>Loading filters...</div>}>
+            <SearchFilter />
+          </Suspense>
+        </aside>        {/* Results Grid */}
         <section className={styles.results}>
           <div className={styles.resultsHeader}>
             <h1>Elite Companions</h1>
