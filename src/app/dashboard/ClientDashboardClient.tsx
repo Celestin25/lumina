@@ -21,10 +21,29 @@ export default function ClientDashboardClient({
   const [imageUrl, setImageUrl] = useState(user.image || '');
   const [name, setName] = useState(user.name || '');
   const [success, setSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    if (file.size > 2 * 1024 * 1024) { // 2MB Limit
+      setErrorMessage("Image must be smaller than 2MB.");
+      return;
+    }
+    
+    setErrorMessage('');
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setImageUrl(reader.result as string);
+    };
+    reader.readAsDataURL(file);
+  };
 
   const handleUpdateProfile = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    setErrorMessage('');
     try {
       const res = await fetch('/api/user/profile', {
         method: 'POST',
@@ -34,9 +53,13 @@ export default function ClientDashboardClient({
       if (res.ok) {
         setSuccess(true);
         setTimeout(() => setSuccess(false), 3000);
+      } else {
+        const data = await res.json();
+        setErrorMessage(data.error || 'Update failed');
       }
     } catch (err) {
       console.error(err);
+      setErrorMessage('A network error occurred.');
     } finally {
       setLoading(false);
     }
@@ -162,6 +185,7 @@ export default function ClientDashboardClient({
           <div className={styles.cardHeader}>
             <h2 className={styles.cardTitle}>Account Settings</h2>
             {success && <span className={styles.successMsg}>Profile updated!</span>}
+            {errorMessage && <span style={{color: '#f43f5e', fontSize: '0.85rem'}}>{errorMessage}</span>}
           </div>
           <form onSubmit={handleUpdateProfile} className={styles.profileForm}>
             <div className={styles.settingsGrid}>
@@ -175,12 +199,11 @@ export default function ClientDashboardClient({
                 />
               </div>
               <div className={styles.field}>
-                <label><Camera size={14} /> Profile Picture URL</label>
+                <label><Camera size={14} /> Profile Picture</label>
                 <input 
-                  type="text" 
-                  value={imageUrl} 
-                  onChange={(e) => setImageUrl(e.target.value)} 
-                  placeholder="https://example.com/photo.jpg"
+                  type="file" 
+                  accept="image/jpeg, image/png, image/webp"
+                  onChange={handleFileChange} 
                 />
               </div>
               <div className={styles.field}>

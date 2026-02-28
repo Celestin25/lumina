@@ -26,6 +26,20 @@ export default function AdminEscortsClient({ escorts }: { escorts: any[] }) {
     finally { setUpdating(null); }
   };
 
+  const handleDelete = async (escortId: string, modelName: string) => {
+    if (!confirm(`Are you sure you want to completely delete ${modelName}? This cannot be undone.`)) return;
+    
+    setUpdating(`${escortId}-delete`);
+    try {
+      const res = await fetch(`/api/admin/escorts?escortId=${escortId}`, {
+        method: 'DELETE',
+      });
+      if (res.ok) window.location.reload();
+      else alert('Failed to delete model');
+    } catch { alert('Error deleting model'); }
+    finally { setUpdating(null); }
+  };
+
   return (
     <div>
       <div className={styles.pageHeader}>
@@ -58,11 +72,12 @@ export default function AdminEscortsClient({ escorts }: { escorts: any[] }) {
               <th style={{padding:'0.75rem 0.5rem'}}>Verified</th>
               <th style={{padding:'0.75rem 0.5rem'}}>Featured</th>
               <th style={{padding:'0.75rem 0.5rem'}}>Active</th>
+              <th style={{padding:'0.75rem 0.5rem', textAlign: 'right'}}>Actions</th>
             </tr>
           </thead>
           <tbody>
             {filtered.length === 0 ? (
-              <tr><td colSpan={7} style={{textAlign:'center', padding:'2rem', color:'var(--color-text-secondary)'}}>No models found</td></tr>
+              <tr><td colSpan={8} style={{textAlign:'center', padding:'2rem', color:'var(--color-text-secondary)'}}>No models found</td></tr>
             ) : filtered.map(e => (
               <tr key={e.id} style={{borderBottom:'1px solid rgba(255,255,255,0.05)'}}>
                 <td style={{padding:'0.75rem 0.5rem'}}>
@@ -98,6 +113,19 @@ export default function AdminEscortsClient({ escorts }: { escorts: any[] }) {
                   onClick={() => handleToggle(e.id, 'isActive', e.isActive)}
                   trueColor="#6366f1"
                 />
+                <td style={{padding:'0.75rem 0.5rem', textAlign: 'right'}}>
+                  <button
+                    onClick={() => handleDelete(e.id, e.displayName)}
+                    disabled={updating === `${e.id}-delete`}
+                    style={{
+                      padding:'4px 10px', borderRadius:'6px', border:'1px solid rgba(244,63,94,0.3)', 
+                      cursor:'pointer', fontSize:'0.75rem', fontWeight:600,
+                      background: 'rgba(244,63,94,0.1)', color: '#f43f5e',
+                    }}
+                  >
+                    {updating === `${e.id}-delete` ? '...' : 'Delete'}
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>
