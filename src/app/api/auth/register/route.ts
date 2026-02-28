@@ -2,8 +2,6 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import bcrypt from 'bcryptjs';
 import { prisma } from '@/lib/prisma';
-import { v4 as uuidv4 } from 'uuid';
-import { sendVerificationEmail } from '@/lib/mail';
 
 const RegisterSchema = z.object({
   name: z.string().min(1, 'Name is required'),
@@ -48,24 +46,9 @@ export async function POST(req: NextRequest) {
       });
     }
 
-    // Generate Verification Token
-    const token = uuidv4();
-    const expires = new Date(new Date().getTime() + 3600 * 1000); // 1 hour expiration
-
-    await prisma.verificationToken.create({
-      data: {
-        email,
-        token,
-        expires,
-      }
-    });
-
-    // Send Verification Email
-    await sendVerificationEmail(email, token);
-
     return NextResponse.json({ 
       success: true, 
-      message: "Please check your email to verify your account" 
+      message: "Account created! We will verify you soon." 
     });
   } catch (error: any) {
     console.error('Registration API error:', error);

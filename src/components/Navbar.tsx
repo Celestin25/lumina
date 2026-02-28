@@ -124,10 +124,13 @@ export default function Navbar() {
               {registerError && <div className={styles.modalError}>{registerError}</div>}
               {registerSuccess ? (
                 <div className={styles.modalSuccess}>
-                  Account created successfully! Please login.
-                  <Link href="/login" className="btn-primary" style={{display:'block', textAlign:'center', marginTop:'1rem'}} onClick={() => setRegisterOpen(false)}>
-                    Go to Login
-                  </Link>
+                  <p style={{marginBottom: '1rem', fontWeight: 600}}>Account created!</p>
+                  <p style={{color: 'var(--color-text-secondary)', fontSize: '0.95rem'}}>
+                    We have received your registration. An admin will review and verify your account soon. You will not be able to log in until your account is approved.
+                  </p>
+                  <button type="button" className="btn-primary" style={{display:'block', width: '100%', marginTop:'1.5rem'}} onClick={() => setRegisterOpen(false)}>
+                    Close
+                  </button>
                 </div>
               ) : (
                 <>

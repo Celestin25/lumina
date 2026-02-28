@@ -15,7 +15,8 @@ model User {
   password           String
   image              String?
   role               String    @default("CLIENT")
-  emailVerified      DateTime? // Added for email verification
+  isApproved         Boolean   @default(false)
+  emailVerified      DateTime? // Added for email verification (legacy)
   stripeCustomerId   String?
   subscriptionStatus String    @default("inactive") // inactive, active, past_due, canceled
   subscriptionPlan   String?   // basic, featured, vip
