@@ -8,8 +8,8 @@ export default function AdminEscortsClient({ escorts }: { escorts: any[] }) {
   const [search, setSearch] = useState('');
 
   const filtered = escorts.filter(e =>
-    !search || e.displayName.toLowerCase().includes(search.toLowerCase()) || 
-    e.user.email.toLowerCase().includes(search.toLowerCase())
+    !search || e.displayName?.toLowerCase().includes(search.toLowerCase()) || 
+    e.user?.email?.toLowerCase().includes(search.toLowerCase())
   );
 
   const handleToggle = async (escortId: string, field: 'isVerified' | 'isFeatured' | 'isActive', current: boolean) => {

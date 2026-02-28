@@ -25,9 +25,10 @@ import { Suspense } from 'react';
 export default async function SearchPage({
   searchParams,
 }: {
-  searchParams: { country?: string; city?: string };
+  searchParams: Promise<{ country?: string; city?: string }>;
 }) {
-  const models = await getModels(searchParams.country, searchParams.city);
+  const resolvedParams = await searchParams;
+  const models = await getModels(resolvedParams.country, resolvedParams.city);
 
   return (
     <main className={styles.main}>
