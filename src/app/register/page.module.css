@@ -76,6 +76,11 @@
   background: rgba(255, 255, 255, 0.05);
 }
 
+.formGroup select option {
+  background-color: var(--color-bg); /* Dark background */
+  color: var(--color-text-primary); /* White text */
+}
+
 .loginLink {
   text-align: center;
   margin-top: 2rem;

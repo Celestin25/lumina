@@ -204,10 +204,73 @@ export default function EscortProfilePage() {
           <div className={styles.section}>
             <h2 className={styles.sectionTitle}>Photos</h2>
             <div className={styles.field}>
-              <label>Photo URLs (one per line)</label>
-              <textarea name="photoUrls" value={form.photoUrls} onChange={handleChange} rows={4}
-                placeholder="https://example.com/photo1.jpg&#10;https://example.com/photo2.jpg" />
-              <p className={styles.hint}>Enter the full URL of each photo on a separate line. Photos must be publicly accessible.</p>
+              <label>Upload Profile Pictures</label>
+              <input 
+                type="file" 
+                accept="image/*" 
+                multiple 
+                onChange={(e) => {
+                  const files = e.target.files;
+                  if (!files) return;
+                  
+                  Array.from(files).forEach(file => {
+                    if (file.size > 2 * 1024 * 1024) {
+                      alert(`File ${file.name} is too large. Max 2MB.`);
+                      return;
+                    }
+                    if (!file.type.startsWith('image/')) return;
+
+                    const reader = new FileReader();
+                    reader.onload = (event) => {
+                      const base64 = event.target?.result as string;
+                      if (base64) {
+                        setForm(prev => {
+                          const currentUrls = prev.photoUrls ? prev.photoUrls.split('\n').filter(Boolean) : [];
+                          if (!currentUrls.includes(base64)) {
+                            return { ...prev, photoUrls: [...currentUrls, base64].join('\n') };
+                          }
+                          return prev;
+                        });
+                      }
+                    };
+                    reader.readAsDataURL(file);
+                  });
+                  // Reset input so the same file can be selected again if removed
+                  e.target.value = '';
+                }}
+                className={styles.fileInput}
+              />
+              <p className={styles.hint}>Select multiple images (Max 2MB each). They will be uploaded instantly.</p>
+              
+              {/* Photo Preview Grid */}
+              {form.photoUrls && (
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))', gap: '10px', marginTop: '1rem' }}>
+                  {form.photoUrls.split('\n').filter(Boolean).map((url, i) => (
+                    <div key={i} style={{ position: 'relative', width: '100%', aspectRatio: '1/1' }}>
+                      <img src={url} alt={`Preview ${i}`} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px' }} />
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setForm(prev => {
+                            const currentUrls = prev.photoUrls.split('\n').filter(Boolean);
+                            currentUrls.splice(i, 1);
+                            return { ...prev, photoUrls: currentUrls.join('\n') };
+                          });
+                        }}
+                        style={{
+                          position: 'absolute', top: '4px', right: '4px', background: 'rgba(255,0,0,0.8)',
+                          color: '#fff', border: 'none', borderRadius: '50%', width: '24px', height: '24px',
+                          cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                          fontSize: '12px', fontWeight: 'bold'
+                        }}
+                        title="Remove photo"
+                      >
+                        ✕
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
 
