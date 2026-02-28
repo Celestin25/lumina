@@ -18,6 +18,7 @@ C:\Users\Lenovo\lumina\.next\dev\server\chunks\[root-of-the-server]__f784409b._.
   157 }
 → 158 const models = await __TURBOPACK__imported__module__$5b$project$5d2f$lumina$2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].modelProfile.findMany(
 SQL_INPUT_ERROR: SQLite input error: no such column: main.ModelProfile.ethnicity (at offset 289)
- GET /api/models 500 in 2.3s (compile: 1153ms, render: 1193ms)
+ GET /api/models 500 in 2.3s (compile: 1153ms, 
+nder: 1193ms)
   Reload env: .env
   Reload env: .env

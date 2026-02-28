@@ -1,5 +1,6 @@
 export const dynamic = 'force-dynamic';
 import SearchFilter from './SearchFilter';
+import { cleanModelsList } from '@/lib/data-utils';
 
 import ModelCard from '@/components/ModelCard';
 import { Search } from 'lucide-react';
@@ -28,7 +29,8 @@ export default async function SearchPage({
   searchParams: Promise<{ country?: string; city?: string }>;
 }) {
   const resolvedParams = await searchParams;
-  const models = await getModels(resolvedParams.country, resolvedParams.city);
+  const modelsData = await getModels(resolvedParams.country, resolvedParams.city);
+  const models = cleanModelsList(modelsData);
 
   return (
     <main className={styles.main}>

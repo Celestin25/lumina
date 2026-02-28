@@ -1,6 +1,7 @@
 import { auth } from '@/auth';
 import { prisma } from '@/lib/prisma';
 import { redirect } from 'next/navigation';
+import { cleanModelData } from '@/lib/data-utils';
 
 export const dynamic = 'force-dynamic';
 
@@ -39,24 +40,13 @@ export default async function EscortDashboard() {
 
   const activeSubscription = user.subscriptions[0] || null;
 
-  const safeUser = user as any;
-
   // WARNING: We must NOT pass massive Base64 strings to the Client Component natively, Netlify will crash!
-  if (safeUser.modelProfile && safeUser.modelProfile.photos) {
-    safeUser.modelProfile.photos = safeUser.modelProfile.photos.map((p: any) => ({
-      ...p,
-      url: p.url.startsWith('data:') ? `/api/photos/${p.id}` : p.url,
-    }));
-  }
-  
-  if (safeUser.image && safeUser.image.length > 1000) {
-    safeUser.image = `/api/avatar/${safeUser.id}`;
-  }
+  const cleanedUser = cleanModelData(user);
 
   return (
     <EscortDashboardClient
-      user={user}
-      profile={user.modelProfile}
+      user={cleanedUser}
+      profile={cleanedUser.modelProfile}
       subscription={activeSubscription}
       earnings={earnings}
       recentPayments={user.payments}

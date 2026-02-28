@@ -49,7 +49,7 @@ export default function Navbar() {
           Lumina<span className="text-gold">✦</span>
         </Link>
         <div className={styles.links}>
-          <Link href="/search" className={styles.link}>Models</Link>
+          <Link href="/models" className={styles.link}>Models</Link>
           <Link href="/locations" className={styles.link}>Locations</Link>
           <Link href="/pricing" className={styles.link}>Pricing</Link>
           <Link href="/about" className={styles.link}>About</Link>

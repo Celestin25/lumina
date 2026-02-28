@@ -1,5 +1,6 @@
 import { prisma } from '@/lib/prisma';
 import { notFound } from 'next/navigation';
+import { cleanModelData } from '@/lib/data-utils';
 import Link from 'next/link';
 import { MapPin, Star, Check, ArrowLeft } from 'lucide-react';
 import styles from './page.module.css';
@@ -22,7 +23,8 @@ async function getModel(id: string) {
 
 export default async function ModelPage({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = await params;
-  const model = await getModel(resolvedParams.id);
+  const rawModel = await getModel(resolvedParams.id);
+  const model = cleanModelData(rawModel);
 
   if (!model) {
     notFound();

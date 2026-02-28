@@ -222,16 +222,30 @@ export default function EscortProfilePage() {
 
                     const reader = new FileReader();
                     reader.onload = (event) => {
-                      const base64 = event.target?.result as string;
-                      if (base64) {
-                        setForm(prev => {
-                          const currentUrls = prev.photoUrls ? prev.photoUrls.split('\n').filter(Boolean) : [];
-                          if (!currentUrls.includes(base64)) {
-                            return { ...prev, photoUrls: [...currentUrls, base64].join('\n') };
-                          }
-                          return prev;
-                        });
-                      }
+                      const img = new Image();
+                      img.onload = () => {
+                        const canvas = document.createElement('canvas');
+                        let width = img.width;
+                        let height = img.height;
+                        const maxSide = 1000;
+                        if (width > height && width > maxSide) { height *= maxSide / width; width = maxSide; }
+                        else if (height > maxSide) { width *= maxSide / height; height = maxSide; }
+                        canvas.width = width;
+                        canvas.height = height;
+                        const ctx = canvas.getContext('2d');
+                        ctx?.drawImage(img, 0, 0, width, height);
+                        const base64 = canvas.toDataURL('image/jpeg', 0.8);
+                        if (base64) {
+                          setForm(prev => {
+                            const currentUrls = prev.photoUrls ? prev.photoUrls.split('\n').filter(Boolean) : [];
+                            if (!currentUrls.includes(base64)) {
+                              return { ...prev, photoUrls: [...currentUrls, base64].join('\n') };
+                            }
+                            return prev;
+                          });
+                        }
+                      };
+                      img.src = event.target?.result as string;
                     };
                     reader.readAsDataURL(file);
                   });

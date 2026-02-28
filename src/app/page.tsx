@@ -6,6 +6,7 @@ import { PrismaClient } from "@prisma/client";
 import ModelCard from "@/components/ModelCard";
 
 import { prisma } from '@/lib/prisma';
+import { cleanModelsList } from '@/lib/data-utils';
 
 async function getFeaturedModels() {
   return await prisma.modelProfile.findMany({
@@ -21,7 +22,8 @@ async function getFeaturedModels() {
 }
 
 export default async function Home() {
-  const featuredModels = await getFeaturedModels();
+  const featuredModelsData = await getFeaturedModels();
+  const featuredModels = cleanModelsList(featuredModelsData);
 
   return (
     <main className={styles.main}>

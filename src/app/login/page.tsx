@@ -17,7 +17,7 @@ function LoginForm() {
       <div className={`container ${styles.container}`}>
         <div className={styles.card}>
           <h1 className={styles.title}>Welcome Back</h1>
-          <p className={styles.subtitle}>Log in to your exclusive account</p>
+          <p className={styles.subtitle}>Log in to your account (Clients & Models)</p>
 
           {registered && (
             <div className={styles.successMessage}>

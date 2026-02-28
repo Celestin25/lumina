@@ -37,7 +37,9 @@ export async function GET(req: NextRequest) {
       ethnicity: profile.ethnicity || '',
       btcAddress: profile.btcAddress || '',
       services: profile.services.map(s => s.name).join(', '),
-      photoUrls: profile.photos.map(p => p.url).join('\n'),
+      photoUrls: profile.photos.map(p => 
+        p.url.startsWith('data:') ? `/api/photos/${p.id}` : p.url
+      ).join('\n'),
     };
 
     return NextResponse.json(formData);
