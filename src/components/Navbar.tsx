@@ -85,7 +85,7 @@ export default function Navbar() {
                 </Link>
               )}
 
-              <button type="button" className={styles.logoutBtn} onClick={() => signOut()} title="Sign Out">
+              <button type="button" className={styles.logoutBtn} onClick={() => signOut({ callbackUrl: '/' })} title="Sign Out">
                 <LogOut size={18} />
                 <span className={styles.logoutText}>Sign Out</span>
               </button>
