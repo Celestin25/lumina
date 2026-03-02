@@ -452,3 +452,4 @@ Tracking engineering progress and feature updates.
 - `2026-02-27 13:14` feat(api): add rate limiting middleware with Redis-backed token bucket
 - `2026-02-27 13:55` feat(i18n): add locale switcher with persistent preference in cookies
 - `2026-03-02 09:29` feat(analytics): integrate client-side event tracking telemetry
+- `2026-03-02 09:40` fix(prisma): fix schema migration conflict blocking production deploy
