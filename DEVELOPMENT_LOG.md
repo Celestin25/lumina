@@ -457,3 +457,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-03 11:52` feat(models): add profile verification badge and approval workflow
 - `2026-03-05 11:10` fix(hydration): resolve client-server mismatch on timestamp display
 - `2026-03-09 11:03` fix(search): trim whitespace from search terms before querying
+- `2026-03-09 12:35` fix(search): trim whitespace from search terms before querying
