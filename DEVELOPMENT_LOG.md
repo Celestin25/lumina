@@ -462,3 +462,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-09 14:44` fix(hydration): resolve client-server mismatch on timestamp display
 - `2026-03-09 16:09` refactor(api): consolidate error handling into reusable middleware factory
 - `2026-03-09 16:59` fix(styles): resolve z-index stacking collision between modal and header
+- `2026-03-10 11:40` feat(search): implement full-text search with debounce and highlighted results
