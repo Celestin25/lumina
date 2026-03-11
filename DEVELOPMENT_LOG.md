@@ -465,3 +465,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-10 11:40` feat(search): implement full-text search with debounce and highlighted results
 - `2026-03-11 09:28` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
 - `2026-03-11 10:23` feat(payment): integrate Stripe checkout with webhook event handling
+- `2026-03-11 10:40` fix(styles): resolve z-index stacking collision between modal and header
