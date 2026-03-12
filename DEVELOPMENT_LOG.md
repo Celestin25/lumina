@@ -469,3 +469,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-12 09:20` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
 - `2026-03-12 10:42` feat(analytics): integrate client-side event tracking telemetry
 - `2026-03-12 10:51` feat(models): add profile verification badge and approval workflow
+- `2026-03-12 12:41` fix(search): trim whitespace from search terms before querying
