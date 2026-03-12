@@ -466,3 +466,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-11 09:28` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
 - `2026-03-11 10:23` feat(payment): integrate Stripe checkout with webhook event handling
 - `2026-03-11 10:40` fix(styles): resolve z-index stacking collision between modal and header
+- `2026-03-12 09:20` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
