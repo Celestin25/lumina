@@ -471,3 +471,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-12 10:51` feat(models): add profile verification badge and approval workflow
 - `2026-03-12 12:41` fix(search): trim whitespace from search terms before querying
 - `2026-03-13 10:30` feat(seo): add structured data markup and dynamic OpenGraph meta tags
+- `2026-03-13 10:48` fix(images): handle broken image URLs with graceful lazy-load fallback
