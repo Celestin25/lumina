@@ -474,3 +474,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-13 10:48` fix(images): handle broken image URLs with graceful lazy-load fallback
 - `2026-03-13 10:48` fix(forms): enforce client-side validation before hitting API endpoints
 - `2026-03-13 10:57` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
+- `2026-03-16 11:00` fix(images): handle broken image URLs with graceful lazy-load fallback
