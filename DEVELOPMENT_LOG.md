@@ -476,3 +476,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-13 10:57` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
 - `2026-03-16 11:00` fix(images): handle broken image URLs with graceful lazy-load fallback
 - `2026-03-16 11:43` feat(models): add profile verification badge and approval workflow
+- `2026-03-17 11:22` fix(api): return proper 422 status for malformed request payloads
