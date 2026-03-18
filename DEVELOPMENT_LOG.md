@@ -483,3 +483,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-18 11:54` feat(models): add profile verification badge and approval workflow
 - `2026-03-18 12:10` fix(hydration): resolve client-server mismatch on timestamp display
 - `2026-03-18 12:18` fix(prisma): fix schema migration conflict blocking production deploy
+- `2026-03-18 12:24` chore: set up GitHub Actions CI with build, type-check and test steps
