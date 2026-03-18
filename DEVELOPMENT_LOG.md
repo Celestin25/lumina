@@ -487,3 +487,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-18 12:30` feat(export): add CSV export for transaction summaries
 - `2026-03-18 12:35` feat(filter): add multi-tag faceted filtering to catalog
 - `2026-03-18 12:57` feat(dashboard): build revenue analytics with recharts and date-range picker
+- `2026-03-18 12:57` refactor(api): consolidate error handling into reusable middleware factory
