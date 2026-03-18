@@ -478,3 +478,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-16 11:43` feat(models): add profile verification badge and approval workflow
 - `2026-03-17 11:22` fix(api): return proper 422 status for malformed request payloads
 - `2026-03-18 11:04` feat(media): implement WebP conversion on upload pipeline
+- `2026-03-18 11:32` feat(admin): build user management table with sort, filter and bulk actions
