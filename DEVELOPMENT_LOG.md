@@ -485,3 +485,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-18 12:18` fix(prisma): fix schema migration conflict blocking production deploy
 - `2026-03-18 12:24` chore: set up GitHub Actions CI with build, type-check and test steps
 - `2026-03-18 12:30` feat(export): add CSV export for transaction summaries
+- `2026-03-18 12:35` feat(filter): add multi-tag faceted filtering to catalog
