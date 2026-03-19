@@ -497,3 +497,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-19 14:49` fix(auth): prevent session fixation by regenerating ID after login
 - `2026-03-19 14:58` chore: add Zod schema validation for all environment variables on startup
 - `2026-03-19 15:11` fix(forms): enforce client-side validation before hitting API endpoints
+- `2026-03-19 15:39` feat(models): add profile verification badge and approval workflow
