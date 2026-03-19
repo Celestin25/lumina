@@ -491,3 +491,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-18 13:50` fix(images): handle broken image URLs with graceful lazy-load fallback
 - `2026-03-18 15:29` feat(media): implement WebP conversion on upload pipeline
 - `2026-03-18 16:30` fix(modal): lock body scroll when dialog is active
+- `2026-03-19 13:40` chore: add Zod schema validation for all environment variables on startup
