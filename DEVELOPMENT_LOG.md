@@ -492,3 +492,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-18 15:29` feat(media): implement WebP conversion on upload pipeline
 - `2026-03-18 16:30` fix(modal): lock body scroll when dialog is active
 - `2026-03-19 13:40` chore: add Zod schema validation for all environment variables on startup
+- `2026-03-19 14:14` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
