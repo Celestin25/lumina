@@ -503,3 +503,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-19 16:49` fix(prisma): fix schema migration conflict blocking production deploy
 - `2026-03-19 17:20` refactor: enforce strict TypeScript mode and resolve all implicit any types
 - `2026-03-20 10:15` feat(api): add rate limiting middleware with Redis-backed token bucket
+- `2026-03-20 10:19` fix(forms): enforce client-side validation before hitting API endpoints
