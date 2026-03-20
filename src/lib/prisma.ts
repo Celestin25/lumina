@@ -7,13 +7,12 @@ const globalForPrisma = globalThis as unknown as {
 };
 
 function createPrismaClient() {
-  // Hardcode the Turso Remote URL here so the app always uses production data
-  // Use https:// instead of libsql:// to force HTTP protocol, which prevents 
-  // "Connection closed" WebSocket errors in Serverless environments (Netlify/Vercel)
-  const remoteUrl = "https://lumina-db-celestin25.turso.io";
+  // Use the TURSO_DATABASE_URL from environment variables for Netlify/Production
+  // Fallback to the known Turso DB url if not explicitly provided but token exists
+  const remoteUrl = process.env.TURSO_DATABASE_URL || "https://lumina-db-celestin25.turso.io";
   const authToken = process.env.TURSO_AUTH_TOKEN;
 
-  // Use the libsql adapter when DATABASE_URL is a remote Turso URL
+  // Use the libsql adapter when TURSO_AUTH_TOKEN is present
   // v5.x: PrismaLibSQL takes a Client instance (from createClient)
   if (authToken) {
     const libsql = createClient({ url: remoteUrl, authToken });
