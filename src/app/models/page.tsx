@@ -11,6 +11,7 @@ async function getModels() {
         isVerified: true,
         isActive: true,
       },
+      take: 15,
       include: {
         photos: {
           select: { id: true, modelId: true }
