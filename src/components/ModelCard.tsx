@@ -28,9 +28,13 @@ export default function ModelCard({ model }: { model: ModelProps }) {
   // Use first photo or placeholder, avoiding massive Base64 DOM crashes
   let mainPhoto = 'https://via.placeholder.com/400x500?text=No+Photo';
   if (model.photos && model.photos.length > 0) {
-    mainPhoto = model.photos[0].url.startsWith('data:') 
-      ? `/api/photos/${model.photos[0].id}` 
-      : model.photos[0].url;
+    const photo = model.photos[0];
+    if (photo.url && photo.url.startsWith('http')) {
+      mainPhoto = photo.url; // External URL
+    } else {
+      // If it's a Base64 string OR the URL was intentionally omitted for performance, use the API route
+      mainPhoto = `/api/photos/${photo.id}`;
+    }
   }
   
   // Get first service or default

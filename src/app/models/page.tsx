@@ -12,7 +12,9 @@ async function getModels() {
         isActive: true,
       },
       include: {
-        photos: true,
+        photos: {
+          select: { id: true, isMain: true, modelId: true }
+        },
         services: true,
       },
       orderBy: {
