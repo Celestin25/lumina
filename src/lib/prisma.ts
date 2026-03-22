@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import { createClient } from "@libsql/client";
+import { createClient } from "@libsql/client/web";
 import { PrismaLibSQL } from "@prisma/adapter-libsql";
 
 const globalForPrisma = globalThis as unknown as {
@@ -7,11 +7,16 @@ const globalForPrisma = globalThis as unknown as {
 };
 
 function createPrismaClient() {
-  const remoteUrl = process.env.TURSO_DATABASE_URL;
+  let remoteUrl = process.env.TURSO_DATABASE_URL;
   const authToken = process.env.TURSO_AUTH_TOKEN;
 
   // Use the libsql adapter when BOTH TURSO_DATABASE_URL and TURSO_AUTH_TOKEN are present
   if (remoteUrl && authToken) {
+    // Netlify Serverless/Edge requires the web client, which only accepts HTTP/HTTPS
+    if (remoteUrl.startsWith("libsql://")) {
+      remoteUrl = remoteUrl.replace("libsql://", "https://");
+    }
+    
     const libsql = createClient({ url: remoteUrl, authToken });
     const adapter = new PrismaLibSQL(libsql);
     return new PrismaClient({
