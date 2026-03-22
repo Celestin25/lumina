@@ -16,7 +16,8 @@ export async function POST(req: NextRequest) {
     const validatedFields = RegisterSchema.safeParse(data);
 
     if (!validatedFields.success) {
-      return NextResponse.json({ error: 'Invalid fields provided' }, { status: 400 });
+      const errorMessage = validatedFields.error.issues[0]?.message || 'Invalid fields provided';
+      return NextResponse.json({ error: errorMessage }, { status: 400 });
     }
 
     const { name, email, password, role } = validatedFields.data;

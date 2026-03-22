@@ -145,7 +145,7 @@ export default function Navbar() {
                   </div>
                   <div className={styles.formGroup}>
                     <label>Password</label>
-                    <input type="password" name="password" required placeholder="••••••••" />
+                    <input type="password" name="password" required minLength={6} placeholder="••••••••" />
                   </div>
                   <div className={styles.formGroup}>
                     <label>I am a</label>
