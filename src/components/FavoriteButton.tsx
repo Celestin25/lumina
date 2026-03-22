@@ -14,25 +14,40 @@ export default function FavoriteButton({ modelId }: FavoriteButtonProps) {
 
   useEffect(() => {
     setMounted(true);
-    const saved = JSON.parse(localStorage.getItem('lumina_favorites') || '[]');
-    setIsFavorite(saved.includes(modelId));
+    try {
+      const saved = JSON.parse(localStorage.getItem('lumina_favorites') || '[]');
+      if (Array.isArray(saved)) {
+        setIsFavorite(saved.includes(modelId));
+      }
+    } catch {
+      setIsFavorite(false);
+    }
   }, [modelId]);
 
   const toggleFavorite = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
     
-    const saved = JSON.parse(localStorage.getItem('lumina_favorites') || '[]');
-    let newSaved;
-    
-    if (isFavorite) {
-      newSaved = saved.filter((id: string) => id !== modelId);
-    } else {
-      newSaved = [...saved, modelId];
+    try {
+      const savedStr = localStorage.getItem('lumina_favorites');
+      let saved = [];
+      if (savedStr) {
+        const parsed = JSON.parse(savedStr);
+        if (Array.isArray(parsed)) saved = parsed;
+      }
+      
+      let newSaved;
+      if (isFavorite) {
+        newSaved = saved.filter((id: string) => id !== modelId);
+      } else {
+        newSaved = [...saved, modelId];
+      }
+      
+      localStorage.setItem('lumina_favorites', JSON.stringify(newSaved));
+      setIsFavorite(!isFavorite);
+    } catch (err) {
+      console.error('Failed to update favorites', err);
     }
-    
-    localStorage.setItem('lumina_favorites', JSON.stringify(newSaved));
-    setIsFavorite(!isFavorite);
   };
 
   // Prevent hydration mismatch by returning a placeholder or empty heart before mount
