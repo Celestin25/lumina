@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UGHE - Kitchen & Sanitary Supplies - Proforma Invoice</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Roboto', Arial, sans-serif; background: #f0f2f5; color: #222; font-size: 13px; }
+    .page { width: 960px; margin: 30px auto 60px; background: #fff; box-shadow: 0 2px 20px rgba(0,0,0,0.15); border-radius: 4px; padding: 48px 56px; }
+    .header { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid #2e7d32; padding-bottom: 20px; margin-bottom: 24px; }
+    .vendor-block h1 { font-size: 22px; font-weight: 700; color: #2e7d32; letter-spacing: 1px; }
+    .vendor-block p { margin-top: 3px; color: #444; line-height: 1.6; }
+    .vendor-block .tin-tag { display: inline-block; background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 3px; padding: 1px 8px; font-size: 11px; font-weight: 700; color: #2e7d32; margin-top: 6px; }
+    .doc-title-block { text-align: right; }
+    .doc-title-block h2 { font-size: 18px; font-weight: 700; color: #1a237e; text-transform: uppercase; letter-spacing: 2px; }
+    .doc-title-block .inv-badge { display: inline-block; background: #1a237e; color: #fff; border-radius: 4px; padding: 4px 16px; font-size: 15px; font-weight: 700; margin-top: 8px; }
+    .doc-title-block .inv-date { color: #666; margin-top: 6px; font-size: 12px; }
+    .billing-row { display: flex; gap: 32px; margin-bottom: 28px; }
+    .billing-box { flex: 1; background: #f9fbe7; border-left: 4px solid #2e7d32; border-radius: 4px; padding: 14px 18px; }
+    .billing-box h3 { font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: #888; margin-bottom: 6px; }
+    .billing-box p { font-size: 13px; line-height: 1.7; }
+    .billing-box .name { font-weight: 700; font-size: 14px; color: #1a237e; }
+    .billing-box .tin { font-size: 11px; color: #555; }
+    .desc-heading { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #555; margin-bottom: 10px; padding-bottom: 4px; border-bottom: 1px dashed #ccc; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 28px; font-size: 12.5px; }
+    thead tr { background: #2e7d32; color: #fff; }
+    thead th { padding: 10px 12px; text-align: left; font-weight: 600; font-size: 11.5px; letter-spacing: 0.5px; vertical-align: middle; }
+    thead th:nth-child(1) { width: 4%; text-align: center; }
+    thead th:nth-child(2) { width: 32%; }
+    thead th:nth-child(3) { width: 22%; }
+    thead th:nth-child(4) { width: 14%; }
+    thead th:nth-child(5) { width: 12%; text-align: right; }
+    thead th:nth-child(6) { width: 8%; text-align: center; }
+    thead th:nth-child(7) { width: 14%; text-align: right; }
+    tbody tr:nth-child(even) { background: #f5f5f5; }
+    tbody tr:hover { background: #e8f5e9; transition: background 0.2s; }
+    tbody td { padding: 8px 12px; border-bottom: 1px solid #e0e0e0; vertical-align: middle; }
+    tbody td:nth-child(1) { text-align: center; color: #aaa; font-size: 11px; }
+    tbody td:nth-child(5) { text-align: right; }
+    tbody td:nth-child(6) { text-align: center; }
+    tbody td:nth-child(7) { text-align: right; font-weight: 500; }
+    .brand-pill { display: inline-block; background: #e3f2fd; color: #1565c0; border-radius: 10px; padding: 2px 8px; font-size: 11px; font-weight: 500; }
+    .brand-pill.na { background: #f5f5f5; color: #999; }
+    .totals-area { display: flex; justify-content: flex-end; margin-bottom: 36px; }
+    .totals-box { width: 320px; border: 1px solid #e0e0e0; border-radius: 6px; overflow: hidden; }
+    .totals-row { display: flex; justify-content: space-between; padding: 9px 16px; border-bottom: 1px solid #eee; font-size: 12.5px; }
+    .totals-row:last-child { border-bottom: none; }
+    .totals-row.grand { background: #2e7d32; color: #fff; font-weight: 700; font-size: 14px; }
+    .totals-row .label { color: #666; }
+    .totals-row.grand .label { color: #fff; }
+    .payment-section { display: flex; gap: 24px; margin-bottom: 32px; }
+    .payment-box { flex: 1; background: #f3e5f5; border-left: 4px solid #7b1fa2; border-radius: 4px; padding: 14px 18px; }
+    .payment-box h3 { font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: #7b1fa2; margin-bottom: 8px; }
+    .payment-box p { line-height: 1.8; font-size: 12.5px; }
+    .payment-box strong { color: #4a148c; }
+    .footer { border-top: 2px solid #e0e0e0; padding-top: 16px; display: flex; justify-content: space-between; align-items: center; color: #aaa; font-size: 11px; }
+    .footer .sig { color: #333; font-size: 12px; }
+    .footer .sig strong { color: #2e7d32; }
+    @media print { body { background: white; } .page { box-shadow: none; margin: 0; width: 100%; padding: 24px 32px; } }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="vendor-block">
+      <h1>ZUNO Ltd</h1>
+      <p>KIGALI CITY GASABO BUMBOGO Kinyaga</p>
+      <p>Tel: 0796893108 &nbsp;|&nbsp; Email: auroraltd1@gmail.com</p>
+      <span class="tin-tag">TIN: 146673716</span>
+    </div>
+    <div class="doc-title-block">
+      <h2>Proforma Invoice</h2>
+      <div class="inv-badge">NO: 9</div>
+      <p class="inv-date">Date: 26 &ndash; 01 &ndash; 2026</p>
+    </div>
+  </div>
+  <div class="billing-row">
+    <div class="billing-box">
+      <h3>Invoice To</h3>
+      <p class="name">University of Global Health Equity (UGHE)</p>
+      <p class="tin">TIN: 103380232</p>
+    </div>
+    <div class="billing-box">
+      <h3>Description</h3>
+      <p><strong>Supply of Kitchen &amp; Sanitary Supplies</strong></p>
+      <p style="margin-top:4px;color:#666;">Covering all items listed below per agreed specification.</p>
+    </div>
+  </div>
+  <div class="desc-heading">Item Breakdown</div>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Item Description</th>
+        <th>UOM</th>
+        <th>Brand</th>
+        <th>Unit Price (Rwf)</th>
+        <th>VAT</th>
+        <th>Total (Rwf)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Hand Liquid Soap, Antibacterial</td><td>500 ML Bottle</td><td><span class="brand-pill">Masta</span></td><td>2,500</td><td>18%</td><td></td></tr>
+      <tr><td>2</td><td>Coffee</td><td>500 Mg Bag</td><td><span class="brand-pill">Pedro</span></td><td>8,000</td><td>18%</td><td></td></tr>
+      <tr><td>3</td><td>Bathing Soap, Round</td><td>20 g Piece</td><td><span class="brand-pill">Four Seasons</span></td><td>500</td><td>18%</td><td></td></tr>
+      <tr><td>4</td><td>Bag, Biohazard, Waste</td><td>Polythen Bag</td><td><span class="brand-pill na">N/A</span></td><td>3,500</td><td>18%</td><td></td></tr>
+      <tr><td>5</td><td>Paper Towel</td><td>Roll</td><td><span class="brand-pill">Livelle</span></td><td>2,000</td><td>18%</td><td></td></tr>
+      <tr><td>6</td><td>Sugar, 1kg</td><td>Kg</td><td><span class="brand-pill na">N/A</span></td><td>1,500</td><td>18%</td><td></td></tr>
+      <tr><td>7</td><td>Salt, Packet</td><td>Filled Container</td><td><span class="brand-pill na">N/A</span></td><td>600</td><td>18%</td><td></td></tr>
+      <tr><td>8</td><td>Tea Bag, Green Tea</td><td>Pack of 50 bags</td><td><span class="brand-pill">Rwanda Mountain Tea</span></td><td>3,500</td><td>18%</td><td></td></tr>
+      <tr><td>9</td><td>Milk, Whole Fat, 1L</td><td>Box of 12 L</td><td><span class="brand-pill">Inyange</span></td><td>18,000</td><td>18%</td><td></td></tr>
+      <tr><td>10</td><td>Coffee Filters</td><td>Packet of 100</td><td><span class="brand-pill">Graindor</span></td><td>4,500</td><td>18%</td><td></td></tr>
+      <tr><td>11</td><td>All-Purpose Cleaner</td><td>500g bottle (Vim)</td><td><span class="brand-pill">VIM</span></td><td>2,500</td><td>18%</td><td></td></tr>
+      <tr><td>12</td><td>Tea Bag, Black Tea</td><td>Packet of 50 bags</td><td><span class="brand-pill">Rwanda Mountain Tea</span></td><td>3,000</td><td>18%</td><td></td></tr>
+      <tr><td>13</td><td>Coffee, Instant (NesCafe)</td><td>Bottles of 200 g</td><td><span class="brand-pill">Nescafe</span></td><td>12,000</td><td>18%</td><td></td></tr>
+      <tr><td>14</td><td>Hand Sanitizer</td><td>5 Litres Jerry Cans</td><td><span class="brand-pill">Xipharma</span></td><td>15,000</td><td>18%</td><td></td></tr>
+      <tr><td>15</td><td>Dish-wash Sponge (Simba)</td><td>Piece</td><td><span class="brand-pill">Simba</span></td><td>600</td><td>18%</td><td></td></tr>
+      <tr><td>16</td><td>Liquid Soap, Multi-Purpose</td><td>5L Jerry Can</td><td><span class="brand-pill">Simba</span></td><td>8,000</td><td>18%</td><td></td></tr>
+      <tr><td>17</td><td>Dish-wash Sponge</td><td>(Pack of 5) Eponge</td><td><span class="brand-pill">Pride</span></td><td>2,500</td><td>18%</td><td></td></tr>
+      <tr><td>18</td><td>Washing Powder, 5kg</td><td>5 Kg Container</td><td><span class="brand-pill">OMO</span></td><td>22,000</td><td>18%</td><td></td></tr>
+      <tr><td>19</td><td>Milk Low Fat, 1L</td><td>Box of 12 L</td><td><span class="brand-pill">Inyange</span></td><td>16,800</td><td>18%</td><td></td></tr>
+      <tr><td>20</td><td>Paper Napkin</td><td>Small Packets</td><td><span class="brand-pill">Supa</span></td><td>1,500</td><td>18%</td><td></td></tr>
+      <tr><td>21</td><td>Toothpick</td><td>Small Packets</td><td><span class="brand-pill na">N/A</span></td><td>500</td><td>18%</td><td></td></tr>
+      <tr><td>22</td><td>Honey</td><td>500 g Bottles</td><td><span class="brand-pill">B&amp;B Daughters</span></td><td>6,000</td><td>18%</td><td></td></tr>
+      <tr><td>23</td><td>Hand Tissue</td><td>Box</td><td><span class="brand-pill">Clear</span></td><td>3,000</td><td>18%</td><td></td></tr>
+      <tr><td>24</td><td>Cleaning Towels</td><td>Piece (Pc)</td><td><span class="brand-pill na">N/A</span></td><td>2,500</td><td>18%</td><td></td></tr>
+      <tr><td>25</td><td>Gloves for Waste</td><td>Piece (Pc)</td><td><span class="brand-pill na">N/A</span></td><td>3,500</td><td>18%</td><td></td></tr>
+      <tr><td>26</td><td>Surgical Face Mask</td><td>Small Boxes</td><td><span class="brand-pill">Karemax</span></td><td>5,000</td><td>18%</td><td></td></tr>
+      <tr><td>27</td><td>Window Mop</td><td>Piece (Pc)</td><td><span class="brand-pill na">N/A</span></td><td>7,000</td><td>18%</td><td></td></tr>
+      <tr><td>28</td><td>Rwanda Coffee</td><td>Bags</td><td><span class="brand-pill">Maraba</span></td><td>12,000</td><td>18%</td><td></td></tr>
+      <tr><td>29</td><td>Waste Bins &ndash; Small</td><td>Piece (Pc)</td><td><span class="brand-pill">Ken Poly</span></td><td>5,000</td><td>18%</td><td></td></tr>
+      <tr><td>30</td><td>Waste Bins &ndash; Large</td><td>Piece (Pc)</td><td><span class="brand-pill">Ken Poly</span></td><td>12,000</td><td>18%</td><td></td></tr>
+      <tr><td>31</td><td>Dust Pans</td><td>Piece (Pc)</td><td><span class="brand-pill">TopZea or Quickie</span></td><td>4,500</td><td>18%</td><td></td></tr>
+      <tr><td>32</td><td>Broom Stick</td><td>Piece (Pc)</td><td><span class="brand-pill na">N/A</span></td><td>3,500</td><td>18%</td><td></td></tr>
+      <tr><td>33</td><td>Mop &amp; Bucket System</td><td>Piece (Pc)</td><td><span class="brand-pill na">N/A</span></td><td>18,000</td><td>18%</td><td></td></tr>
+      <tr><td>34</td><td>Mop Cloth</td><td>Piece (Pc)</td><td><span class="brand-pill na">N/A</span></td><td>3,500</td><td>18%</td><td></td></tr>
+      <tr><td>35</td><td>Cleaning Cloth</td><td>Piece (Pc)</td><td><span class="brand-pill na">N/A</span></td><td>2,000</td><td>18%</td><td></td></tr>
+      <tr><td>36</td><td>All Purpose Cleaning Solution</td><td>Liter</td><td><span class="brand-pill">VIM</span></td><td>3,500</td><td>18%</td><td></td></tr>
+      <tr><td>37</td><td>Food Takeaway Packages</td><td>Pack of 1000</td><td><span class="brand-pill na">N/A</span></td><td>25,000</td><td>18%</td><td></td></tr>
+      <tr><td>38</td><td>Tea Takeaway Packages</td><td>Packet</td><td><span class="brand-pill na">N/A</span></td><td>8,000</td><td>18%</td><td></td></tr>
+      <tr><td>39</td><td>Bar Soap</td><td>Piece (Pc)</td><td><span class="brand-pill">Protex</span></td><td>1,200</td><td>18%</td><td></td></tr>
+      <tr><td>40</td><td>Sanitary Pads</td><td>Packet</td><td><span class="brand-pill">Supa</span></td><td>3,000</td><td>18%</td><td></td></tr>
+      <tr><td>41</td><td>Toilet Papers</td><td>Packet</td><td><span class="brand-pill">Supa</span></td><td>4,500</td><td>18%</td><td></td></tr>
+      <tr><td>42</td><td>Ovaltine</td><td>500 g Bottle</td><td><span class="brand-pill">Ovaltine</span></td><td>9,500</td><td>18%</td><td></td></tr>
+      <tr><td>43</td><td>Furniture Cleaner Pledge</td><td>Piece (Pc)</td><td><span class="brand-pill na">N/A</span></td><td>8,500</td><td>18%</td><td></td></tr>
+      <tr><td>44</td><td>Washing Sponges (Soft)</td><td>Piece (Pc)</td><td><span class="brand-pill na">N/A</span></td><td>700</td><td>18%</td><td></td></tr>
+      <tr>
+        <td>45</td>
+        <td>20L Inyange Gallon (Refill)<br/><span style="font-size:11px;color:#888;">Delivery: Kanombe Nayrugunga, Kacyiru, Kigali Office (Kigali Height)</span></td>
+        <td>Piece</td>
+        <td><span class="brand-pill">Inyange</span></td>
+        <td>3,500</td><td>18%</td><td></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="totals-area">
+    <div class="totals-box">
+      <div class="totals-row"><span class="label">Sub-Total (Rwf)</span><span>2,873,500</span></div>
+      <div class="totals-row"><span class="label">VAT (18%)</span><span>517,230</span></div>
+      <div class="totals-row grand"><span class="label">GRAND TOTAL (Rwf)</span><span>3,390,730</span></div>
+    </div>
+  </div>
+  <div class="payment-section">
+    <div class="payment-box">
+      <h3>Bank Details</h3>
+      <p><strong>Bank:</strong> Bank of Kigali (BK)<br/><strong>Account No:</strong> 100230105213<br/><strong>Account Name:</strong> Clementine Ishimwe</p>
+    </div>
+    <div class="payment-box">
+      <h3>Notes</h3>
+      <p>Unit prices and quantities to be confirmed upon order.<br/>VAT at 18% applies to all applicable items.<br/>This is a proforma invoice for budgeting purposes.</p>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="sig">Prepared by: <strong>ZUNO Ltd</strong> &nbsp;|&nbsp; auroraltd1@gmail.com &nbsp;|&nbsp; +250 796893108</div>
+    <div>Page 1 of 1 &nbsp;|&nbsp; Printed: 2026-03-21</div>
+  </div>
+</div>
+</body>
+</html>

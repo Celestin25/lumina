@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import { createClient } from "@libsql/client/web";
+import { createClient } from "@libsql/client";
 import { PrismaLibSQL } from "@prisma/adapter-libsql";
 
 const globalForPrisma = globalThis as unknown as {
@@ -7,14 +7,11 @@ const globalForPrisma = globalThis as unknown as {
 };
 
 function createPrismaClient() {
-  // Use the TURSO_DATABASE_URL from environment variables for Netlify/Production
-  // Fallback to the known Turso DB url if not explicitly provided but token exists
-  const remoteUrl = process.env.TURSO_DATABASE_URL || "https://lumina-db-celestin25.turso.io";
+  const remoteUrl = process.env.TURSO_DATABASE_URL;
   const authToken = process.env.TURSO_AUTH_TOKEN;
 
-  // Use the libsql adapter when TURSO_AUTH_TOKEN is present
-  // v5.x: PrismaLibSQL takes a Client instance (from createClient)
-  if (authToken) {
+  // Use the libsql adapter when BOTH TURSO_DATABASE_URL and TURSO_AUTH_TOKEN are present
+  if (remoteUrl && authToken) {
     const libsql = createClient({ url: remoteUrl, authToken });
     const adapter = new PrismaLibSQL(libsql);
     return new PrismaClient({
