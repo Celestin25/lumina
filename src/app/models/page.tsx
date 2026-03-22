@@ -13,7 +13,7 @@ async function getModels() {
       },
       include: {
         photos: {
-          select: { id: true, isMain: true, modelId: true }
+          select: { id: true, modelId: true }
         },
         services: true,
       },
