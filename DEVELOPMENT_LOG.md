@@ -505,3 +505,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-20 10:15` feat(api): add rate limiting middleware with Redis-backed token bucket
 - `2026-03-20 10:19` fix(forms): enforce client-side validation before hitting API endpoints
 - `2026-03-23 11:10` feat(api): add rate limiting middleware with Redis-backed token bucket
+- `2026-03-23 11:40` chore: configure Husky pre-commit hooks with lint-staged for auto-format
