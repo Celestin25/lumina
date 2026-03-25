@@ -507,3 +507,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-23 11:10` feat(api): add rate limiting middleware with Redis-backed token bucket
 - `2026-03-23 11:40` chore: configure Husky pre-commit hooks with lint-staged for auto-format
 - `2026-03-23 12:20` feat(profile): implement step-by-step profile completion wizard
+- `2026-03-25 09:36` feat(auth): implement JWT refresh token rotation and device session tracking
