@@ -516,3 +516,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-25 14:23` feat(api): add rate limiting middleware with Redis-backed token bucket
 - `2026-03-25 15:02` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
 - `2026-03-25 15:24` fix(modal): lock body scroll when dialog is active
+- `2026-03-25 16:26` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
