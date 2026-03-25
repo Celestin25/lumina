@@ -518,3 +518,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-25 15:24` fix(modal): lock body scroll when dialog is active
 - `2026-03-25 16:26` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
 - `2026-03-25 16:27` refactor(hooks): consolidate auth state management into useAuth context
+- `2026-03-25 16:33` refactor(components): split ModelCard into composable atomic components
