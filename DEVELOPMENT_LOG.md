@@ -514,3 +514,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-25 12:49` fix(routing): handle 404 gracefully with fallback UI and back navigation
 - `2026-03-25 13:00` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
 - `2026-03-25 14:23` feat(api): add rate limiting middleware with Redis-backed token bucket
+- `2026-03-25 15:02` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
