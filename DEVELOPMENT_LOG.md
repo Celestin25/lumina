@@ -511,3 +511,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-25 10:38` feat(filter): add multi-tag faceted filtering to catalog
 - `2026-03-25 11:27` feat(profile): implement step-by-step profile completion wizard
 - `2026-03-25 12:04` feat(ui): add dark mode toggle with system preference fallback
+- `2026-03-25 12:49` fix(routing): handle 404 gracefully with fallback UI and back navigation
