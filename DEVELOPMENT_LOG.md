@@ -521,3 +521,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-25 16:33` refactor(components): split ModelCard into composable atomic components
 - `2026-03-26 12:01` fix(hydration): resolve client-server mismatch on timestamp display
 - `2026-03-26 12:07` chore: configure Husky pre-commit hooks with lint-staged for auto-format
+- `2026-03-26 12:11` chore: set up GitHub Actions CI with build, type-check and test steps
