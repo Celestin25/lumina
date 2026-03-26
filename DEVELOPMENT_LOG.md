@@ -523,3 +523,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-26 12:07` chore: configure Husky pre-commit hooks with lint-staged for auto-format
 - `2026-03-26 12:11` chore: set up GitHub Actions CI with build, type-check and test steps
 - `2026-03-26 12:24` fix(api): return proper 422 status for malformed request payloads
+- `2026-03-26 13:45` chore: add Zod schema validation for all environment variables on startup
