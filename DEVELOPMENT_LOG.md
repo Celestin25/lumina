@@ -534,3 +534,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-31 15:37` docs: update README with environment setup and database migration steps
 - `2026-03-31 15:50` refactor: enforce strict TypeScript mode and resolve all implicit any types
 - `2026-03-31 15:58` refactor: enforce strict TypeScript mode and resolve all implicit any types
+- `2026-03-31 15:58` fix(prisma): fix schema migration conflict blocking production deploy
