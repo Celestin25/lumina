@@ -525,3 +525,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-26 12:24` fix(api): return proper 422 status for malformed request payloads
 - `2026-03-26 13:45` chore: add Zod schema validation for all environment variables on startup
 - `2026-03-30 10:22` feat(analytics): integrate client-side event tracking telemetry
+- `2026-03-31 09:21` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
