@@ -538,3 +538,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-31 16:45` fix(prisma): fix schema migration conflict blocking production deploy
 - `2026-03-31 17:17` feat(profile): implement step-by-step profile completion wizard
 - `2026-03-31 17:47` feat(payment): integrate Stripe checkout with webhook event handling
+- `2026-03-31 18:08` fix(styles): resolve z-index stacking collision between modal and header
