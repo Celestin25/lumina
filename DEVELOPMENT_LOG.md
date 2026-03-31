@@ -528,3 +528,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-31 09:21` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
 - `2026-03-31 09:28` feat(export): add CSV export for transaction summaries
 - `2026-03-31 09:49` chore: set up GitHub Actions CI with build, type-check and test steps
+- `2026-03-31 10:28` fix(hydration): resolve client-server mismatch on timestamp display
