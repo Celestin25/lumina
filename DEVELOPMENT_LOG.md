@@ -543,3 +543,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-01 13:20` feat(models): add profile verification badge and approval workflow
 - `2026-04-01 13:25` fix(prisma): fix schema migration conflict blocking production deploy
 - `2026-04-01 13:37` fix(routing): handle 404 gracefully with fallback UI and back navigation
+- `2026-04-01 13:49` feat(seo): add structured data markup and dynamic OpenGraph meta tags
