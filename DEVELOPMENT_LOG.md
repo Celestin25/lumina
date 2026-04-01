@@ -541,3 +541,4 @@ Tracking engineering progress and feature updates.
 - `2026-03-31 18:08` fix(styles): resolve z-index stacking collision between modal and header
 - `2026-04-01 12:52` fix(prisma): fix schema migration conflict blocking production deploy
 - `2026-04-01 13:20` feat(models): add profile verification badge and approval workflow
+- `2026-04-01 13:25` fix(prisma): fix schema migration conflict blocking production deploy
