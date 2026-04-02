@@ -550,3 +550,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-02 09:45` feat(dashboard): build revenue analytics with recharts and date-range picker
 - `2026-04-02 11:02` fix(forms): enforce client-side validation before hitting API endpoints
 - `2026-04-02 11:05` feat(analytics): integrate client-side event tracking telemetry
+- `2026-04-02 12:20` feat(i18n): add locale switcher with persistent preference in cookies
