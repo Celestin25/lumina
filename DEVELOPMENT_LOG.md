@@ -545,3 +545,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-01 13:37` fix(routing): handle 404 gracefully with fallback UI and back navigation
 - `2026-04-01 13:49` feat(seo): add structured data markup and dynamic OpenGraph meta tags
 - `2026-04-02 09:07` feat(i18n): add locale switcher with persistent preference in cookies
+- `2026-04-02 09:25` feat(search): implement full-text search with debounce and highlighted results
