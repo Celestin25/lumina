@@ -546,3 +546,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-01 13:49` feat(seo): add structured data markup and dynamic OpenGraph meta tags
 - `2026-04-02 09:07` feat(i18n): add locale switcher with persistent preference in cookies
 - `2026-04-02 09:25` feat(search): implement full-text search with debounce and highlighted results
+- `2026-04-02 09:40` fix(styles): resolve z-index stacking collision between modal and header
