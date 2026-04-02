@@ -548,3 +548,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-02 09:25` feat(search): implement full-text search with debounce and highlighted results
 - `2026-04-02 09:40` fix(styles): resolve z-index stacking collision between modal and header
 - `2026-04-02 09:45` feat(dashboard): build revenue analytics with recharts and date-range picker
+- `2026-04-02 11:02` fix(forms): enforce client-side validation before hitting API endpoints
