@@ -553,3 +553,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-02 12:20` feat(i18n): add locale switcher with persistent preference in cookies
 - `2026-04-03 09:35` fix(prisma): fix schema migration conflict blocking production deploy
 - `2026-04-03 10:38` refactor(components): split ModelCard into composable atomic components
+- `2026-04-03 11:50` test: add E2E tests for registration, login and profile update flows
