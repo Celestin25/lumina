@@ -556,3 +556,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-03 11:50` test: add E2E tests for registration, login and profile update flows
 - `2026-04-07 11:02` docs: update README with environment setup and database migration steps
 - `2026-04-07 13:24` feat(analytics): integrate client-side event tracking telemetry
+- `2026-04-07 13:50` perf: optimize font loading with next/font and preload directives
