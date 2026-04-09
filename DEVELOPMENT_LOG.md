@@ -564,3 +564,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-09 12:02` fix(db): resolve N+1 query in listing endpoint with Prisma eager loading
 - `2026-04-09 12:36` feat(media): implement WebP conversion on upload pipeline
 - `2026-04-09 12:39` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
+- `2026-04-09 12:52` feat(export): add CSV export for transaction summaries
