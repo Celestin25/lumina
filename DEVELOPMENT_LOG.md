@@ -568,3 +568,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-09 13:40` fix(hydration): resolve client-server mismatch on timestamp display
 - `2026-04-09 13:48` feat(search): implement full-text search with debounce and highlighted results
 - `2026-04-09 14:04` fix(hydration): resolve client-server mismatch on timestamp display
+- `2026-04-09 14:58` fix(nav): correct active route indicator on nested paths
