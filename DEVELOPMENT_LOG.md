@@ -558,3 +558,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-07 13:24` feat(analytics): integrate client-side event tracking telemetry
 - `2026-04-07 13:50` perf: optimize font loading with next/font and preload directives
 - `2026-04-08 11:14` feat(i18n): add locale switcher with persistent preference in cookies
+- `2026-04-09 09:56` fix(modal): lock body scroll when dialog is active
