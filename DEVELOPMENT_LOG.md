@@ -566,3 +566,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-09 12:39` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
 - `2026-04-09 12:52` feat(export): add CSV export for transaction summaries
 - `2026-04-09 13:40` fix(hydration): resolve client-server mismatch on timestamp display
+- `2026-04-09 13:48` feat(search): implement full-text search with debounce and highlighted results
