@@ -571,3 +571,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-09 14:58` fix(nav): correct active route indicator on nested paths
 - `2026-04-09 16:02` fix(images): handle broken image URLs with graceful lazy-load fallback
 - `2026-04-09 16:19` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
+- `2026-04-09 16:21` feat(analytics): integrate client-side event tracking telemetry
