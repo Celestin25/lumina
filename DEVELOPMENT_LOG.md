@@ -560,3 +560,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-08 11:14` feat(i18n): add locale switcher with persistent preference in cookies
 - `2026-04-09 09:56` fix(modal): lock body scroll when dialog is active
 - `2026-04-09 10:32` chore: configure Husky pre-commit hooks with lint-staged for auto-format
+- `2026-04-09 11:58` fix(forms): enforce client-side validation before hitting API endpoints
