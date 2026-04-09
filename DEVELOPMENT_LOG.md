@@ -562,3 +562,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-09 10:32` chore: configure Husky pre-commit hooks with lint-staged for auto-format
 - `2026-04-09 11:58` fix(forms): enforce client-side validation before hitting API endpoints
 - `2026-04-09 12:02` fix(db): resolve N+1 query in listing endpoint with Prisma eager loading
+- `2026-04-09 12:36` feat(media): implement WebP conversion on upload pipeline
