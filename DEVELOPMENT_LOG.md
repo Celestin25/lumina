@@ -573,3 +573,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-09 16:19` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
 - `2026-04-09 16:21` feat(analytics): integrate client-side event tracking telemetry
 - `2026-04-13 11:26` feat(export): add CSV export for transaction summaries
+- `2026-04-13 12:02` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
