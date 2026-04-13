@@ -578,3 +578,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-13 13:22` fix(auth): prevent session fixation by regenerating ID after login
 - `2026-04-13 15:25` feat(profile): implement step-by-step profile completion wizard
 - `2026-04-13 17:43` feat(ui): add dark mode toggle with system preference fallback
+- `2026-04-13 19:31` feat(models): add profile verification badge and approval workflow
