@@ -583,3 +583,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-14 11:10` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
 - `2026-04-14 11:12` fix(prisma): fix schema migration conflict blocking production deploy
 - `2026-04-14 12:15` feat(payment): integrate Stripe checkout with webhook event handling
+- `2026-04-14 12:49` fix(api): return proper 422 status for malformed request payloads
