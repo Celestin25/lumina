@@ -581,3 +581,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-13 19:31` feat(models): add profile verification badge and approval workflow
 - `2026-04-13 20:24` refactor: extract date formatting helpers into shared utils
 - `2026-04-14 11:10` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
+- `2026-04-14 11:12` fix(prisma): fix schema migration conflict blocking production deploy
