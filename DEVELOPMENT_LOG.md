@@ -585,3 +585,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-14 12:15` feat(payment): integrate Stripe checkout with webhook event handling
 - `2026-04-14 12:49` fix(api): return proper 422 status for malformed request payloads
 - `2026-04-16 11:50` feat(models): add profile verification badge and approval workflow
+- `2026-04-17 09:56` perf: optimize font loading with next/font and preload directives
