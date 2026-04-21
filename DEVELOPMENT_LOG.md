@@ -593,3 +593,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-17 15:04` fix(forms): enforce client-side validation before hitting API endpoints
 - `2026-04-17 15:21` refactor: enforce strict TypeScript mode and resolve all implicit any types
 - `2026-04-21 11:18` refactor: extract date formatting helpers into shared utils
+- `2026-04-21 11:51` fix(modal): lock body scroll when dialog is active
