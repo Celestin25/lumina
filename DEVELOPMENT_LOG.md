@@ -595,3 +595,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-21 11:18` refactor: extract date formatting helpers into shared utils
 - `2026-04-21 11:51` fix(modal): lock body scroll when dialog is active
 - `2026-04-22 11:51` perf: optimize font loading with next/font and preload directives
+- `2026-04-22 13:15` test: add E2E tests for registration, login and profile update flows
