@@ -602,3 +602,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-23 10:02` fix(hydration): resolve client-server mismatch on timestamp display
 - `2026-04-23 10:41` fix(modal): lock body scroll when dialog is active
 - `2026-04-23 11:02` feat(i18n): add locale switcher with persistent preference in cookies
+- `2026-04-23 11:05` feat(filter): add multi-tag faceted filtering to catalog
