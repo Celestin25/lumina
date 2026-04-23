@@ -600,3 +600,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-22 16:08` refactor(hooks): consolidate auth state management into useAuth context
 - `2026-04-23 09:44` fix(nav): correct active route indicator on nested paths
 - `2026-04-23 10:02` fix(hydration): resolve client-server mismatch on timestamp display
+- `2026-04-23 10:41` fix(modal): lock body scroll when dialog is active
