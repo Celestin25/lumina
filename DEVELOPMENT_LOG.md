@@ -606,3 +606,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-23 11:22` chore: configure Husky pre-commit hooks with lint-staged for auto-format
 - `2026-04-24 11:14` chore: configure Husky pre-commit hooks with lint-staged for auto-format
 - `2026-04-24 11:20` fix(images): handle broken image URLs with graceful lazy-load fallback
+- `2026-04-24 11:35` feat(upload): support batch image upload with drag-and-drop reorder
