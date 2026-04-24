@@ -610,3 +610,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-24 11:46` feat(filter): add multi-tag faceted filtering to catalog
 - `2026-04-24 11:58` feat(export): add CSV export for transaction summaries
 - `2026-04-24 12:16` chore: add Zod schema validation for all environment variables on startup
+- `2026-04-24 13:40` feat(search): implement full-text search with debounce and highlighted results
