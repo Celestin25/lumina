@@ -612,3 +612,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-24 12:16` chore: add Zod schema validation for all environment variables on startup
 - `2026-04-24 13:40` feat(search): implement full-text search with debounce and highlighted results
 - `2026-04-27 10:09` feat(dashboard): build revenue analytics with recharts and date-range picker
+- `2026-04-29 09:03` chore: set up GitHub Actions CI with build, type-check and test steps
