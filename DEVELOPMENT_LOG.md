@@ -615,3 +615,4 @@ Tracking engineering progress and feature updates.
 - `2026-04-29 09:03` chore: set up GitHub Actions CI with build, type-check and test steps
 - `2026-04-29 09:35` chore: configure Husky pre-commit hooks with lint-staged for auto-format
 - `2026-04-29 09:39` refactor(hooks): consolidate auth state management into useAuth context
+- `2026-04-29 09:48` feat(search): implement full-text search with debounce and highlighted results
