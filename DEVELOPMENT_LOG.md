@@ -622,3 +622,4 @@ Tracking engineering progress and feature updates.
 - `2026-05-05 11:26` chore: set up GitHub Actions CI with build, type-check and test steps
 - `2026-05-05 12:42` chore: set up GitHub Actions CI with build, type-check and test steps
 - `2026-05-07 11:38` feat(models): add profile verification badge and approval workflow
+- `2026-05-07 12:48` perf: enable Brotli compression and edge caching for static assets
