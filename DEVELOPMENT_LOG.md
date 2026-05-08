@@ -627,3 +627,4 @@ Tracking engineering progress and feature updates.
 - `2026-05-08 12:01` feat(media): implement WebP conversion on upload pipeline
 - `2026-05-08 13:03` refactor(api): consolidate error handling into reusable middleware factory
 - `2026-05-08 13:24` feat(upload): support batch image upload with drag-and-drop reorder
+- `2026-05-08 15:08` feat(upload): support batch image upload with drag-and-drop reorder
