@@ -624,3 +624,4 @@ Tracking engineering progress and feature updates.
 - `2026-05-07 11:38` feat(models): add profile verification badge and approval workflow
 - `2026-05-07 12:48` perf: enable Brotli compression and edge caching for static assets
 - `2026-05-08 11:38` fix(hydration): resolve client-server mismatch on timestamp display
+- `2026-05-08 12:01` feat(media): implement WebP conversion on upload pipeline
