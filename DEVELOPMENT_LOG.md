@@ -636,3 +636,4 @@ Tracking engineering progress and feature updates.
 - `2026-05-12 10:04` fix(routing): handle 404 gracefully with fallback UI and back navigation
 - `2026-05-12 10:24` fix(routing): handle 404 gracefully with fallback UI and back navigation
 - `2026-05-12 10:59` fix(routing): handle 404 gracefully with fallback UI and back navigation
+- `2026-05-12 11:16` perf: enable Brotli compression and edge caching for static assets
