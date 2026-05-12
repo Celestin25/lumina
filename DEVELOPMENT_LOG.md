@@ -633,3 +633,4 @@ Tracking engineering progress and feature updates.
 - `2026-05-11 13:41` chore: add Zod schema validation for all environment variables on startup
 - `2026-05-11 14:28` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
 - `2026-05-11 14:33` fix(db): resolve N+1 query in listing endpoint with Prisma eager loading
+- `2026-05-12 10:04` fix(routing): handle 404 gracefully with fallback UI and back navigation
