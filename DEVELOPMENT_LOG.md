@@ -642,3 +642,4 @@ Tracking engineering progress and feature updates.
 - `2026-05-12 13:20` chore: add Zod schema validation for all environment variables on startup
 - `2026-05-13 11:00` fix(forms): enforce client-side validation before hitting API endpoints
 - `2026-05-13 11:26` fix(styles): resolve z-index stacking collision between modal and header
+- `2026-05-14 09:14` feat(media): implement WebP conversion on upload pipeline
