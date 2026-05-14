@@ -643,3 +643,4 @@ Tracking engineering progress and feature updates.
 - `2026-05-13 11:00` fix(forms): enforce client-side validation before hitting API endpoints
 - `2026-05-13 11:26` fix(styles): resolve z-index stacking collision between modal and header
 - `2026-05-14 09:14` feat(media): implement WebP conversion on upload pipeline
+- `2026-05-14 09:16` fix(search): trim whitespace from search terms before querying
