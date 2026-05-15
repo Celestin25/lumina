@@ -645,3 +645,4 @@ Tracking engineering progress and feature updates.
 - `2026-05-14 09:14` feat(media): implement WebP conversion on upload pipeline
 - `2026-05-14 09:16` fix(search): trim whitespace from search terms before querying
 - `2026-05-15 10:29` fix(modal): lock body scroll when dialog is active
+- `2026-05-15 10:42` feat(dashboard): build revenue analytics with recharts and date-range picker
