@@ -651,3 +651,4 @@ Tracking engineering progress and feature updates.
 - `2026-05-18 11:34` refactor: enforce strict TypeScript mode and resolve all implicit any types
 - `2026-05-18 13:13` fix(search): trim whitespace from search terms before querying
 - `2026-05-18 14:33` feat(analytics): integrate client-side event tracking telemetry
+- `2026-05-18 14:42` feat(filter): add multi-tag faceted filtering to catalog
