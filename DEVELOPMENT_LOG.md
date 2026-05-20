@@ -652,3 +652,4 @@ Tracking engineering progress and feature updates.
 - `2026-05-18 13:13` fix(search): trim whitespace from search terms before querying
 - `2026-05-18 14:33` feat(analytics): integrate client-side event tracking telemetry
 - `2026-05-18 14:42` feat(filter): add multi-tag faceted filtering to catalog
+- `2026-05-20 11:06` perf: enable Brotli compression and edge caching for static assets
