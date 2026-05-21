@@ -654,3 +654,4 @@ Tracking engineering progress and feature updates.
 - `2026-05-18 14:42` feat(filter): add multi-tag faceted filtering to catalog
 - `2026-05-20 11:06` perf: enable Brotli compression and edge caching for static assets
 - `2026-05-21 10:08` refactor: enforce strict TypeScript mode and resolve all implicit any types
+- `2026-05-21 11:46` fix(db): resolve N+1 query in listing endpoint with Prisma eager loading
