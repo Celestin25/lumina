@@ -657,3 +657,4 @@ Tracking engineering progress and feature updates.
 - `2026-05-21 11:46` fix(db): resolve N+1 query in listing endpoint with Prisma eager loading
 - `2026-05-22 10:03` refactor(api): consolidate error handling into reusable middleware factory
 - `2026-05-26 11:40` feat(i18n): add locale switcher with persistent preference in cookies
+- `2026-05-26 12:30` feat(admin): build user management table with sort, filter and bulk actions
