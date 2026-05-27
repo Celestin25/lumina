@@ -661,3 +661,4 @@ Tracking engineering progress and feature updates.
 - `2026-05-27 09:40` feat(notifications): build real-time push notifications with SSE
 - `2026-05-27 11:20` refactor(api): consolidate error handling into reusable middleware factory
 - `2026-05-27 11:57` fix(styles): resolve z-index stacking collision between modal and header
+- `2026-05-27 12:53` feat(export): add CSV export for transaction summaries
