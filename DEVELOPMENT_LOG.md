@@ -658,3 +658,4 @@ Tracking engineering progress and feature updates.
 - `2026-05-22 10:03` refactor(api): consolidate error handling into reusable middleware factory
 - `2026-05-26 11:40` feat(i18n): add locale switcher with persistent preference in cookies
 - `2026-05-26 12:30` feat(admin): build user management table with sort, filter and bulk actions
+- `2026-05-27 09:40` feat(notifications): build real-time push notifications with SSE
