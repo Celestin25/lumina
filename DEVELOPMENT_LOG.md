@@ -664,3 +664,4 @@ Tracking engineering progress and feature updates.
 - `2026-05-27 12:53` feat(export): add CSV export for transaction summaries
 - `2026-05-28 12:39` fix(modal): lock body scroll when dialog is active
 - `2026-05-28 13:23` feat(notifications): build real-time push notifications with SSE
+- `2026-05-28 13:30` feat(api): add rate limiting middleware with Redis-backed token bucket
