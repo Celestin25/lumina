@@ -662,3 +662,4 @@ Tracking engineering progress and feature updates.
 - `2026-05-27 11:20` refactor(api): consolidate error handling into reusable middleware factory
 - `2026-05-27 11:57` fix(styles): resolve z-index stacking collision between modal and header
 - `2026-05-27 12:53` feat(export): add CSV export for transaction summaries
+- `2026-05-28 12:39` fix(modal): lock body scroll when dialog is active
