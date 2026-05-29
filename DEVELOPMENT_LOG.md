@@ -669,3 +669,4 @@ Tracking engineering progress and feature updates.
 - `2026-05-28 15:14` fix(search): trim whitespace from search terms before querying
 - `2026-05-28 15:43` fix(images): handle broken image URLs with graceful lazy-load fallback
 - `2026-05-28 16:00` feat(analytics): integrate client-side event tracking telemetry
+- `2026-05-29 11:51` feat(dashboard): build revenue analytics with recharts and date-range picker
