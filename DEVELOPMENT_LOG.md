@@ -671,3 +671,4 @@ Tracking engineering progress and feature updates.
 - `2026-05-28 16:00` feat(analytics): integrate client-side event tracking telemetry
 - `2026-05-29 11:51` feat(dashboard): build revenue analytics with recharts and date-range picker
 - `2026-06-02 13:24` feat(search): implement full-text search with debounce and highlighted results
+- `2026-06-02 13:25` fix(routing): handle 404 gracefully with fallback UI and back navigation
