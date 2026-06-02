@@ -672,3 +672,4 @@ Tracking engineering progress and feature updates.
 - `2026-05-29 11:51` feat(dashboard): build revenue analytics with recharts and date-range picker
 - `2026-06-02 13:24` feat(search): implement full-text search with debounce and highlighted results
 - `2026-06-02 13:25` fix(routing): handle 404 gracefully with fallback UI and back navigation
+- `2026-06-02 13:31` docs: update README with environment setup and database migration steps
