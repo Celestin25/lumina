@@ -675,3 +675,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-02 13:31` docs: update README with environment setup and database migration steps
 - `2026-06-03 11:16` fix(styles): resolve z-index stacking collision between modal and header
 - `2026-06-03 11:32` refactor: extract date formatting helpers into shared utils
+- `2026-06-03 12:17` chore: configure Husky pre-commit hooks with lint-staged for auto-format
