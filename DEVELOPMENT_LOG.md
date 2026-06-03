@@ -673,3 +673,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-02 13:24` feat(search): implement full-text search with debounce and highlighted results
 - `2026-06-02 13:25` fix(routing): handle 404 gracefully with fallback UI and back navigation
 - `2026-06-02 13:31` docs: update README with environment setup and database migration steps
+- `2026-06-03 11:16` fix(styles): resolve z-index stacking collision between modal and header
