@@ -682,3 +682,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-04 11:24` refactor(api): consolidate error handling into reusable middleware factory
 - `2026-06-05 10:38` feat(profile): implement step-by-step profile completion wizard
 - `2026-06-05 11:37` feat(filter): add multi-tag faceted filtering to catalog
+- `2026-06-05 11:52` fix(images): handle broken image URLs with graceful lazy-load fallback
