@@ -685,3 +685,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-05 11:52` fix(images): handle broken image URLs with graceful lazy-load fallback
 - `2026-06-08 13:32` perf: enable Brotli compression and edge caching for static assets
 - `2026-06-08 13:36` fix(api): return proper 422 status for malformed request payloads
+- `2026-06-08 13:45` fix(perf): memoize expensive filter computations to prevent extra renders
