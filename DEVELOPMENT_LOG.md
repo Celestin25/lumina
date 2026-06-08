@@ -687,3 +687,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-08 13:36` fix(api): return proper 422 status for malformed request payloads
 - `2026-06-08 13:45` fix(perf): memoize expensive filter computations to prevent extra renders
 - `2026-06-08 13:53` feat(export): add CSV export for transaction summaries
+- `2026-06-08 15:42` feat(notifications): build real-time push notifications with SSE
