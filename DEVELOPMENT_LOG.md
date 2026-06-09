@@ -691,3 +691,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-09 11:58` chore: set up GitHub Actions CI with build, type-check and test steps
 - `2026-06-09 12:38` feat(profile): implement step-by-step profile completion wizard
 - `2026-06-09 14:25` perf: optimize font loading with next/font and preload directives
+- `2026-06-09 14:37` feat(api): add rate limiting middleware with Redis-backed token bucket
