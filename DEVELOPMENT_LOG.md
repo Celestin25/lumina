@@ -695,3 +695,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-10 09:03` feat(i18n): add locale switcher with persistent preference in cookies
 - `2026-06-10 09:06` fix(hydration): resolve client-server mismatch on timestamp display
 - `2026-06-10 09:08` perf: optimize font loading with next/font and preload directives
+- `2026-06-10 09:39` fix(images): handle broken image URLs with graceful lazy-load fallback
