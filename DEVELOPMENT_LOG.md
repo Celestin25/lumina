@@ -698,3 +698,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-10 09:39` fix(images): handle broken image URLs with graceful lazy-load fallback
 - `2026-06-10 09:46` feat(media): implement WebP conversion on upload pipeline
 - `2026-06-10 10:18` feat(api): add rate limiting middleware with Redis-backed token bucket
+- `2026-06-10 10:46` test: add E2E tests for registration, login and profile update flows
