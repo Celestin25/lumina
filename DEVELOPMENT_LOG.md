@@ -692,3 +692,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-09 12:38` feat(profile): implement step-by-step profile completion wizard
 - `2026-06-09 14:25` perf: optimize font loading with next/font and preload directives
 - `2026-06-09 14:37` feat(api): add rate limiting middleware with Redis-backed token bucket
+- `2026-06-10 09:03` feat(i18n): add locale switcher with persistent preference in cookies
