@@ -700,3 +700,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-10 10:18` feat(api): add rate limiting middleware with Redis-backed token bucket
 - `2026-06-10 10:46` test: add E2E tests for registration, login and profile update flows
 - `2026-06-11 11:09` fix(routing): handle 404 gracefully with fallback UI and back navigation
+- `2026-06-11 12:48` feat(upload): support batch image upload with drag-and-drop reorder
