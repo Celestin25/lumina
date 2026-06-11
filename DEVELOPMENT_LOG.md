@@ -708,3 +708,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-11 15:05` chore: configure Husky pre-commit hooks with lint-staged for auto-format
 - `2026-06-11 15:51` refactor(api): consolidate error handling into reusable middleware factory
 - `2026-06-11 16:05` fix(forms): enforce client-side validation before hitting API endpoints
+- `2026-06-11 17:40` feat(notifications): build real-time push notifications with SSE
