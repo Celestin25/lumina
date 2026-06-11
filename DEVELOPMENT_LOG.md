@@ -702,3 +702,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-11 11:09` fix(routing): handle 404 gracefully with fallback UI and back navigation
 - `2026-06-11 12:48` feat(upload): support batch image upload with drag-and-drop reorder
 - `2026-06-11 13:20` fix(perf): memoize expensive filter computations to prevent extra renders
+- `2026-06-11 13:41` fix(images): handle broken image URLs with graceful lazy-load fallback
