@@ -705,3 +705,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-11 13:41` fix(images): handle broken image URLs with graceful lazy-load fallback
 - `2026-06-11 13:44` feat(upload): support batch image upload with drag-and-drop reorder
 - `2026-06-11 14:53` feat(models): add profile verification badge and approval workflow
+- `2026-06-11 15:05` chore: configure Husky pre-commit hooks with lint-staged for auto-format
