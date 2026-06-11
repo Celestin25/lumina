@@ -710,3 +710,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-11 16:05` fix(forms): enforce client-side validation before hitting API endpoints
 - `2026-06-11 17:40` feat(notifications): build real-time push notifications with SSE
 - `2026-06-11 18:31` feat(upload): support batch image upload with drag-and-drop reorder
+- `2026-06-11 18:32` fix(routing): handle 404 gracefully with fallback UI and back navigation
