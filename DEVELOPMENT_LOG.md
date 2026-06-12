@@ -714,3 +714,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-11 18:57` fix(modal): lock body scroll when dialog is active
 - `2026-06-12 12:06` refactor(api): consolidate error handling into reusable middleware factory
 - `2026-06-12 13:12` chore: add Zod schema validation for all environment variables on startup
+- `2026-06-12 13:28` test: add E2E tests for registration, login and profile update flows
