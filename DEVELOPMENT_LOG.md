@@ -712,3 +712,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-11 18:31` feat(upload): support batch image upload with drag-and-drop reorder
 - `2026-06-11 18:32` fix(routing): handle 404 gracefully with fallback UI and back navigation
 - `2026-06-11 18:57` fix(modal): lock body scroll when dialog is active
+- `2026-06-12 12:06` refactor(api): consolidate error handling into reusable middleware factory
