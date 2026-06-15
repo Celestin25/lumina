@@ -724,3 +724,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-15 15:48` fix(auth): prevent session fixation by regenerating ID after login
 - `2026-06-15 16:25` feat(ui): add dark mode toggle with system preference fallback
 - `2026-06-15 17:16` feat(profile): implement step-by-step profile completion wizard
+- `2026-06-15 18:27` fix(api): return proper 422 status for malformed request payloads
