@@ -718,3 +718,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-12 13:32` perf: enable Brotli compression and edge caching for static assets
 - `2026-06-12 13:54` feat(upload): support batch image upload with drag-and-drop reorder
 - `2026-06-15 11:00` feat(ui): add dark mode toggle with system preference fallback
+- `2026-06-15 13:29` refactor(hooks): consolidate auth state management into useAuth context
