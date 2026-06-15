@@ -722,3 +722,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-15 15:23` feat(upload): support batch image upload with drag-and-drop reorder
 - `2026-06-15 15:42` fix(routing): handle 404 gracefully with fallback UI and back navigation
 - `2026-06-15 15:48` fix(auth): prevent session fixation by regenerating ID after login
+- `2026-06-15 16:25` feat(ui): add dark mode toggle with system preference fallback
