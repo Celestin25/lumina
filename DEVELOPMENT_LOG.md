@@ -727,3 +727,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-15 18:27` fix(api): return proper 422 status for malformed request payloads
 - `2026-06-15 19:12` chore: set up GitHub Actions CI with build, type-check and test steps
 - `2026-06-15 19:24` feat(ui): add dark mode toggle with system preference fallback
+- `2026-06-16 12:15` refactor(api): consolidate error handling into reusable middleware factory
