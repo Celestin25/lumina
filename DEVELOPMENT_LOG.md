@@ -741,3 +741,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-18 13:37` perf: optimize font loading with next/font and preload directives
 - `2026-06-18 13:38` feat(dashboard): build revenue analytics with recharts and date-range picker
 - `2026-06-18 13:41` chore: set up GitHub Actions CI with build, type-check and test steps
+- `2026-06-18 14:21` feat(admin): build user management table with sort, filter and bulk actions
