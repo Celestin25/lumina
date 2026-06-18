@@ -732,3 +732,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-16 13:39` feat(profile): implement step-by-step profile completion wizard
 - `2026-06-17 10:48` refactor(api): consolidate error handling into reusable middleware factory
 - `2026-06-18 11:01` refactor(api): consolidate error handling into reusable middleware factory
+- `2026-06-18 11:05` feat(media): implement WebP conversion on upload pipeline
