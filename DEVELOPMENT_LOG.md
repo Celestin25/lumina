@@ -735,3 +735,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-18 11:05` feat(media): implement WebP conversion on upload pipeline
 - `2026-06-18 11:14` feat(media): implement WebP conversion on upload pipeline
 - `2026-06-18 12:14` feat(search): implement full-text search with debounce and highlighted results
+- `2026-06-18 13:06` feat(profile): implement step-by-step profile completion wizard
