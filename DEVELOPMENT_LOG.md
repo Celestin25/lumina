@@ -738,3 +738,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-18 13:06` feat(profile): implement step-by-step profile completion wizard
 - `2026-06-18 13:15` test: add E2E tests for registration, login and profile update flows
 - `2026-06-18 13:33` chore: configure Husky pre-commit hooks with lint-staged for auto-format
+- `2026-06-18 13:37` perf: optimize font loading with next/font and preload directives
