@@ -734,3 +734,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-18 11:01` refactor(api): consolidate error handling into reusable middleware factory
 - `2026-06-18 11:05` feat(media): implement WebP conversion on upload pipeline
 - `2026-06-18 11:14` feat(media): implement WebP conversion on upload pipeline
+- `2026-06-18 12:14` feat(search): implement full-text search with debounce and highlighted results
