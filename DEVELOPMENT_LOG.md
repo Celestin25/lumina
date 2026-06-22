@@ -746,3 +746,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-18 16:38` perf: optimize font loading with next/font and preload directives
 - `2026-06-22 10:07` feat(seo): add structured data markup and dynamic OpenGraph meta tags
 - `2026-06-22 10:31` fix(search): trim whitespace from search terms before querying
+- `2026-06-22 12:21` perf: enable Brotli compression and edge caching for static assets
