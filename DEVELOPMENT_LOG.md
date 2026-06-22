@@ -744,3 +744,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-18 14:21` feat(admin): build user management table with sort, filter and bulk actions
 - `2026-06-18 14:55` fix(db): resolve N+1 query in listing endpoint with Prisma eager loading
 - `2026-06-18 16:38` perf: optimize font loading with next/font and preload directives
+- `2026-06-22 10:07` feat(seo): add structured data markup and dynamic OpenGraph meta tags
