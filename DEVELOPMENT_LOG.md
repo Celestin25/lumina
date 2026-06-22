@@ -747,3 +747,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-22 10:07` feat(seo): add structured data markup and dynamic OpenGraph meta tags
 - `2026-06-22 10:31` fix(search): trim whitespace from search terms before querying
 - `2026-06-22 12:21` perf: enable Brotli compression and edge caching for static assets
+- `2026-06-22 12:25` fix(styles): resolve z-index stacking collision between modal and header
