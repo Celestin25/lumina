@@ -752,3 +752,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-23 12:30` chore: configure Husky pre-commit hooks with lint-staged for auto-format
 - `2026-06-24 11:29` perf: enable Brotli compression and edge caching for static assets
 - `2026-06-24 12:11` feat(upload): support batch image upload with drag-and-drop reorder
+- `2026-06-25 10:06` chore: configure Husky pre-commit hooks with lint-staged for auto-format
