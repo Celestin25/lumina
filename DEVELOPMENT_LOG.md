@@ -755,3 +755,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-25 10:06` chore: configure Husky pre-commit hooks with lint-staged for auto-format
 - `2026-06-25 10:46` fix(images): handle broken image URLs with graceful lazy-load fallback
 - `2026-06-25 10:47` perf: optimize font loading with next/font and preload directives
+- `2026-06-25 11:06` fix(auth): prevent session fixation by regenerating ID after login
