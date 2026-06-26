@@ -761,3 +761,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-26 11:17` refactor: enforce strict TypeScript mode and resolve all implicit any types
 - `2026-06-26 11:59` fix(api): return proper 422 status for malformed request payloads
 - `2026-06-26 13:01` fix(forms): enforce client-side validation before hitting API endpoints
+- `2026-06-26 14:54` docs: update README with environment setup and database migration steps
