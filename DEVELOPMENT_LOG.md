@@ -768,3 +768,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-29 09:22` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
 - `2026-06-29 09:25` feat(export): add CSV export for transaction summaries
 - `2026-06-29 09:51` fix(modal): lock body scroll when dialog is active
+- `2026-06-29 11:38` feat(ui): add dark mode toggle with system preference fallback
