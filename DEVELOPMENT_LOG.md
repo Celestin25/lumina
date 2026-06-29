@@ -765,3 +765,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-26 15:49` fix(images): handle broken image URLs with graceful lazy-load fallback
 - `2026-06-26 16:46` feat(filter): add multi-tag faceted filtering to catalog
 - `2026-06-29 09:04` fix(forms): enforce client-side validation before hitting API endpoints
+- `2026-06-29 09:22` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
