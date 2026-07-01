@@ -771,3 +771,4 @@ Tracking engineering progress and feature updates.
 - `2026-06-29 11:38` feat(ui): add dark mode toggle with system preference fallback
 - `2026-07-01 11:46` docs: update README with environment setup and database migration steps
 - `2026-07-01 12:25` feat(dashboard): build revenue analytics with recharts and date-range picker
+- `2026-07-01 13:10` feat(auth): implement JWT refresh token rotation and device session tracking
