@@ -773,3 +773,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-01 12:25` feat(dashboard): build revenue analytics with recharts and date-range picker
 - `2026-07-01 13:10` feat(auth): implement JWT refresh token rotation and device session tracking
 - `2026-07-09 11:53` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
+- `2026-07-10 10:41` chore: set up GitHub Actions CI with build, type-check and test steps
