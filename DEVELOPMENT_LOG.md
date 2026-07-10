@@ -778,3 +778,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-10 11:35` test: add E2E tests for registration, login and profile update flows
 - `2026-07-10 12:42` fix(modal): lock body scroll when dialog is active
 - `2026-07-10 14:52` feat(admin): build user management table with sort, filter and bulk actions
+- `2026-07-10 16:20` feat(seo): add structured data markup and dynamic OpenGraph meta tags
