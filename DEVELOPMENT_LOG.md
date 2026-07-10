@@ -775,3 +775,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-09 11:53` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
 - `2026-07-10 10:41` chore: set up GitHub Actions CI with build, type-check and test steps
 - `2026-07-10 10:42` feat(models): add profile verification badge and approval workflow
+- `2026-07-10 11:35` test: add E2E tests for registration, login and profile update flows
