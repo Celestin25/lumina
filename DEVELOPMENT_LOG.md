@@ -784,3 +784,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-14 10:44` fix(styles): resolve z-index stacking collision between modal and header
 - `2026-07-14 11:35` perf: optimize font loading with next/font and preload directives
 - `2026-07-14 12:30` refactor(api): consolidate error handling into reusable middleware factory
+- `2026-07-14 13:06` feat(export): add CSV export for transaction summaries
