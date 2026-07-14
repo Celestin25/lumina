@@ -787,3 +787,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-14 13:06` feat(export): add CSV export for transaction summaries
 - `2026-07-14 14:01` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
 - `2026-07-14 14:59` feat(filter): add multi-tag faceted filtering to catalog
+- `2026-07-14 14:59` perf: enable Brotli compression and edge caching for static assets
