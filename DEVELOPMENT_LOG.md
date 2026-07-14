@@ -781,3 +781,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-10 16:20` feat(seo): add structured data markup and dynamic OpenGraph meta tags
 - `2026-07-10 16:37` refactor(api): consolidate error handling into reusable middleware factory
 - `2026-07-14 10:33` refactor(hooks): consolidate auth state management into useAuth context
+- `2026-07-14 10:44` fix(styles): resolve z-index stacking collision between modal and header
