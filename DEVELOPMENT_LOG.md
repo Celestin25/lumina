@@ -793,3 +793,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-15 15:49` fix(nav): correct active route indicator on nested paths
 - `2026-07-15 16:23` feat(notifications): build real-time push notifications with SSE
 - `2026-07-15 17:25` fix(api): return proper 422 status for malformed request payloads
+- `2026-07-15 19:33` fix(prisma): fix schema migration conflict blocking production deploy
