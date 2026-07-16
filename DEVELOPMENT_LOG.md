@@ -798,3 +798,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-16 11:11` feat(notifications): build real-time push notifications with SSE
 - `2026-07-16 12:16` feat(models): add profile verification badge and approval workflow
 - `2026-07-16 12:31` fix(db): resolve N+1 query in listing endpoint with Prisma eager loading
+- `2026-07-16 12:34` perf: optimize font loading with next/font and preload directives
