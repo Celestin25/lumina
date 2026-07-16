@@ -796,3 +796,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-15 19:33` fix(prisma): fix schema migration conflict blocking production deploy
 - `2026-07-15 19:37` refactor(components): split ModelCard into composable atomic components
 - `2026-07-16 11:11` feat(notifications): build real-time push notifications with SSE
+- `2026-07-16 12:16` feat(models): add profile verification badge and approval workflow
