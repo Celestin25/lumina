@@ -801,3 +801,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-16 12:34` perf: optimize font loading with next/font and preload directives
 - `2026-07-16 12:47` test: add E2E tests for registration, login and profile update flows
 - `2026-07-16 13:16` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
+- `2026-07-17 12:48` test: add E2E tests for registration, login and profile update flows
