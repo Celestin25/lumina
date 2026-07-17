@@ -813,3 +813,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-17 18:16` fix(perf): memoize expensive filter computations to prevent extra renders
 - `2026-07-17 19:05` refactor(components): split ModelCard into composable atomic components
 - `2026-07-17 19:53` feat(models): add profile verification badge and approval workflow
+- `2026-07-17 19:54` fix(images): handle broken image URLs with graceful lazy-load fallback
