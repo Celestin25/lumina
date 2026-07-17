@@ -809,3 +809,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-17 15:39` fix(forms): enforce client-side validation before hitting API endpoints
 - `2026-07-17 17:02` refactor: extract date formatting helpers into shared utils
 - `2026-07-17 17:24` fix(hydration): resolve client-server mismatch on timestamp display
+- `2026-07-17 17:59` chore: configure Husky pre-commit hooks with lint-staged for auto-format
