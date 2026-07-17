@@ -806,3 +806,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-17 14:35` fix(perf): memoize expensive filter computations to prevent extra renders
 - `2026-07-17 15:05` feat(i18n): add locale switcher with persistent preference in cookies
 - `2026-07-17 15:26` feat(i18n): add locale switcher with persistent preference in cookies
+- `2026-07-17 15:39` fix(forms): enforce client-side validation before hitting API endpoints
