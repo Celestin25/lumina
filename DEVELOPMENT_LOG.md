@@ -811,3 +811,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-17 17:24` fix(hydration): resolve client-server mismatch on timestamp display
 - `2026-07-17 17:59` chore: configure Husky pre-commit hooks with lint-staged for auto-format
 - `2026-07-17 18:16` fix(perf): memoize expensive filter computations to prevent extra renders
+- `2026-07-17 19:05` refactor(components): split ModelCard into composable atomic components
