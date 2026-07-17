@@ -810,3 +810,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-17 17:02` refactor: extract date formatting helpers into shared utils
 - `2026-07-17 17:24` fix(hydration): resolve client-server mismatch on timestamp display
 - `2026-07-17 17:59` chore: configure Husky pre-commit hooks with lint-staged for auto-format
+- `2026-07-17 18:16` fix(perf): memoize expensive filter computations to prevent extra renders
