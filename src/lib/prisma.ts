@@ -7,17 +7,19 @@ const globalForPrisma = globalThis as unknown as {
 };
 
 function createPrismaClient() {
-  let remoteUrl = process.env.TURSO_DATABASE_URL;
+  // DATABASE_URL holds the Turso libsql:// or https:// URL in production
+  // TURSO_AUTH_TOKEN holds the authentication token
+  let dbUrl = process.env.DATABASE_URL;
   const authToken = process.env.TURSO_AUTH_TOKEN;
 
-  // Use the libsql adapter when BOTH TURSO_DATABASE_URL and TURSO_AUTH_TOKEN are present
-  if (remoteUrl && authToken) {
-    // Netlify Serverless/Edge requires the web client, which only accepts HTTP/HTTPS
-    if (remoteUrl.startsWith("libsql://")) {
-      remoteUrl = remoteUrl.replace("libsql://", "https://");
+  // Use the libsql adapter when we have a remote Turso URL + auth token
+  if (dbUrl && authToken && !dbUrl.startsWith("file:")) {
+    // Serverless runtimes (Vercel/Netlify) require HTTPS, not libsql://
+    if (dbUrl.startsWith("libsql://")) {
+      dbUrl = dbUrl.replace("libsql://", "https://");
     }
-    
-    const libsql = createClient({ url: remoteUrl, authToken });
+
+    const libsql = createClient({ url: dbUrl, authToken });
     const adapter = new PrismaLibSQL(libsql);
     return new PrismaClient({
       adapter,
@@ -25,22 +27,15 @@ function createPrismaClient() {
     } as any);
   }
 
-  // Fallback to regular local SQLite for local development
+  // Local development fallback: plain SQLite file
   return new PrismaClient({
     log: process.env.NODE_ENV === "development" ? ["error", "warn"] : ["error"],
   });
 }
 
-let prismaClientInstance: PrismaClient | undefined;
+if (!globalForPrisma.prisma) {
+  globalForPrisma.prisma = createPrismaClient();
+}
 
-export const prisma = new Proxy({} as PrismaClient, {
-  get(target, prop) {
-    if (!prismaClientInstance) {
-      prismaClientInstance = globalForPrisma.prisma ?? createPrismaClient();
-      if (process.env.NODE_ENV !== "production") {
-        globalForPrisma.prisma = prismaClientInstance;
-      }
-    }
-    return (prismaClientInstance as any)[prop];
-  }
-});
+export const prisma = globalForPrisma.prisma;
+

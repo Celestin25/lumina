@@ -43,12 +43,16 @@ model ModelProfile {
   height      Int?
   weight      Int?
   ethnicity   String?
+  bodyType    String?
+  hairColor   String?
+  gender      String?
   phone       String?
   btcAddress  String?
 
   hourlyRate  Float   @default(0)
   services    Service[]
   photos      Photo[]
+  videos      Video[]
 
   isVerified  Boolean  @default(false)
   isFeatured  Boolean  @default(false)
@@ -65,6 +69,13 @@ model ModelProfile {
 }
 
 model Photo {
+  id      String       @id @default(cuid())
+  url     String
+  modelId String
+  model   ModelProfile @relation(fields: [modelId], references: [id], onDelete: Cascade)
+}
+
+model Video {
   id      String       @id @default(cuid())
   url     String
   modelId String

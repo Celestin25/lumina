@@ -10,7 +10,10 @@ const randomSubset = (arr: any[], count: number) => {
   return shuffled.slice(0, count);
 };
 const randomInt = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
-const ethnicities = ['Black', 'White', 'Mixed', 'Latino'];
+const ethnicities = ['Arab', 'Asian', 'Ebony', 'Indian', 'Latina', 'Mixed', 'White'];
+const bodyTypes = ['Slim', 'Athletic', 'Curvy', 'Big Breast', 'Plump'];
+const hairColors = ['Blonde', 'Brunette', 'Black', 'Redhead', 'Bald'];
+const genders = ['girl', 'girl', 'girl', 'girl', 'girl', 'girl', 'girl', 'girl', 'guy', 'couple', 'trans'];
 
 async function main() {
   console.log('Start seeding ...')
@@ -100,6 +103,9 @@ async function main() {
                         height: randomInt(160, 185),
                         weight: randomInt(45, 75),
                         ethnicity: random(ethnicities),
+                        bodyType: random(bodyTypes),
+                        hairColor: random(hairColors),
+                        gender: random(genders),
                         hourlyRate,
                         isFeatured: Math.random() > 0.8,
                         isVerified: Math.random() > 0.3,
@@ -156,6 +162,9 @@ async function main() {
                     height: randomInt(165, 180),
                     weight: randomInt(50, 65),
                     ethnicity: random(ethnicities),
+                    bodyType: random(bodyTypes),
+                    hairColor: random(hairColors),
+                    gender: random(genders),
                     hourlyRate,
                     isFeatured: Math.random() > 0.7,
                     isVerified: Math.random() > 0.5,

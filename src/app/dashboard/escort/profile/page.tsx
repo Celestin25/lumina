@@ -4,6 +4,7 @@ import { useState, useCallback, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+import { regions, allLocations, countryFlag, citiesForCountry } from '@/locations/data';
 import styles from './profile.module.css';
 
 interface ProfileFormData {
@@ -20,6 +21,7 @@ interface ProfileFormData {
   btcAddress: string;
   services: string;
   photoUrls: string;
+  videoUrls: string;
 }
 
 export default function EscortProfilePage() {
@@ -42,6 +44,7 @@ export default function EscortProfilePage() {
     btcAddress: '',
     services: '',
     photoUrls: '',
+    videoUrls: '',
   });
 
   // Fetch existing profile data on mount
@@ -156,11 +159,30 @@ export default function EscortProfilePage() {
             <div className={styles.grid2}>
               <div className={styles.field}>
                 <label>Country *</label>
-                <input name="country" value={form.country} onChange={handleChange} required placeholder="United Kingdom" />
+                <select name="country" value={form.country} onChange={handleChange} required className={styles.select}>
+                  <option value="">Select Country</option>
+                  {form.country && !allLocations.some(l => l.country === form.country) && (
+                    <option value={form.country}>{form.country}</option>
+                  )}
+                  {regions.map(region => (
+                    <optgroup key={region.name} label={region.name}>
+                      {region.locations.map(loc => (
+                        <option key={loc.country} value={loc.country}>
+                          {countryFlag(loc.country)} {loc.country}
+                        </option>
+                      ))}
+                    </optgroup>
+                  ))}
+                </select>
               </div>
               <div className={styles.field}>
                 <label>City *</label>
-                <input name="city" value={form.city} onChange={handleChange} required placeholder="London" />
+                <input name="city" value={form.city} onChange={handleChange} required placeholder="London" list="city-suggestions" />
+                <datalist id="city-suggestions">
+                  {citiesForCountry(form.country).map(city => (
+                    <option key={city} value={city} />
+                  ))}
+                </datalist>
               </div>
               <div className={styles.field}>
                 <label>Phone / WhatsApp *</label>
@@ -181,6 +203,7 @@ export default function EscortProfilePage() {
                   <option value="White">White</option>
                   <option value="Mixed">Mixed</option>
                   <option value="Latino">Latino</option>
+                  <option value="Asian">Asian</option>
                 </select>
               </div>
               <div className={styles.field}>
@@ -286,6 +309,80 @@ export default function EscortProfilePage() {
                           fontSize: '12px', fontWeight: 'bold'
                         }}
                         title="Remove photo"
+                      >
+                        ✕
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Videos */}
+          <div className={styles.section}>
+            <h2 className={styles.sectionTitle}>Videos</h2>
+            <div className={styles.field}>
+              <label>Upload Short Videos / Clips</label>
+              <input 
+                type="file" 
+                accept="video/*" 
+                multiple 
+                onChange={(e) => {
+                  const files = e.target.files;
+                  if (!files) return;
+                  
+                  Array.from(files).forEach(file => {
+                    if (file.size > 5 * 1024 * 1024) {
+                      alert(`File ${file.name} is too large. Max 5MB.`);
+                      return;
+                    }
+                    if (!file.type.startsWith('video/')) return;
+
+                    const reader = new FileReader();
+                    reader.onload = (event) => {
+                      const base64 = event.target?.result as string;
+                      if (base64) {
+                        setForm(prev => {
+                          const currentUrls = prev.videoUrls ? prev.videoUrls.split('\n').filter(Boolean) : [];
+                          if (!currentUrls.includes(base64)) {
+                            return { ...prev, videoUrls: [...currentUrls, base64].join('\n') };
+                          }
+                          return prev;
+                        });
+                      }
+                    };
+                    reader.readAsDataURL(file);
+                  });
+                  // Reset input
+                  e.target.value = '';
+                }}
+                className={styles.fileInput}
+              />
+              <p className={styles.hint}>Select short video clips (Max 5MB each, MP4/WebM recommended). They will be processed instantly.</p>
+              
+              {/* Video Preview Grid */}
+              {form.videoUrls && (
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: '15px', marginTop: '1rem' }}>
+                  {form.videoUrls.split('\n').filter(Boolean).map((url, i) => (
+                    <div key={i} style={{ position: 'relative', width: '100%', borderRadius: '8px', overflow: 'hidden', border: '1px solid var(--color-border)' }}>
+                      <video src={url} controls style={{ width: '100%', display: 'block' }} />
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setForm(prev => {
+                            const currentUrls = prev.videoUrls.split('\n').filter(Boolean);
+                            currentUrls.splice(i, 1);
+                            return { ...prev, videoUrls: currentUrls.join('\n') };
+                          });
+                        }}
+                        style={{
+                          position: 'absolute', top: '8px', right: '8px', background: 'rgba(255,0,0,0.8)',
+                          color: '#fff', border: 'none', borderRadius: '50%', width: '28px', height: '28px',
+                          cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                          fontSize: '14px', fontWeight: 'bold', zIndex: 10
+                        }}
+                        title="Remove video"
                       >
                         ✕
                       </button>

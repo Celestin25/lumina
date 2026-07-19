@@ -16,6 +16,7 @@ export async function GET(req: NextRequest) {
       include: {
         photos: true,
         services: true,
+        videos: true,
       },
     });
 
@@ -23,7 +24,7 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ error: 'Profile not found' }, { status: 404 });
     }
 
-    // Convert photos and services back to string format for the form
+    // Convert photos, videos, and services back to string format for the form
     const formData = {
       displayName: profile.displayName,
       bio: profile.bio || '',
@@ -39,6 +40,9 @@ export async function GET(req: NextRequest) {
       services: profile.services.map(s => s.name).join(', '),
       photoUrls: profile.photos.map(p => 
         p.url.startsWith('data:') ? `/api/photos/${p.id}` : p.url
+      ).join('\n'),
+      videoUrls: profile.videos.map(v => 
+        v.url.startsWith('data:') ? `/api/videos/${v.id}` : v.url
       ).join('\n'),
     };
 
@@ -65,7 +69,7 @@ export async function POST(req: NextRequest) {
 
     const {
       displayName, bio, country, city, phone, age, height, weight,
-      hourlyRate, btcAddress, services, photoUrls, ethnicity
+      hourlyRate, btcAddress, services, photoUrls, videoUrls, ethnicity
     } = await req.json();
 
     if (!displayName || !country || !city || !phone || !hourlyRate) {
@@ -80,6 +84,11 @@ export async function POST(req: NextRequest) {
     // Parse photo URLs
     const photoList = photoUrls
       ? photoUrls.split('\n').map((u: string) => u.trim()).filter(Boolean)
+      : [];
+
+    // Parse video URLs
+    const videoList = videoUrls
+      ? videoUrls.split('\n').map((u: string) => u.trim()).filter(Boolean)
       : [];
 
     // Upsert ModelProfile
@@ -98,12 +107,14 @@ export async function POST(req: NextRequest) {
       ethnicity: ethnicity || null,
       btcAddress: btcAddress || null,
       photos: { create: photoList.map((url: string) => ({ url })) },
+      videos: { create: videoList.map((url: string) => ({ url })) },
       services: { create: serviceList.map((name: string) => ({ name })) },
     };
 
     if (existing) {
-      // Delete existing photos and services first
+      // Delete existing photos, videos, and services first
       await prisma.photo.deleteMany({ where: { modelId: existing.id } });
+      await prisma.video.deleteMany({ where: { modelId: existing.id } });
       await prisma.service.deleteMany({ where: { modelId: existing.id } });
 
       await prisma.modelProfile.update({

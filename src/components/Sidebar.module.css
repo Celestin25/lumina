@@ -1,0 +1,277 @@
+.sidebar {
+  width: 240px;
+  background-color: #121212;
+  border-right: 1px solid #222;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+  height: calc(100vh - 90px);
+  position: sticky;
+  top: 90px;
+  font-size: 0.85rem;
+  color: #ccc;
+  user-select: none;
+}
+
+/* Tokens Banner */
+.tokensBanner {
+  background-color: #1a1a1a;
+  border: 1px solid #55b727; /* Green border */
+  border-radius: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.tokensBanner:hover {
+  transform: translateY(-1px);
+}
+
+.tokensContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tokensLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.tokensGold {
+  color: #ffd700;
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.tokensSub {
+  font-size: 0.75rem;
+  color: #aaa;
+}
+
+.tokensIcon {
+  font-size: 1.5rem;
+}
+
+/* Nav Menu Items */
+.navList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.navItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: transparent;
+  border: none;
+  color: #ddd;
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.navItem:hover {
+  background-color: #222;
+  color: #fff;
+}
+
+.active {
+  background-color: #22c55e !important; /* Lumina Green for active route */
+  color: #fff !important;
+}
+
+.label {
+  font-size: 0.85rem;
+}
+
+/* Sections */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 1px solid #222;
+  padding-top: 12px;
+}
+
+.sectionHeader {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #666;
+  letter-spacing: 0.8px;
+  margin-bottom: 4px;
+  padding-left: 12px;
+}
+
+.filterList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.filterBtn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: #aaa;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.825rem;
+  transition: all 0.2s ease;
+}
+
+.filterBtn:hover {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.filterLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.activeFilter {
+  background-color: #222;
+  color: #fff;
+  font-weight: 600;
+}
+
+.count {
+  font-size: 0.75rem;
+  color: #555;
+  background-color: #1c1c1c;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+.filterBtn:hover .count {
+  color: #999;
+}
+
+/* Colors for specific icons */
+.redIcon {
+  color: #22c55e;
+}
+
+.goldIcon {
+  color: #ffd700;
+}
+
+.blueIcon {
+  color: #00bfff;
+}
+
+/* All Categories Button */
+.allCategoriesBtn {
+  background: transparent;
+  border: 1px solid #333;
+  color: #aaa;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 6px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.allCategoriesBtn:hover {
+  border-color: #555;
+  color: #fff;
+}
+
+/* Price Section */
+.priceForm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 12px;
+}
+
+.priceInputs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.priceInput {
+  width: 100%;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  outline: none;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.priceInput::-webkit-inner-spin-button,
+.priceInput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.priceDash {
+  color: #555;
+}
+
+.priceApplyBtn {
+  background-color: #22c55e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 0.775rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.priceApplyBtn:hover {
+  background-color: #166534;
+}
+
+/* Clear Filters Button */
+.clearBtn {
+  background: transparent;
+  border: 1px dashed #444;
+  color: #999;
+  border-radius: 6px;
+  padding: 8px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 8px;
+  text-align: center;
+}
+
+.clearBtn:hover {
+  border-color: #22c55e;
+  color: #fff;
+  background-color: rgba(34, 197, 94, 0.05);
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+    display: none; /* Hide on mobile/tablet, user can toggle or show drawer */
+  }
+}

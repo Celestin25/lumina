@@ -1,46 +1,41 @@
 'use client';
 
 import { useRouter, useSearchParams } from 'next/navigation';
-import { useState, useEffect } from 'react';
-import { africanLocations, worldLocations } from '@/locations/data';
+import { useState } from 'react';
+import { regions, allLocations, countryFlag } from '@/locations/data';
 import styles from './page.module.css'; // We'll share styles or move them
 
 export default function SearchFilter() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  
+
   // Convert URLSearchParams to state
   const currentCountry = searchParams.get('country') || '';
   const currentCity = searchParams.get('city') || '';
-  
-  // Determine initial region based on currentCountry
-  const isAfrica = africanLocations.some(l => l.country === currentCountry);
-  const isWorld = worldLocations.some(l => l.country === currentCountry);
-  
   const currentEthnicity = searchParams.get('ethnicity') || '';
-  
-  const [region, setRegion] = useState<'africa' | 'world' | ''>(
-    isAfrica ? 'africa' : isWorld ? 'world' : ''
-  );
-  
+
+  // Determine initial region based on currentCountry
+  const initialRegion = currentCountry
+    ? regions.find(r => r.locations.some(l => l.country === currentCountry))?.name || ''
+    : '';
+
+  const [region, setRegion] = useState<string>(initialRegion);
   const [selectedCountry, setSelectedCountry] = useState(currentCountry);
   const [selectedCity, setSelectedCity] = useState(currentCity);
   const [selectedEthnicity, setSelectedEthnicity] = useState(currentEthnicity);
 
   // Get available countries based on region
-  const availableCountries = region === 'africa' 
-    ? africanLocations 
-    : region === 'world' 
-      ? worldLocations 
-      : [...africanLocations, ...worldLocations];
+  const availableCountries = region
+    ? regions.find(r => r.name === region)?.locations || []
+    : allLocations;
 
   // Get available cities based on country
-  const availableCities = selectedCountry 
-    ? availableCountries.find(c => c.country === selectedCountry)?.cities || []
+  const availableCities = selectedCountry
+    ? allLocations.find(c => c.country === selectedCountry)?.cities || []
     : [];
 
-  const handleRegionChange = (r: 'africa' | 'world') => {
-    setRegion(r);
+  const handleRegionChange = (name: string) => {
+    setRegion(prev => (prev === name ? '' : name));
     setSelectedCountry('');
     setSelectedCity('');
   };
@@ -49,37 +44,34 @@ export default function SearchFilter() {
     const params = new URLSearchParams();
     if (selectedCountry) params.set('country', selectedCountry);
     if (selectedCity) params.set('city', selectedCity);
+    if (selectedEthnicity) params.set('ethnicity', selectedEthnicity);
     router.push(`/search?${params.toString()}`);
   };
 
   return (
     <div className={styles.filterCard}>
       <h3>Filter Results</h3>
-      
+
       <div className={styles.formGroup}>
         <label>Region</label>
-        <div style={{display: 'flex', gap: '10px'}}>
-          <button 
-            type="button"
-            className={`${styles.regionBtn} ${region === 'africa' ? styles.active : ''}`}
-            onClick={() => handleRegionChange('africa')}
-          >
-            Africa
-          </button>
-          <button 
-            type="button"
-            className={`${styles.regionBtn} ${region === 'world' ? styles.active : ''}`}
-            onClick={() => handleRegionChange('world')}
-          >
-            World
-          </button>
+        <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+          {regions.map(r => (
+            <button
+              key={r.name}
+              type="button"
+              className={`${styles.regionBtn} ${region === r.name ? styles.active : ''}`}
+              onClick={() => handleRegionChange(r.name)}
+            >
+              {r.icon} {r.name}
+            </button>
+          ))}
         </div>
       </div>
 
       <div className={styles.formGroup}>
         <label>Country</label>
-        <select 
-          value={selectedCountry} 
+        <select
+          value={selectedCountry}
           onChange={(e) => {
             setSelectedCountry(e.target.value);
             setSelectedCity('');
@@ -88,15 +80,17 @@ export default function SearchFilter() {
         >
           <option value="">All Countries</option>
           {availableCountries.map(c => (
-            <option key={c.country} value={c.country}>{c.country}</option>
+            <option key={c.country} value={c.country}>
+              {countryFlag(c.country)} {c.country}
+            </option>
           ))}
         </select>
       </div>
 
       <div className={styles.formGroup}>
         <label>City (Capital/Major)</label>
-        <select 
-          value={selectedCity} 
+        <select
+          value={selectedCity}
           disabled={!selectedCountry}
           onChange={(e) => setSelectedCity(e.target.value)}
           className={styles.select}
@@ -110,8 +104,8 @@ export default function SearchFilter() {
 
       <div className={styles.formGroup}>
         <label>Ethnicity</label>
-        <select 
-          value={selectedEthnicity} 
+        <select
+          value={selectedEthnicity}
           onChange={(e) => setSelectedEthnicity(e.target.value)}
           className={styles.select}
         >
@@ -120,10 +114,11 @@ export default function SearchFilter() {
           <option value="White">White</option>
           <option value="Mixed">Mixed</option>
           <option value="Latino">Latino</option>
+          <option value="Asian">Asian</option>
         </select>
       </div>
 
-      <button onClick={handleApply} className="btn-primary" style={{width: '100%'}}>
+      <button onClick={handleApply} className="btn-primary" style={{ width: '100%' }}>
         Update Results
       </button>
     </div>

@@ -1,0 +1,78 @@
+.stickyBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #22c55e; /* Lumina Green */
+  padding: 14px 24px;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure space for the cookie banner if it exists */
+body:has(.cookieContainer) .stickyBar {
+  bottom: 60px;
+}
+
+.content {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.text {
+  letter-spacing: 0.5px;
+}
+
+.btn {
+  background-color: #fff;
+  color: #22c55e;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .stickyBar {
+    padding: 12px 16px;
+  }
+  .left {
+    font-size: 0.85rem;
+  }
+  .btn {
+    padding: 6px 16px;
+    font-size: 0.75rem;
+  }
+}

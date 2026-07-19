@@ -12,6 +12,7 @@ async function getModel(id: string) {
     where: { id },
     include: {
       photos: true,
+      videos: true,
       services: true,
       reviews: true,
     },
@@ -79,6 +80,24 @@ export default async function ModelPage({ params }: { params: Promise<{ id: stri
             <h2>About</h2>
             <p className={styles.bio}>{model.bio}</p>
           </section>
+
+          {model.videos && model.videos.length > 0 && (
+            <section className={styles.section}>
+              <h2>Videos & Clips</h2>
+              <div className={styles.videosGrid}>
+                {model.videos.map((video: any) => (
+                  <div key={video.id} className={styles.videoWrapper}>
+                    <video 
+                      src={video.url.startsWith('data:') ? `/api/videos/${video.id}` : video.url} 
+                      controls 
+                      className={styles.videoPlayer} 
+                      preload="metadata"
+                    />
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
 
           <section className={styles.statsGrid}>
             <div className={styles.statBox}>

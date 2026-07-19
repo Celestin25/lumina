@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import { Star, MapPin, Briefcase, Phone } from 'lucide-react';
+import { Phone, Smartphone, Flame } from 'lucide-react';
 import FavoriteButton from './FavoriteButton';
+import { countryFlag } from '@/locations/data';
 import styles from './ModelCard.module.css';
 
 interface Service {
@@ -17,76 +18,89 @@ interface ModelProps {
   hourlyRate: number;
   rating: number;
   ethnicity?: string | null;
+  bodyType?: string | null;
+  hairColor?: string | null;
+  gender?: string | null;
   bio?: string | null;
   photos: { id: string; url: string }[];
   services?: Service[];
   isVerified?: boolean;
+  isFeatured?: boolean;
   phone?: string | null;
 }
 
 export default function ModelCard({ model }: { model: ModelProps }) {
-  // Use first photo or placeholder, avoiding massive Base64 DOM crashes
+  // Select photo
   let mainPhoto = 'https://via.placeholder.com/400x500?text=No+Photo';
   if (model.photos && model.photos.length > 0) {
     const photo = model.photos[0];
     if (photo.url && photo.url.startsWith('http')) {
-      mainPhoto = photo.url; // External URL
+      mainPhoto = photo.url;
     } else {
-      // If it's a Base64 string OR the URL was intentionally omitted for performance, use the API route
       mainPhoto = `/api/photos/${photo.id}`;
     }
   }
-  
-  // Get first service or default
-  const mainService = model.services && model.services.length > 0 ? model.services[0].name : 'Companion';
 
   // Format WhatsApp Link
   const cleanPhone = model.phone ? model.phone.replace(/[^0-9]/g, '') : '1234567890';
-  const whatsappLink = `https://wa.me/${cleanPhone}?text=Hi%20${model.displayName},%20I%20saw%20your%20profile%20on%20Lumina.`;
+  const whatsappLink = `https://wa.me/${cleanPhone}?text=Hi%20${model.displayName},%20I%20saw%20your%20profile%20on%20STRIPCHAT.`;
+
+  // Determine flag
+  const flag = countryFlag(model.country);
+
+  // Indicators
+  const hasToy = model.isVerified;
+  const isMobile = !!model.phone;
 
   return (
     <div className={styles.card}>
-      <Link href={`/models/${model.id}`} className={styles.imageContainer}>
-        <img src={mainPhoto} alt={model.displayName} className={styles.image} />
-        <span className={styles.serviceTag}>{mainService}</span>
-        {model.isVerified && <span className={styles.premiumBadge}>PREMIUM</span>}
-      </Link>
-      
-      <div className={styles.content}>
-        <div className={styles.header}>
-          <Link href={`/models/${model.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <h3 className={styles.name}>{model.displayName}</h3>
-          </Link>
-          <div className={styles.location}>
-            <MapPin size={12} />
-            <span>{model.city || 'Unknown'} {model.ethnicity ? `• ${model.ethnicity}` : ''}</span>
+      <div className={styles.imageWrapper}>
+        <Link href={`/models/${model.id}`} className={styles.imageLink}>
+          <img src={mainPhoto} alt={model.displayName} className={styles.image} />
+          
+          {/* Top Left Icons */}
+          <div className={styles.topLeftBadges}>
+            {isMobile && (
+              <div className={styles.iconBadge} title="Mobile Cam Enabled">
+                <Smartphone size={10} />
+              </div>
+            )}
+            {hasToy && (
+              <div className={styles.iconBadge} title="Interactive Vibrator Enabled">
+                <Flame size={10} className={styles.toyIcon} />
+              </div>
+            )}
           </div>
-        </div>
-        
-        <div className={styles.rating}>
-           {[...Array(5)].map((_, i) => (
-             <Star 
-               key={i} 
-               size={12} 
-               fill={i < Math.floor(model.rating) ? "#fbbf24" : "none"} 
-               color={i < Math.floor(model.rating) ? "#fbbf24" : "#d1d5db"} // Gold or Gray
-             />
-           ))}
-        </div>
 
-        <p className={styles.bio}>
-          {model.bio || "No bio available."}
-        </p>
+          {/* Top Right "NEW" Badge */}
+          <div className={styles.topRightBadges}>
+            {model.isFeatured && (
+              <span className={styles.newBadge}>NEW</span>
+            )}
+          </div>
 
-        <div className={styles.footer}>
-          <Link href={`/models/${model.id}`} className={`${styles.actionBtn} ${styles.btnBriefcase}`} title="View Profile">
-            <Briefcase size={20} />
-          </Link>
-          
-          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className={`${styles.actionBtn} ${styles.btnCall}`} title="Contact on WhatsApp">
-             <Phone size={18} />
-          </a>
-          
+          {/* Bottom Gradient overlay */}
+          <div className={styles.bottomOverlay}>
+            <div className={styles.infoRow}>
+              <span className={styles.name}>{model.displayName}</span>
+              <span className={styles.flag} title={model.country}>{flag}</span>
+            </div>
+            <div className={styles.detailRow}>
+              <span className={styles.rate}>${model.hourlyRate} / hr</span>
+              <span className={styles.tag}>
+                {model.age} • {model.ethnicity || 'Mixed'}
+              </span>
+            </div>
+          </div>
+        </Link>
+      </div>
+
+      {/* Floating Action Overlay on Hover */}
+      <div className={styles.hoverActions}>
+        <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className={styles.chatBtn} title="Chat Live on WhatsApp">
+          <Phone size={12} style={{ marginRight: '4px' }} /> Chat
+        </a>
+        <div className={styles.favWrapper}>
           <FavoriteButton modelId={model.id} />
         </div>
       </div>

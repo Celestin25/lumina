@@ -3,6 +3,9 @@ import { Inter, Playfair_Display } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AuthProvider from "@/components/AuthProvider";
+import CookieConsent from "@/components/CookieConsent";
+import StickyPromoBar from "@/components/StickyPromoBar";
+import { LanguageProvider } from "@/i18n/LanguageContext";
 import "./globals.css";
 
 const inter = Inter({ 
@@ -35,9 +38,13 @@ export default async function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${playfair.variable}`}>
         <AuthProvider session={session}>
-          <Navbar />
-          {children}
-          <Footer />
+          <LanguageProvider>
+            <Navbar />
+            {children}
+            <Footer />
+            <CookieConsent />
+            <StickyPromoBar />
+          </LanguageProvider>
         </AuthProvider>
       </body>
     </html>

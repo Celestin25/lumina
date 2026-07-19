@@ -16,16 +16,32 @@ export function cleanModelData(model: any) {
     return photo;
   };
 
+  const cleanVideo = (video: any) => {
+    if (video && video.url && video.url.startsWith('data:')) {
+      return {
+        ...video,
+        url: `/api/videos/${video.id}`,
+      };
+    }
+    return video;
+  };
+
   const cleanedModel = { ...model };
 
   // Handle a single model profile
   if (cleanedModel.photos) {
     cleanedModel.photos = cleanedModel.photos.map(cleanPhoto);
   }
+  if (cleanedModel.videos) {
+    cleanedModel.videos = cleanedModel.videos.map(cleanVideo);
+  }
 
   // Handle a model profile nested inside a user object
   if (cleanedModel.modelProfile && cleanedModel.modelProfile.photos) {
     cleanedModel.modelProfile.photos = cleanedModel.modelProfile.photos.map(cleanPhoto);
+  }
+  if (cleanedModel.modelProfile && cleanedModel.modelProfile.videos) {
+    cleanedModel.modelProfile.videos = cleanedModel.modelProfile.videos.map(cleanVideo);
   }
 
   // Handle user avatar itself

@@ -1,12 +1,36 @@
 export const dynamic = 'force-dynamic';
-import Link from "next/link";
-import { ArrowRight, Star, MapPin } from "lucide-react";
-import styles from "./page.module.css";
-import { PrismaClient } from "@prisma/client";
-import ModelCard from "@/components/ModelCard";
 
+import Link from "next/link";
+import Sidebar from "@/components/Sidebar";
+import ModelCard from "@/components/ModelCard";
 import { prisma } from '@/lib/prisma';
 import { cleanModelsList } from '@/lib/data-utils';
+import styles from "./page.module.css";
+
+async function getAfricanModels() {
+  try {
+    const africanCountries = [
+      "Nigeria", "South Africa", "Kenya", "Egypt", "Morocco", "Ghana", "Ethiopia", 
+      "Tanzania", "Uganda", "Rwanda", "Burundi", "Senegal", "Ivory Coast", "Algeria", 
+      "Tunisia", "Cameroon", "DR Congo", "Zambia", "Zimbabwe", "Botswana", "Namibia", 
+      "Mozambique", "Angola", "Mauritius", "Seychelles"
+    ];
+    return await prisma.modelProfile.findMany({
+      where: { 
+        isVerified: true,
+        isActive: true,
+        country: { in: africanCountries },
+      },
+      take: 6,
+      include: {
+        photos: true,
+      }
+    });
+  } catch (error: any) {
+    console.error("Database query failed:", error);
+    return [];
+  }
+}
 
 async function getFeaturedModels() {
   try {
@@ -16,60 +40,52 @@ async function getFeaturedModels() {
         isVerified: true,
         isActive: true,
       },
-      take: 3,
+      take: 12,
       include: {
         photos: true,
       }
     });
   } catch (error: any) {
-    console.error("Database featured search failed:", error);
-    return { error: error.message || error.toString() };
+    console.error("Database query failed:", error);
+    return [];
   }
 }
 
 export default async function Home() {
+  const africanModelsData = await getAfricanModels();
   const featuredModelsData = await getFeaturedModels();
-  
-  if ((featuredModelsData as any).error) {
-    return (
-      <main className={styles.main}>
-        <div className="container" style={{ paddingTop: '100px', paddingBottom: '100px', color: 'red' }}>
-          <h2>Database Error on Home Page</h2>
-          <pre>{(featuredModelsData as any).error}</pre>
-        </div>
-      </main>
-    );
-  }
 
+  const africanModels = cleanModelsList(africanModelsData as any[]);
   const featuredModels = cleanModelsList(featuredModelsData as any[]);
 
   return (
-    <main className={styles.main}>
-      {/* Hero Section */}
-      <section className={styles.hero}>
-        <div className={styles.heroOverlay} />
-        <div className={`container ${styles.heroContent}`}>
-          <h1 className={styles.heroTitle}>
-            Experience <span className="text-gold">Luxury</span> beyond limits.
-          </h1>
-          <p className={styles.heroSubtitle}>
-            Global access to elite companions for discerning gentlemen.
-          </p>
-          <div className={styles.heroActions}>
-            <Link href="/search" className="btn-primary">
-              View All Models <ArrowRight size={18} style={{ marginLeft: "8px" }} />
-            </Link>
-          </div>
-        </div>
-      </section>
+    <main className={styles.mainContainer}>
+      <Sidebar />
+      <div className={styles.content}>
+        {/* African Category Section */}
+        {africanModels.length > 0 && (
+          <section className={styles.section}>
+            <div className={styles.sectionHeader}>
+              <h2>African</h2>
+              <Link href="/search?country=South+Africa" className={styles.seeAll}>
+                See All
+              </Link>
+            </div>
+            
+            <div className={styles.grid}>
+              {africanModels.map((model) => (
+                <ModelCard key={model.id} model={model} />
+              ))}
+            </div>
+          </section>
+        )}
 
-      {/* Featured Models Preview */}
-      <section className="section bg-secondary">
-        <div className="container">
+        {/* Featured Models Section */}
+        <section className={styles.section}>
           <div className={styles.sectionHeader}>
-            <h2>Featured Companions</h2>
-            <Link href="/search" className="btn-outline">
-              View All
+            <h2>Featured Models</h2>
+            <Link href="/search?featured=true" className={styles.seeAll}>
+              See All
             </Link>
           </div>
           
@@ -79,11 +95,11 @@ export default async function Home() {
                 <ModelCard key={model.id} model={model} />
               ))
             ) : (
-              <p className="text-secondary">No featured models available at the moment.</p>
+              <p className={styles.noResults}>No featured models at the moment.</p>
             )}
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
   );
 }

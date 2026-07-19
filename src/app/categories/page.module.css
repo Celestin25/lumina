@@ -1,0 +1,230 @@
+﻿.main {
+  background-color: #0d0d0d;
+  min-height: 100vh;
+}
+
+.mainContainer {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+  padding: 24px 28px 80px;
+}
+
+/* ─── Page Header ────────────────────────────────── */
+.pageHeader { margin-bottom: 18px; }
+
+.pageTitle {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.pageSubtitle {
+  color: #555;
+  font-size: 0.83rem;
+}
+
+/* ─── Alphabet quick-nav ─────────────────────────── */
+.alphabetNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-items: center;
+  margin-bottom: 28px;
+  border-bottom: 1px solid #1c1c1c;
+  padding-bottom: 12px;
+}
+
+.alphaActive {
+  color: #22c55e;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-decoration: none;
+  margin-right: 4px;
+}
+
+.alphaChar {
+  color: #555;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 1px 5px;
+  border-radius: 3px;
+  transition: color 0.12s ease;
+}
+
+.alphaChar:hover { color: #fff; }
+
+/* ─── Category sections ──────────────────────────── */
+.categorySection { margin-bottom: 48px; }
+
+.sectionTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #1c1c1c;
+}
+
+.sectionIconWrap { font-size: 1.15rem; }
+
+/* ─── Regions grid ───────────────────────────────── */
+/* Mimics Stripchat's multi-column per-region layout  */
+.regionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  gap: 28px 18px;
+  align-items: start;
+}
+
+.regionBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Stripchat-style region header */
+.regionHeader {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #555;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  background-color: #141414;
+  border: 1px solid #1e1e1e;
+  padding: 4px 10px;
+  border-radius: 3px;
+  margin-bottom: 8px;
+}
+
+/* ─── Country rows ───────────────────────────────── */
+.countryList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+/* Each row: [flag] [code] [name] [count]  */
+.countryLink {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #bbb;
+  text-decoration: none;
+  font-size: 0.82rem;
+  padding: 4px 8px;
+  border-radius: 3px;
+  transition: background-color 0.12s ease, color 0.12s ease;
+}
+
+.countryLink:hover {
+  background-color: #1a3a26;
+  color: #22c55e;
+}
+
+/* Rectangular flag image from flagcdn */
+.flagImg {
+  width: 20px;
+  height: 15px;
+  object-fit: cover;
+  border-radius: 1px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ISO code — muted, fixed width */
+.countryCode {
+  font-size: 0.72rem;
+  color: #555;
+  font-weight: 600;
+  width: 22px;
+  flex-shrink: 0;
+  letter-spacing: 0.3px;
+}
+
+/* Country name */
+.countryName {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Live count — muted number at the end */
+.countryCount {
+  font-size: 0.75rem;
+  color: #444;
+  flex-shrink: 0;
+  margin-left: auto;
+  font-weight: 500;
+}
+
+/* ─── Appearance section ─────────────────────────── */
+.appearanceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+  gap: 24px;
+}
+
+.appearanceBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.tagList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 2px;
+}
+
+.tagLink {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 0.83rem;
+  padding: 4px 8px;
+  border-radius: 3px;
+  transition: background-color 0.12s ease, color 0.12s ease;
+}
+
+.tagLink:hover {
+  background-color: #1a3a26;
+  color: #22c55e;
+}
+
+/* ─── Services grid ──────────────────────────────── */
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+  gap: 7px;
+}
+
+.serviceTag {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 0.83rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background-color: #111;
+  border: 1px solid #1e1e1e;
+  transition: all 0.12s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.serviceTag:hover {
+  color: #22c55e;
+  border-color: #22c55e;
+  background-color: #1a3a26;
+}
