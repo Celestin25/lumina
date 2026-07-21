@@ -817,3 +817,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-17 20:40` fix(styles): resolve z-index stacking collision between modal and header
 - `2026-07-21 10:27` feat(auth): implement JWT refresh token rotation and device session tracking
 - `2026-07-21 10:34` perf: optimize font loading with next/font and preload directives
+- `2026-07-21 10:55` feat(export): add CSV export for transaction summaries
