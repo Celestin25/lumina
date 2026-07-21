@@ -821,3 +821,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-21 11:24` fix(perf): memoize expensive filter computations to prevent extra renders
 - `2026-07-21 11:37` feat(notifications): build real-time push notifications with SSE
 - `2026-07-21 12:16` feat(seo): add structured data markup and dynamic OpenGraph meta tags
+- `2026-07-21 12:21` fix(modal): lock body scroll when dialog is active
