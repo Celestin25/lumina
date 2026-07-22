@@ -825,3 +825,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-21 12:37` feat(seo): add structured data markup and dynamic OpenGraph meta tags
 - `2026-07-22 12:54` fix(prisma): fix schema migration conflict blocking production deploy
 - `2026-07-22 13:04` fix(nav): correct active route indicator on nested paths
+- `2026-07-22 14:36` feat(dashboard): build revenue analytics with recharts and date-range picker
