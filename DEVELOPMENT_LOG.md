@@ -830,3 +830,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-22 17:07` fix(styles): resolve z-index stacking collision between modal and header
 - `2026-07-23 09:11` chore: set up GitHub Actions CI with build, type-check and test steps
 - `2026-07-23 09:48` test: add E2E tests for registration, login and profile update flows
+- `2026-07-23 10:18` feat(upload): support batch image upload with drag-and-drop reorder
