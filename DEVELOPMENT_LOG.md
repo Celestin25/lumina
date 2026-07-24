@@ -832,3 +832,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-23 09:48` test: add E2E tests for registration, login and profile update flows
 - `2026-07-23 10:18` feat(upload): support batch image upload with drag-and-drop reorder
 - `2026-07-23 10:27` fix(auth): prevent session fixation by regenerating ID after login
+- `2026-07-24 11:26` refactor(components): split ModelCard into composable atomic components
