@@ -834,3 +834,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-23 10:27` fix(auth): prevent session fixation by regenerating ID after login
 - `2026-07-24 11:26` refactor(components): split ModelCard into composable atomic components
 - `2026-07-24 12:36` feat(analytics): integrate client-side event tracking telemetry
+- `2026-07-24 13:44` feat(i18n): add locale switcher with persistent preference in cookies
