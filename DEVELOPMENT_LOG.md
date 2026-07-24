@@ -838,3 +838,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-24 14:00` feat(admin): build user management table with sort, filter and bulk actions
 - `2026-07-24 14:03` chore: set up GitHub Actions CI with build, type-check and test steps
 - `2026-07-24 14:54` refactor(api): consolidate error handling into reusable middleware factory
+- `2026-07-24 15:02` feat(media): implement WebP conversion on upload pipeline
