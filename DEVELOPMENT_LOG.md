@@ -841,3 +841,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-24 15:02` feat(media): implement WebP conversion on upload pipeline
 - `2026-07-27 09:21` fix(forms): enforce client-side validation before hitting API endpoints
 - `2026-07-27 09:42` fix(prisma): fix schema migration conflict blocking production deploy
+- `2026-07-27 09:58` chore: configure Husky pre-commit hooks with lint-staged for auto-format
