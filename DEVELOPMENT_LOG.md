@@ -839,3 +839,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-24 14:03` chore: set up GitHub Actions CI with build, type-check and test steps
 - `2026-07-24 14:54` refactor(api): consolidate error handling into reusable middleware factory
 - `2026-07-24 15:02` feat(media): implement WebP conversion on upload pipeline
+- `2026-07-27 09:21` fix(forms): enforce client-side validation before hitting API endpoints
