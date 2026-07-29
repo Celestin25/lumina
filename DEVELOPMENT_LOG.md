@@ -844,3 +844,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-27 09:58` chore: configure Husky pre-commit hooks with lint-staged for auto-format
 - `2026-07-27 10:18` fix(prisma): fix schema migration conflict blocking production deploy
 - `2026-07-29 10:24` refactor: extract date formatting helpers into shared utils
+- `2026-07-29 10:31` feat(auth): implement JWT refresh token rotation and device session tracking
