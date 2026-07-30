@@ -847,3 +847,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-29 10:31` feat(auth): implement JWT refresh token rotation and device session tracking
 - `2026-07-29 10:38` fix(styles): resolve z-index stacking collision between modal and header
 - `2026-07-30 09:21` perf: enable Brotli compression and edge caching for static assets
+- `2026-07-30 10:11` chore: configure Husky pre-commit hooks with lint-staged for auto-format
