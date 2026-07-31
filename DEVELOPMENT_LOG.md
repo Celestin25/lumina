@@ -855,3 +855,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-31 11:22` feat(i18n): add locale switcher with persistent preference in cookies
 - `2026-07-31 12:34` fix(search): trim whitespace from search terms before querying
 - `2026-07-31 12:45` feat(payment): integrate Stripe checkout with webhook event handling
+- `2026-07-31 13:03` refactor(api): consolidate error handling into reusable middleware factory
