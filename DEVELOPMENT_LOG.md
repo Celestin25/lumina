@@ -852,3 +852,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-30 10:51` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
 - `2026-07-31 11:02` refactor(api): consolidate error handling into reusable middleware factory
 - `2026-07-31 11:16` refactor: extract date formatting helpers into shared utils
+- `2026-07-31 11:22` feat(i18n): add locale switcher with persistent preference in cookies
