@@ -858,3 +858,4 @@ Tracking engineering progress and feature updates.
 - `2026-07-31 13:03` refactor(api): consolidate error handling into reusable middleware factory
 - `2026-07-31 13:34` feat(analytics): integrate client-side event tracking telemetry
 - `2026-08-03 10:34` feat(analytics): integrate client-side event tracking telemetry
+- `2026-08-04 09:05` chore: configure Husky pre-commit hooks with lint-staged for auto-format
