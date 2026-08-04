@@ -861,3 +861,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-04 09:05` chore: configure Husky pre-commit hooks with lint-staged for auto-format
 - `2026-08-04 10:24` refactor(components): split ModelCard into composable atomic components
 - `2026-08-04 10:29` test: add E2E tests for registration, login and profile update flows
+- `2026-08-04 11:21` fix(nav): correct active route indicator on nested paths
