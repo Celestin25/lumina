@@ -872,3 +872,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-10 11:14` feat(models): add profile verification badge and approval workflow
 - `2026-08-10 11:22` refactor(hooks): consolidate auth state management into useAuth context
 - `2026-08-10 11:37` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
+- `2026-08-10 12:49` fix(perf): memoize expensive filter computations to prevent extra renders
