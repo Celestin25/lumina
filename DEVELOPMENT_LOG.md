@@ -869,3 +869,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-10 10:48` feat(ui): add dark mode toggle with system preference fallback
 - `2026-08-10 11:03` chore: set up GitHub Actions CI with build, type-check and test steps
 - `2026-08-10 11:11` fix(routing): handle 404 gracefully with fallback UI and back navigation
+- `2026-08-10 11:14` feat(models): add profile verification badge and approval workflow
