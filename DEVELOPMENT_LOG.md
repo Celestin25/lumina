@@ -866,3 +866,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-10 09:22` refactor: enforce strict TypeScript mode and resolve all implicit any types
 - `2026-08-10 09:29` refactor(components): split ModelCard into composable atomic components
 - `2026-08-10 09:40` chore: configure Husky pre-commit hooks with lint-staged for auto-format
+- `2026-08-10 10:48` feat(ui): add dark mode toggle with system preference fallback
