@@ -864,3 +864,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-04 11:21` fix(nav): correct active route indicator on nested paths
 - `2026-08-06 11:10` feat(upload): support batch image upload with drag-and-drop reorder
 - `2026-08-10 09:22` refactor: enforce strict TypeScript mode and resolve all implicit any types
+- `2026-08-10 09:29` refactor(components): split ModelCard into composable atomic components
