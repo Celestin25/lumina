@@ -870,3 +870,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-10 11:03` chore: set up GitHub Actions CI with build, type-check and test steps
 - `2026-08-10 11:11` fix(routing): handle 404 gracefully with fallback UI and back navigation
 - `2026-08-10 11:14` feat(models): add profile verification badge and approval workflow
+- `2026-08-10 11:22` refactor(hooks): consolidate auth state management into useAuth context
