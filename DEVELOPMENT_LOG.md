@@ -873,3 +873,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-10 11:22` refactor(hooks): consolidate auth state management into useAuth context
 - `2026-08-10 11:37` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
 - `2026-08-10 12:49` fix(perf): memoize expensive filter computations to prevent extra renders
+- `2026-08-11 10:32` test: add E2E tests for registration, login and profile update flows
