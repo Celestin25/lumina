@@ -878,3 +878,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-11 11:13` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
 - `2026-08-11 11:26` perf: enable Brotli compression and edge caching for static assets
 - `2026-08-11 11:55` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
+- `2026-08-11 12:18` perf: optimize font loading with next/font and preload directives
