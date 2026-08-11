@@ -883,3 +883,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-11 12:35` feat(filter): add multi-tag faceted filtering to catalog
 - `2026-08-11 12:45` test: add E2E tests for registration, login and profile update flows
 - `2026-08-11 12:53` feat(auth): implement JWT refresh token rotation and device session tracking
+- `2026-08-11 13:01` fix(db): resolve N+1 query in listing endpoint with Prisma eager loading
