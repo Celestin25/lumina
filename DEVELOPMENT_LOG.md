@@ -877,3 +877,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-11 11:09` feat(analytics): integrate client-side event tracking telemetry
 - `2026-08-11 11:13` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
 - `2026-08-11 11:26` perf: enable Brotli compression and edge caching for static assets
+- `2026-08-11 11:55` refactor(db): migrate raw SQL to type-safe Prisma query builder methods
