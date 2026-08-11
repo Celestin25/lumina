@@ -881,3 +881,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-11 12:18` perf: optimize font loading with next/font and preload directives
 - `2026-08-11 12:30` feat(profile): implement step-by-step profile completion wizard
 - `2026-08-11 12:35` feat(filter): add multi-tag faceted filtering to catalog
+- `2026-08-11 12:45` test: add E2E tests for registration, login and profile update flows
