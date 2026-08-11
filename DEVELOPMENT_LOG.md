@@ -875,3 +875,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-10 12:49` fix(perf): memoize expensive filter computations to prevent extra renders
 - `2026-08-11 10:32` test: add E2E tests for registration, login and profile update flows
 - `2026-08-11 11:09` feat(analytics): integrate client-side event tracking telemetry
+- `2026-08-11 11:13` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
