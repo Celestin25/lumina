@@ -887,3 +887,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-11 13:04` feat(profile): implement step-by-step profile completion wizard
 - `2026-08-11 13:34` feat(payment): integrate Stripe checkout with webhook event handling
 - `2026-08-12 12:28` fix(forms): enforce client-side validation before hitting API endpoints
+- `2026-08-12 13:43` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
