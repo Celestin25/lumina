@@ -890,3 +890,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-12 13:43` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
 - `2026-08-12 14:08` feat(upload): support batch image upload with drag-and-drop reorder
 - `2026-08-12 14:56` feat(dashboard): build revenue analytics with recharts and date-range picker
+- `2026-08-12 15:35` fix(prisma): fix schema migration conflict blocking production deploy
