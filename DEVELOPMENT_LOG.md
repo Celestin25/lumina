@@ -895,3 +895,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-13 10:21` feat(admin): build user management table with sort, filter and bulk actions
 - `2026-08-13 10:56` feat(analytics): integrate client-side event tracking telemetry
 - `2026-08-14 10:22` fix(perf): memoize expensive filter computations to prevent extra renders
+- `2026-08-14 10:27` feat(notifications): build real-time push notifications with SSE
