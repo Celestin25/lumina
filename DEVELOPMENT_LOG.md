@@ -898,3 +898,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-14 10:27` feat(notifications): build real-time push notifications with SSE
 - `2026-08-14 10:30` fix(nav): correct active route indicator on nested paths
 - `2026-08-14 10:50` fix(db): resolve N+1 query in listing endpoint with Prisma eager loading
+- `2026-08-14 12:20` feat(profile): implement step-by-step profile completion wizard
