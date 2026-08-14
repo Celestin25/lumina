@@ -901,3 +901,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-14 12:20` feat(profile): implement step-by-step profile completion wizard
 - `2026-08-14 12:38` feat(filter): add multi-tag faceted filtering to catalog
 - `2026-08-14 12:50` fix(images): handle broken image URLs with graceful lazy-load fallback
+- `2026-08-14 12:56` feat(dashboard): build revenue analytics with recharts and date-range picker
