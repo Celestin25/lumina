@@ -910,3 +910,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-17 12:48` feat(profile): implement step-by-step profile completion wizard
 - `2026-08-17 12:56` refactor: enforce strict TypeScript mode and resolve all implicit any types
 - `2026-08-17 12:57` feat(profile): implement step-by-step profile completion wizard
+- `2026-08-18 12:12` fix(images): handle broken image URLs with graceful lazy-load fallback
