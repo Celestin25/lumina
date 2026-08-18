@@ -912,3 +912,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-17 12:57` feat(profile): implement step-by-step profile completion wizard
 - `2026-08-18 12:12` fix(images): handle broken image URLs with graceful lazy-load fallback
 - `2026-08-18 13:32` feat(ui): add dark mode toggle with system preference fallback
+- `2026-08-18 13:49` feat(notifications): build real-time push notifications with SSE
