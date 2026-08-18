@@ -916,3 +916,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-18 15:00` feat(search): implement full-text search with debounce and highlighted results
 - `2026-08-18 16:37` feat(notifications): build real-time push notifications with SSE
 - `2026-08-18 18:30` feat(export): add CSV export for transaction summaries
+- `2026-08-18 19:07` refactor(components): split ModelCard into composable atomic components
