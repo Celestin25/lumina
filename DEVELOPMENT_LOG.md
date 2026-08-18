@@ -914,3 +914,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-18 13:32` feat(ui): add dark mode toggle with system preference fallback
 - `2026-08-18 13:49` feat(notifications): build real-time push notifications with SSE
 - `2026-08-18 15:00` feat(search): implement full-text search with debounce and highlighted results
+- `2026-08-18 16:37` feat(notifications): build real-time push notifications with SSE
