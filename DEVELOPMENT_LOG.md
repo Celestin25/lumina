@@ -924,3 +924,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-19 12:05` test: add E2E tests for registration, login and profile update flows
 - `2026-08-19 13:14` feat(dashboard): build revenue analytics with recharts and date-range picker
 - `2026-08-19 13:25` refactor: extract date formatting helpers into shared utils
+- `2026-08-19 13:46` feat(api): add rate limiting middleware with Redis-backed token bucket
