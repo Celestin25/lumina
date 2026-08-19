@@ -919,3 +919,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-18 19:07` refactor(components): split ModelCard into composable atomic components
 - `2026-08-18 19:43` feat(media): implement WebP conversion on upload pipeline
 - `2026-08-18 20:08` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
+- `2026-08-19 11:13` fix(styles): resolve z-index stacking collision between modal and header
