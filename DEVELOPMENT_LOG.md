@@ -929,3 +929,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-20 09:36` fix(perf): memoize expensive filter computations to prevent extra renders
 - `2026-08-20 10:22` fix(hydration): resolve client-server mismatch on timestamp display
 - `2026-08-20 11:47` test: add E2E tests for registration, login and profile update flows
+- `2026-08-20 12:16` feat(models): add profile verification badge and approval workflow
