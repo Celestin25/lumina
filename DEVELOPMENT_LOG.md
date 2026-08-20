@@ -927,3 +927,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-19 13:46` feat(api): add rate limiting middleware with Redis-backed token bucket
 - `2026-08-19 13:50` fix(nav): correct active route indicator on nested paths
 - `2026-08-20 09:36` fix(perf): memoize expensive filter computations to prevent extra renders
+- `2026-08-20 10:22` fix(hydration): resolve client-server mismatch on timestamp display
