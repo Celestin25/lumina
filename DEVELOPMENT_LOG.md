@@ -931,3 +931,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-20 11:47` test: add E2E tests for registration, login and profile update flows
 - `2026-08-20 12:16` feat(models): add profile verification badge and approval workflow
 - `2026-08-20 14:53` feat(search): implement full-text search with debounce and highlighted results
+- `2026-08-21 11:58` fix(styles): resolve z-index stacking collision between modal and header
