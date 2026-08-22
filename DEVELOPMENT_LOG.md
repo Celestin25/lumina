@@ -932,3 +932,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-20 12:16` feat(models): add profile verification badge and approval workflow
 - `2026-08-20 14:53` feat(search): implement full-text search with debounce and highlighted results
 - `2026-08-21 11:58` fix(styles): resolve z-index stacking collision between modal and header
+- `2026-08-22 13:52` feat(upload): support batch image upload with drag-and-drop reorder
