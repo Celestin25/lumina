@@ -934,3 +934,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-21 11:58` fix(styles): resolve z-index stacking collision between modal and header
 - `2026-08-22 13:52` feat(upload): support batch image upload with drag-and-drop reorder
 - `2026-08-24 10:45` fix(db): resolve N+1 query in listing endpoint with Prisma eager loading
+- `2026-08-31 12:07` feat(search): implement full-text search with debounce and highlighted results
