@@ -939,3 +939,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-01 12:01` test: add E2E tests for registration, login and profile update flows
 - `2026-09-01 13:37` refactor(components): split ModelCard into composable atomic components
 - `2026-09-01 14:30` fix(auth): prevent session fixation by regenerating ID after login
+- `2026-09-01 15:06` feat(api): add rate limiting middleware with Redis-backed token bucket
