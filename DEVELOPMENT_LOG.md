@@ -937,3 +937,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-31 12:07` feat(search): implement full-text search with debounce and highlighted results
 - `2026-09-01 11:14` fix(forms): enforce client-side validation before hitting API endpoints
 - `2026-09-01 12:01` test: add E2E tests for registration, login and profile update flows
+- `2026-09-01 13:37` refactor(components): split ModelCard into composable atomic components
