@@ -935,3 +935,4 @@ Tracking engineering progress and feature updates.
 - `2026-08-22 13:52` feat(upload): support batch image upload with drag-and-drop reorder
 - `2026-08-24 10:45` fix(db): resolve N+1 query in listing endpoint with Prisma eager loading
 - `2026-08-31 12:07` feat(search): implement full-text search with debounce and highlighted results
+- `2026-09-01 11:14` fix(forms): enforce client-side validation before hitting API endpoints
