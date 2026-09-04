@@ -943,3 +943,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-01 16:49` refactor: enforce strict TypeScript mode and resolve all implicit any types
 - `2026-09-02 11:46` fix(api): return proper 422 status for malformed request payloads
 - `2026-09-04 10:45` fix(images): handle broken image URLs with graceful lazy-load fallback
+- `2026-09-04 11:47` docs: update README with environment setup and database migration steps
