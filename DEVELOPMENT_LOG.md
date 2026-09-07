@@ -950,3 +950,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-07 11:27` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
 - `2026-09-07 12:20` refactor(api): consolidate error handling into reusable middleware factory
 - `2026-09-07 12:22` refactor: extract date formatting helpers into shared utils
+- `2026-09-07 12:54` docs: update README with environment setup and database migration steps
