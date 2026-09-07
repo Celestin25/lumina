@@ -948,3 +948,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-04 14:10` fix(modal): lock body scroll when dialog is active
 - `2026-09-07 11:24` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
 - `2026-09-07 11:27` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
+- `2026-09-07 12:20` refactor(api): consolidate error handling into reusable middleware factory
