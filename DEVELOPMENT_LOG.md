@@ -951,3 +951,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-07 12:20` refactor(api): consolidate error handling into reusable middleware factory
 - `2026-09-07 12:22` refactor: extract date formatting helpers into shared utils
 - `2026-09-07 12:54` docs: update README with environment setup and database migration steps
+- `2026-09-08 10:13` chore: set up GitHub Actions CI with build, type-check and test steps
