@@ -956,3 +956,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-09 10:12` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
 - `2026-09-09 10:29` refactor(api): consolidate error handling into reusable middleware factory
 - `2026-09-09 11:25` fix(styles): resolve z-index stacking collision between modal and header
+- `2026-09-09 13:27` refactor: extract date formatting helpers into shared utils
