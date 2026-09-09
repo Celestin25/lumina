@@ -954,3 +954,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-08 10:13` chore: set up GitHub Actions CI with build, type-check and test steps
 - `2026-09-08 10:58` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
 - `2026-09-09 10:12` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
+- `2026-09-09 10:29` refactor(api): consolidate error handling into reusable middleware factory
