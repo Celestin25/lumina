@@ -961,3 +961,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-09 14:55` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
 - `2026-09-09 15:22` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
 - `2026-09-09 15:31` chore: upgrade Next.js to 15.1 and resolve breaking API route changes
+- `2026-09-09 15:38` feat(seo): add structured data markup and dynamic OpenGraph meta tags
