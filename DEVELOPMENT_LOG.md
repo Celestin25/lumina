@@ -964,3 +964,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-09 15:38` feat(seo): add structured data markup and dynamic OpenGraph meta tags
 - `2026-09-09 15:53` chore: set up GitHub Actions CI with build, type-check and test steps
 - `2026-09-09 16:11` refactor: extract date formatting helpers into shared utils
+- `2026-09-10 12:38` feat(models): add profile verification badge and approval workflow
