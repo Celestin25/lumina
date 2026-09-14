@@ -968,3 +968,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-14 10:05` fix(nav): correct active route indicator on nested paths
 - `2026-09-14 11:02` feat(models): add profile verification badge and approval workflow
 - `2026-09-14 11:20` chore: configure Husky pre-commit hooks with lint-staged for auto-format
+- `2026-09-14 11:42` feat(auth): implement JWT refresh token rotation and device session tracking
