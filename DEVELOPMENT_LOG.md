@@ -971,3 +971,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-14 11:42` feat(auth): implement JWT refresh token rotation and device session tracking
 - `2026-09-14 13:55` feat(payment): integrate Stripe checkout with webhook event handling
 - `2026-09-15 10:40` refactor(components): split ModelCard into composable atomic components
+- `2026-09-15 10:46` refactor: extract date formatting helpers into shared utils
