@@ -973,3 +973,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-15 10:40` refactor(components): split ModelCard into composable atomic components
 - `2026-09-15 10:46` refactor: extract date formatting helpers into shared utils
 - `2026-09-15 12:54` feat(payment): integrate Stripe checkout with webhook event handling
+- `2026-09-15 13:01` fix(images): handle broken image URLs with graceful lazy-load fallback
