@@ -974,3 +974,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-15 10:46` refactor: extract date formatting helpers into shared utils
 - `2026-09-15 12:54` feat(payment): integrate Stripe checkout with webhook event handling
 - `2026-09-15 13:01` fix(images): handle broken image URLs with graceful lazy-load fallback
+- `2026-09-15 13:55` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
