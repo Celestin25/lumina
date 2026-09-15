@@ -976,3 +976,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-15 13:01` fix(images): handle broken image URLs with graceful lazy-load fallback
 - `2026-09-15 13:55` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
 - `2026-09-15 13:59` feat(ui): add dark mode toggle with system preference fallback
+- `2026-09-15 14:13` fix(nav): correct active route indicator on nested paths
