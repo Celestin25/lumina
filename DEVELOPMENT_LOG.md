@@ -979,3 +979,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-15 14:13` fix(nav): correct active route indicator on nested paths
 - `2026-09-15 14:28` fix(nav): correct active route indicator on nested paths
 - `2026-09-15 15:17` feat(search): implement full-text search with debounce and highlighted results
+- `2026-09-16 11:14` feat(ui): add dark mode toggle with system preference fallback
