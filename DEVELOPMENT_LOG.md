@@ -983,3 +983,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-17 10:51` feat(upload): support batch image upload with drag-and-drop reorder
 - `2026-09-17 11:16` feat(analytics): integrate client-side event tracking telemetry
 - `2026-09-17 11:18` refactor: enforce strict TypeScript mode and resolve all implicit any types
+- `2026-09-17 11:38` feat(dashboard): build revenue analytics with recharts and date-range picker
