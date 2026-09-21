@@ -986,3 +986,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-17 11:38` feat(dashboard): build revenue analytics with recharts and date-range picker
 - `2026-09-17 11:42` feat(analytics): integrate client-side event tracking telemetry
 - `2026-09-21 11:40` feat(filter): add multi-tag faceted filtering to catalog
+- `2026-09-21 11:48` fix(routing): handle 404 gracefully with fallback UI and back navigation
