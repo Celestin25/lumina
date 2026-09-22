@@ -999,3 +999,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-22 12:22` fix(nav): correct active route indicator on nested paths
 - `2026-09-22 12:41` chore: configure Husky pre-commit hooks with lint-staged for auto-format
 - `2026-09-22 14:42` feat(analytics): integrate client-side event tracking telemetry
+- `2026-09-22 15:25` fix(routing): handle 404 gracefully with fallback UI and back navigation
