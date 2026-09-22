@@ -989,3 +989,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-21 11:48` fix(routing): handle 404 gracefully with fallback UI and back navigation
 - `2026-09-21 11:51` chore: add Zod schema validation for all environment variables on startup
 - `2026-09-22 09:26` perf: optimize font loading with next/font and preload directives
+- `2026-09-22 09:35` fix(modal): lock body scroll when dialog is active
