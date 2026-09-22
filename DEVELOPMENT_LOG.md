@@ -996,3 +996,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-22 10:54` fix(search): trim whitespace from search terms before querying
 - `2026-09-22 11:40` feat(auth): implement JWT refresh token rotation and device session tracking
 - `2026-09-22 12:13` fix(search): trim whitespace from search terms before querying
+- `2026-09-22 12:22` fix(nav): correct active route indicator on nested paths
