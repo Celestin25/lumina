@@ -994,3 +994,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-22 10:41` fix(hydration): resolve client-server mismatch on timestamp display
 - `2026-09-22 10:49` perf: optimize font loading with next/font and preload directives
 - `2026-09-22 10:54` fix(search): trim whitespace from search terms before querying
+- `2026-09-22 11:40` feat(auth): implement JWT refresh token rotation and device session tracking
