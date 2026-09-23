@@ -1004,3 +1004,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-22 16:17` test: add E2E tests for registration, login and profile update flows
 - `2026-09-23 10:25` fix(nav): correct active route indicator on nested paths
 - `2026-09-23 11:22` fix(images): handle broken image URLs with graceful lazy-load fallback
+- `2026-09-23 12:23` fix(hydration): resolve client-server mismatch on timestamp display
