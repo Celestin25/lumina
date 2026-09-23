@@ -1002,3 +1002,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-22 15:25` fix(routing): handle 404 gracefully with fallback UI and back navigation
 - `2026-09-22 15:29` feat(profile): implement step-by-step profile completion wizard
 - `2026-09-22 16:17` test: add E2E tests for registration, login and profile update flows
+- `2026-09-23 10:25` fix(nav): correct active route indicator on nested paths
