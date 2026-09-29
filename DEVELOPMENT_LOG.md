@@ -1009,3 +1009,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-27 11:05` feat(notifications): build real-time push notifications with SSE
 - `2026-09-29 11:28` refactor(components): split ModelCard into composable atomic components
 - `2026-09-29 11:32` feat(auth): implement JWT refresh token rotation and device session tracking
+- `2026-09-29 12:26` fix(nav): correct active route indicator on nested paths
