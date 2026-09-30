@@ -1012,3 +1012,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-29 12:26` fix(nav): correct active route indicator on nested paths
 - `2026-09-30 10:06` feat(ui): add dark mode toggle with system preference fallback
 - `2026-09-30 10:28` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
+- `2026-09-30 10:28` feat(i18n): add locale switcher with persistent preference in cookies
