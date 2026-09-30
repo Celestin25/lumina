@@ -1017,3 +1017,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-30 10:55` fix(modal): lock body scroll when dialog is active
 - `2026-09-30 11:23` chore: set up GitHub Actions CI with build, type-check and test steps
 - `2026-09-30 13:18` chore: configure Husky pre-commit hooks with lint-staged for auto-format
+- `2026-09-30 13:41` fix(search): trim whitespace from search terms before querying
