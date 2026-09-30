@@ -1014,3 +1014,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-30 10:28` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
 - `2026-09-30 10:28` feat(i18n): add locale switcher with persistent preference in cookies
 - `2026-09-30 10:29` refactor(components): split ModelCard into composable atomic components
+- `2026-09-30 10:55` fix(modal): lock body scroll when dialog is active
