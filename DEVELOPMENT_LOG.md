@@ -1024,3 +1024,4 @@ Tracking engineering progress and feature updates.
 - `2026-10-01 12:09` fix(search): trim whitespace from search terms before querying
 - `2026-10-01 12:25` docs: update README with environment setup and database migration steps
 - `2026-10-01 12:41` feat(api): add rate limiting middleware with Redis-backed token bucket
+- `2026-10-01 12:47` feat(media): implement WebP conversion on upload pipeline
