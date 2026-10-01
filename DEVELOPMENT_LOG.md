@@ -1022,3 +1022,4 @@ Tracking engineering progress and feature updates.
 - `2026-10-01 11:11` feat(i18n): add locale switcher with persistent preference in cookies
 - `2026-10-01 11:49` feat(media): implement WebP conversion on upload pipeline
 - `2026-10-01 12:09` fix(search): trim whitespace from search terms before querying
+- `2026-10-01 12:25` docs: update README with environment setup and database migration steps
