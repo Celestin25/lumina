@@ -1019,3 +1019,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-30 13:18` chore: configure Husky pre-commit hooks with lint-staged for auto-format
 - `2026-09-30 13:41` fix(search): trim whitespace from search terms before querying
 - `2026-09-30 13:56` refactor: enforce strict TypeScript mode and resolve all implicit any types
+- `2026-10-01 11:11` feat(i18n): add locale switcher with persistent preference in cookies
