@@ -1021,3 +1021,4 @@ Tracking engineering progress and feature updates.
 - `2026-09-30 13:56` refactor: enforce strict TypeScript mode and resolve all implicit any types
 - `2026-10-01 11:11` feat(i18n): add locale switcher with persistent preference in cookies
 - `2026-10-01 11:49` feat(media): implement WebP conversion on upload pipeline
+- `2026-10-01 12:09` fix(search): trim whitespace from search terms before querying
