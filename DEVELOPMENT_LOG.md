@@ -1026,3 +1026,4 @@ Tracking engineering progress and feature updates.
 - `2026-10-01 12:41` feat(api): add rate limiting middleware with Redis-backed token bucket
 - `2026-10-01 12:47` feat(media): implement WebP conversion on upload pipeline
 - `2026-10-02 09:12` feat(auth): implement JWT refresh token rotation and device session tracking
+- `2026-10-02 10:35` feat(admin): build user management table with sort, filter and bulk actions
