@@ -1032,3 +1032,4 @@ Tracking engineering progress and feature updates.
 - `2026-10-05 11:15` feat(filter): add multi-tag faceted filtering to catalog
 - `2026-10-05 11:57` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
 - `2026-10-05 12:16` fix(api): return proper 422 status for malformed request payloads
+- `2026-10-05 13:18` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
