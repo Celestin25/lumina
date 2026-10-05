@@ -1030,3 +1030,4 @@ Tracking engineering progress and feature updates.
 - `2026-10-02 10:40` feat(analytics): integrate client-side event tracking telemetry
 - `2026-10-05 10:26` fix(hydration): resolve client-server mismatch on timestamp display
 - `2026-10-05 11:15` feat(filter): add multi-tag faceted filtering to catalog
+- `2026-10-05 11:57` fix(ui): fix mobile viewport overflow causing horizontal scroll on cards
