@@ -1036,3 +1036,4 @@ Tracking engineering progress and feature updates.
 - `2026-10-05 15:08` feat(search): implement full-text search with debounce and highlighted results
 - `2026-10-05 15:49` fix(api): return proper 422 status for malformed request payloads
 - `2026-10-06 10:01` fix(nav): correct active route indicator on nested paths
+- `2026-10-06 10:01` feat(search): implement full-text search with debounce and highlighted results
