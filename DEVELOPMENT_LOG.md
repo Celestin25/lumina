@@ -1039,3 +1039,4 @@ Tracking engineering progress and feature updates.
 - `2026-10-06 10:01` feat(search): implement full-text search with debounce and highlighted results
 - `2026-10-06 10:19` feat(export): add CSV export for transaction summaries
 - `2026-10-06 10:38` feat(profile): implement step-by-step profile completion wizard
+- `2026-10-07 11:16` feat(auth): implement JWT refresh token rotation and device session tracking
