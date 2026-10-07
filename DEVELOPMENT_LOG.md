@@ -1042,3 +1042,4 @@ Tracking engineering progress and feature updates.
 - `2026-10-07 11:16` feat(auth): implement JWT refresh token rotation and device session tracking
 - `2026-10-07 13:41` feat(auth): implement JWT refresh token rotation and device session tracking
 - `2026-10-07 14:16` fix(auth): prevent session fixation by regenerating ID after login
+- `2026-10-07 14:39` docs: update README with environment setup and database migration steps
