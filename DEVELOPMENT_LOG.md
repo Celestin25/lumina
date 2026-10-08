@@ -1049,3 +1049,4 @@ Tracking engineering progress and feature updates.
 - `2026-10-08 13:56` feat(search): implement full-text search with debounce and highlighted results
 - `2026-10-08 15:09` fix(images): handle broken image URLs with graceful lazy-load fallback
 - `2026-10-08 15:31` perf: enable Brotli compression and edge caching for static assets
+- `2026-10-08 15:32` feat(admin): build user management table with sort, filter and bulk actions
