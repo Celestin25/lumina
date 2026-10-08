@@ -1045,3 +1045,4 @@ Tracking engineering progress and feature updates.
 - `2026-10-07 14:39` docs: update README with environment setup and database migration steps
 - `2026-10-08 12:30` chore: configure Husky pre-commit hooks with lint-staged for auto-format
 - `2026-10-08 13:24` perf: enable Brotli compression and edge caching for static assets
+- `2026-10-08 13:43` fix(forms): enforce client-side validation before hitting API endpoints
