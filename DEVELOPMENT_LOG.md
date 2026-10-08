@@ -1050,3 +1050,4 @@ Tracking engineering progress and feature updates.
 - `2026-10-08 15:09` fix(images): handle broken image URLs with graceful lazy-load fallback
 - `2026-10-08 15:31` perf: enable Brotli compression and edge caching for static assets
 - `2026-10-08 15:32` feat(admin): build user management table with sort, filter and bulk actions
+- `2026-10-08 15:37` feat(media): implement WebP conversion on upload pipeline
